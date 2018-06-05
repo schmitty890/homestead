@@ -154,6 +154,8 @@ If you're editing any file outside of `public/assets/js` or `sass/partials`, we 
 
 13. Once your branch is pushed up, navigate to our repo, and you can see branch under "Your recently pushed branches:". Click on Compare & pull request.
 
-14. On the
+14. Choose the base branch `development` as that will be the branch you merge your branch into. (the development branch will be merged into master twice a day, at 11am and 11pm)
 
 15. On the right hand side, add reviewers to review your pull request. Then click "Create Pull Request"
+
+16. Once your pull request is approved and merged, it will be built out into production during the next build to production. (11am and 11pm is when builds to prod happen)
