@@ -76,7 +76,7 @@
 ## Purpose
 state the purpose for this app
  
-## Screenshot
+## Screenshots
 <!-- post any screenshots -->
 <!-- ![screenshot](./public/assets/images/screenshot.png) -->
 
@@ -104,6 +104,12 @@ state the purpose for this app
   `npm install`
 
   `gulp`
+
+
+
+
+
+----------------------------------------------------------
 
 
 # Linting
