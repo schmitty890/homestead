@@ -1,6 +1,6 @@
 //the Test Module is a namespaced function to what feature of the site this function powers
 var Test = function(){
-  var aTestVariable = 'test!!';
+  var aTestVariable = 'test';
 
   //another function private to Module
   function privateFunction(){
