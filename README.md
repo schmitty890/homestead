@@ -71,7 +71,7 @@
 
 
 
-- Visit the deployed site at [example](https://obscure-fortress-66993.herokuapp.com/) for demo.
+- Visit [Homestead](https://obscure-fortress-66993.herokuapp.com/) for demo.
 
 ## Purpose
 state the purpose for this app
