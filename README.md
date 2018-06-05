@@ -118,7 +118,7 @@ If you have any errors, please fix them. if you have warnings that could slide, 
 
 # Development 👨‍💻
 
-The command `gulp` will automatically launch the project in google chrome.
+The command `npm start` will automatically launch the project. navigate to `http://localhost:3000/`
 
 The files watched by gulp are the client js and sass files.
 
