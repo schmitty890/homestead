@@ -1,7 +1,6 @@
 # homestead
 
 
-# proposed directory structure
 ## Application Structure
 
     .
@@ -93,10 +92,10 @@ state the purpose for this app
 - [Sequelize](https://www.npmjs.com/package/sequelize)
 - HTML5, CSS3, Javascript and jQuery
 
-## Features
+# Features
 <!-- list any features -->
 
-## Installation
+# Getting Started
 - Fork or clone the GitHub repo to your machine.
 - Ensure that you have Node.js, MySQL and Gulp installed on your machine.
 - If you have a password that protects your MySQL root user, enter that password in the connection.js file in the cloned repo.
@@ -129,17 +128,17 @@ If you're editing any file outside of `public/assets/js` or `sass/partials`, we 
 
 ### Branching process
 
-Master is a protected branch. This means we need at least 1 approval before we merge into our master branch.
-(having the master branch protected helps so we know for sure what is going into master, and noone can accidentally push code to it and break our site)
-Develop will be the branch we work off of. Develop will be merged into master twice a day.
-This screenshot illustrates this process.
-Feature A and Feature B are branches where we code our tasks. Once finished, we merge our branch into develop. At the end of everyday, develop gets merged into master.
+- Master is a protected branch. This means we need at least 1 approval before we merge into our master branch. (having the master branch protected helps so we know for sure what is going into master, and noone can accidentally push code to it and break our site)
+- Develop will be the branch we create branches off of. Develop will be merged into master at the end of every day.
+- This screenshot below illustrates this process.
+- Feature A and Feature B are branches where we code our tasks. Once finished with making your edits, we merge that branch into develop. At the end of everyday, develop gets merged into master.
+- Then develop is updated with the latest version of master, and the process happens all over again.
 
 ![screenshot](./public/assets/images/branching.jpg)
 
 
 ```
-1. Start on a clean branch
+1. <b>Start on a clean branch</b>
   1.1 Check which branch you're on `git branch`
 
   1.2 Start on develop branch, `git checkout develop`
@@ -148,31 +147,31 @@ Feature A and Feature B are branches where we code our tasks. Once finished, we 
 
   1.4 Create your new branch to code your story, `git checkout -b <branchname>` (Title your branch name the title of the story you're working on, replace spaces with -)
 
-  1.5 Now you're on your own branch. Type `git branch` to see you're on your new branch.
+  1.5 Now you're on your own branch. Type `git branch` to see you're on your new branch
 
-  1.6 Now write your code.
+  1.6 Now write your code
 ```
 
 ```
-2. You're done writing code, time to add your files and commit message to your branch
+2. <b>You're done writing code, time to add your files and commit message to your branch</b>
 
   2.1 Once you're code is done for the story you're working on, run `npm run -s eslint .` to see if any linting errors/warnings. fix anything that is outstanding. next we will add your changes to your branch and commit them.
 
   2.2 Type `git status` to see the status of the files you've worked on. (these should be red, because you havent added them yet)
 
-  2.3 To add these files, do a `git add .` to add all files.
+  2.3 To add these files, do a `git add .` to add all files
 
-  2.4 Type `git status` again, you will now see the files are green, which indicates they have been added to your branch.
+  2.4 Type `git status` again, you will now see the files are green, which indicates they have been added to your branch
 
   2.5 Now make your commit message that says specifically what code you changed in this story. `git commit -m "your commit message here"`
 ```  
 
 ```
-3. You're ready to push your branch up to github.
+3. <b>You're ready to push your branch up to github</b>
 
   3.1 Next, push your code up to the repository, with a `git push origin <branchname>`
 
-  3.2 Once your branch is pushed up, navigate to our repo, and you can see branch under "Your recently pushed branches:". Click on Compare & pull request.
+  3.2 Once your branch is pushed up, navigate to our repo, and you can see branch under "Your recently pushed branches:". Click on Compare & pull request
 
   3.3 Choose the base branch `development` as that will be the branch you merge your branch into. (the development branch will be merged into master daily TODO: determine when we want builds to master branch to happen)
 
