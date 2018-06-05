@@ -23,4 +23,4 @@ var Test = function(){
 //how we call the Test Module to execute its functions
 Test.init();
 
-console.log('test 2');
+console.log('test2');
