@@ -138,7 +138,8 @@ If you're editing any file outside of `public/assets/js` or `sass/partials`, we 
 
 
 ```
-1. <b>Start on a clean branch</b>
+1. Start on a clean branch
+
   1.1 Check which branch you're on `git branch`
 
   1.2 Start on develop branch, `git checkout develop`
@@ -153,7 +154,7 @@ If you're editing any file outside of `public/assets/js` or `sass/partials`, we 
 ```
 
 ```
-2. <b>You're done writing code, time to add your files and commit message to your branch</b>
+2. You're done writing code, time to add your files and commit message to your branch
 
   2.1 Once you're code is done for the story you're working on, run `npm run -s eslint .` to see if any linting errors/warnings. fix anything that is outstanding. next we will add your changes to your branch and commit them.
 
@@ -167,7 +168,7 @@ If you're editing any file outside of `public/assets/js` or `sass/partials`, we 
 ```  
 
 ```
-3. <b>You're ready to push your branch up to github</b>
+3. You're ready to push your branch up to github
 
   3.1 Next, push your code up to the repository, with a `git push origin <branchname>`
 
