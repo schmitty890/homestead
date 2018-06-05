@@ -126,7 +126,7 @@ If you're editing any file outside of `public/assets/js` or `sass/partials`, we 
 
 
 ### Branching process
-
+```
 1. Start on a clean branch
   1.1 Check which branch you're on `git branch`
 
@@ -163,3 +163,4 @@ If you're editing any file outside of `public/assets/js` or `sass/partials`, we 
   3.4 On the right hand side, add reviewers to review your pull request. Then click "Create Pull Request"
 
   3.5 Once your pull request is approved and merged, it will be built out into production during the next build to production. (11am and 11pm is when builds to prod happen)
+```
