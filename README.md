@@ -99,13 +99,13 @@ state the purpose for this app
 - Fork or clone the GitHub repo to your machine.
 - Ensure that you have Node.js, MySQL and Gulp installed on your machine.
 - If you have a password that protects your MySQL root user, enter that password in the connection.js file in the cloned repo.
-- In your CLI, navigate to the cloned directory. Install the npm dependencies and run gulp.
+- In your CLI, navigate to the cloned directory. `npm install` the dependencies and run `npm start`
 
   `npm install`
 
-  `gulp`
+  `npm start`
 
-- Once gulp is started, you are able to view the project on `http://localhost:3000/`
+- Once started, you are able to view the project on `http://localhost:3000/`
 
 - 🎉Happy developing!🎉
 
