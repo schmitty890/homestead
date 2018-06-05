@@ -61,7 +61,7 @@
     │   └── test3.js                      # test3.js            - unit test 3
     ├── .editorconfig                     # .editorconfig       - holds text editor configuration file so team members can have the same spacing and indentation
     ├── .env                              # .env                - environment variable file - we hold any private variables here, such as our jawsDB credentials or api keys
-    ├── .eslintirc.js                     # .eslintrc.js        - holds eslint rules and configuration
+    ├── .eslintrc.js                      # .eslintrc.js        - holds eslint rules and configuration
     ├── .gitignore                        # .gitignore          - ignore node modules, .env, .DS_Store, any other file that needs to be ignored
     ├── gulpfile.js                       # gulpfile.js         - gulp file that reads all files from gulp tasks folder, and runs the default task. See gulp tasks to see what is run.
     ├── package-lock.json                 # package-lock.js     - auto generated file
@@ -126,7 +126,18 @@ Sass files are located at `sass/partials/*.scss`. Editing these files and saving
 If you're editing any file outside of `public/assets/js` or `sass/partials`, we recommend running `npm run watch`, this runs nodemon, which watches all of our files.
 
 
+
 ### Branching process
+
+Master is a protected branch. This means we need at least 1 approval before we merge into our master branch.
+(having the master branch protected helps so we know for sure what is going into master, and noone can accidentally push code to it and break our site)
+Develop will be the branch we work off of. Develop will be merged into master twice a day.
+This screenshot illustrates this process.
+Feature A and Feature B are branches where we code our tasks. Once finished, we merge our branch into develop. At the end of everyday, develop gets merged into master.
+
+![screenshot](./public/assets/images/branching.jpg)
+
+
 ```
 1. Start on a clean branch
   1.1 Check which branch you're on `git branch`
@@ -163,9 +174,9 @@ If you're editing any file outside of `public/assets/js` or `sass/partials`, we 
 
   3.2 Once your branch is pushed up, navigate to our repo, and you can see branch under "Your recently pushed branches:". Click on Compare & pull request.
 
-  3.3 Choose the base branch `development` as that will be the branch you merge your branch into. (the development branch will be merged into master twice a day, at 11am and 11pm)
+  3.3 Choose the base branch `development` as that will be the branch you merge your branch into. (the development branch will be merged into master daily TODO: determine when we want builds to master branch to happen)
 
   3.4 On the right hand side, add reviewers to review your pull request. Then click "Create Pull Request"
 
-  3.5 Once your pull request is approved and merged, it will be built out into production during the next build to production. (11am and 11pm is when builds to prod happen)
+  3.5 Once your pull request is approved and merged, it will be built out into master during the next build to production. (TODO: determine when we want builds to maste branch to happen)
 ```
