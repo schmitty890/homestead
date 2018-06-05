@@ -139,7 +139,9 @@ If you're editing any file outside of `public/assets/js` or `sass/partials`, we 
   1.5 Now you're on your own branch. Type `git branch` to see you're on your new branch.
 
   1.6 Now write your code.
+```
 
+```
 2. You're done writing code, time to add your files and commit message to your branch
 
   2.1 Once you're code is done for the story you're working on, run `npm run -s eslint .` to see if any linting errors/warnings. fix anything that is outstanding. next we will add your changes to your branch and commit them.
@@ -151,7 +153,9 @@ If you're editing any file outside of `public/assets/js` or `sass/partials`, we 
   2.4 Type `git status` again, you will now see the files are green, which indicates they have been added to your branch.
 
   2.5 Now make your commit message that says specifically what code you changed in this story. `git commit -m "your commit message here"`
+```  
 
+```
 3. You're ready to push your branch up to github.
 
   3.1 Next, push your code up to the repository, with a `git push origin <branchname>`
