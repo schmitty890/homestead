@@ -105,6 +105,10 @@ state the purpose for this app
 
   `gulp`
 
+- Once gulp is started, you are able to view the project on `http://localhost:3000/`
+
+- 🎉Happy developing!🎉
+
 
 # Linting
 Before you push your branch up to the `develop` branch, ensure you lint your code.
@@ -112,7 +116,7 @@ Before you push your branch up to the `develop` branch, ensure you lint your cod
 run `npm run -s eslint .` this will show if you have any ESLint errors or warnings.
 If you have any errors, please fix them. if you have warnings that could slide, push your code up or talk with a team member.
 
-# Development
+# Development 👨‍💻
 
 The command `gulp` will automatically launch the project in google chrome.
 
@@ -128,14 +132,15 @@ If you're editing any file outside of `public/assets/js` or `sass/partials`, we 
 
 ### Branching process
 
-- Master is a protected branch. This means we need at least 1 approval before we merge into our master branch. (having the master branch protected helps so we know for sure what is going into master, and noone can accidentally push code to it and break our site)
+- Master is a 🔒protected branch🔒. This means we need at least 1 approval before we merge into our master branch. (having the master branch protected helps so we know for sure what is going into master, and noone can accidentally push code to it and break our site)
 - Develop will be the branch we create branches off of. Develop will be merged into master at the end of every day.
-- This screenshot below illustrates this process.
+- This screenshot 👇 illustrates this process
 - Feature A and Feature B are branches where we code our tasks. Once finished with making your edits, we merge that branch into develop. At the end of everyday, develop gets merged into master.
 - Then develop is updated with the latest version of master, and the process happens all over again.
 
 ![screenshot](./public/assets/images/branching.jpg)
 
+Here is a helpful reminder of the git process when creating, adding to, committing and pushing branches. Refer to this whenever needed, as working in a team environment with branches really helps keep everyones code organized and makes the project much more manageable.
 
 ```
 1. Start on a clean branch
@@ -150,7 +155,7 @@ If you're editing any file outside of `public/assets/js` or `sass/partials`, we 
 
   1.5 Now you're on your own branch. Type `git branch` to see you're on your new branch
 
-  1.6 Now write your code
+  1.6 Now write your code ✏️
 ```
 
 ```
@@ -160,7 +165,7 @@ If you're editing any file outside of `public/assets/js` or `sass/partials`, we 
 
   2.2 Type `git status` to see the status of the files you've worked on. (these should be red, because you havent added them yet)
 
-  2.3 To add these files, do a `git add .` to add all files
+  2.3 To add these files, type `git add .` to add all files
 
   2.4 Type `git status` again, you will now see the files are green, which indicates they have been added to your branch
 
@@ -174,9 +179,19 @@ If you're editing any file outside of `public/assets/js` or `sass/partials`, we 
 
   3.2 Once your branch is pushed up, navigate to our repo, and you can see branch under "Your recently pushed branches:". Click on Compare & pull request
 
-  3.3 Choose the base branch `development` as that will be the branch you merge your branch into. (the development branch will be merged into master daily TODO: determine when we want builds to master branch to happen)
+  3.3 ❗Choose the base branch `development` as that will be the branch that you merge your branch into. (the development branch will be merged into master daily TODO: determine when we want builds to master branch to happen ❓)
 
   3.4 On the right hand side, add reviewers to review your pull request. Then click "Create Pull Request"
 
-  3.5 Once your pull request is approved and merged, it will be built out into master during the next build to production. (TODO: determine when we want builds to maste branch to happen)
+  3.5 Once your pull request is approved and merged, it will be 🙌built out into master🙌 during the next build to production. (TODO: determine when we want builds to maste branch to happen ❓)
 ```
+
+
+### Find a bug or want to add an issue? 🕵️
+
+- Document what the issue is, if you can find the root problem, write whatever you have down
+- Go to the Issues tab, create a new issue
+- Assign it to yourself if you want to work on that issue, or leave it blank and someone else can assign themselves to it if they want to take on the challenge
+- Add a label to it. Most are going to be bugs or enhancement
+- [See bucky talk about this in more detail](https://www.youtube.com/watch?v=YshvUGgF_3o)
+
