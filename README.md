@@ -61,7 +61,7 @@
     │   └── test3.js                      # test3.js            - unit test 3
     ├── .editorconfig                     # .editorconfig       - holds text editor configuration file so team members can have the same spacing and indentation
     ├── .env                              # .env                - environment variable file - we hold any private variables here, such as our jawsDB credentials or api keys
-    ├── .eslintirc.js                     # .eslintrc.js        - holds eslint rules and configuration
+    ├── .eslintrc.js                      # .eslintrc.js        - holds eslint rules and configuration
     ├── .gitignore                        # .gitignore          - ignore node modules, .env, .DS_Store, any other file that needs to be ignored
     ├── gulpfile.js                       # gulpfile.js         - gulp file that reads all files from gulp tasks folder, and runs the default task. See gulp tasks to see what is run.
     ├── package-lock.json                 # package-lock.js     - auto generated file
