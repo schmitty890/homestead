@@ -12,6 +12,7 @@ module.exports = {
     "no-empty": "error",
     "no-multiple-empty-lines": "warn",
     "no-var": "error",
-    "prefer-const": "error"
+    "prefer-const": "error",
+    "quotes": ["error", "single"]
   }
 };

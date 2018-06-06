@@ -1,14 +1,14 @@
-var browserSync = require('browser-sync').create();
-var gulp = require('gulp');
-var nodemon = require('gulp-nodemon');
-var reload = browserSync.reload;
-var clean = require('gulp-clean');
-var maps = require('gulp-sourcemaps');
-var concat = require('gulp-concat');
-var sass = require('gulp-sass');
-var watchSass = require("gulp-watch-sass");
-var uglify = require('gulp-uglify');
-var rename = require('gulp-rename');
+const browserSync = require('browser-sync').create();
+const gulp = require('gulp');
+const nodemon = require('gulp-nodemon');
+const reload = browserSync.reload;
+const clean = require('gulp-clean');
+const maps = require('gulp-sourcemaps');
+const concat = require('gulp-concat');
+const sass = require('gulp-sass');
+const watchSass = require("gulp-watch-sass");
+const uglify = require('gulp-uglify');
+const rename = require('gulp-rename');
 
 // when served, watch files. call browser-sync
 gulp.task('serve', ['browser-sync'], function() {
@@ -31,7 +31,7 @@ gulp.task('browser-sync', ['nodemon'], function() {
 
 // nodemon calls sass and concatScripts
 gulp.task('nodemon', ['sass', 'concatScripts'], function(done) {
-  var running = false;
+  let running = false;
   return nodemon({
     script: 'server.js',
     watch: 'public/assets/'

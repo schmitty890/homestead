@@ -1,6 +1,6 @@
-var gulp = require('gulp');
-var wrench = require('wrench');
-var runSequence = require('run-sequence');
+const gulp = require('gulp');
+const wrench = require('wrench');
+const runSequence = require('run-sequence');
 
 // configure wrench to read all the files in gulp-tasks directory. filters out looking for any file that ends in js
 // take all the .js files and map them to our require function. this includes all of our gulp-tasks and make them available to be run by gulp
