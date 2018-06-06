@@ -5,7 +5,10 @@ var Test = function(){
   //another function private to Module
   function privateFunction(){
     //this can log the 'aTestVariable' because it is defined outside of this Module function, but aTestVariable is kept private to this Module
-    console.log(aTestVariable);
+    if (aTestVariable === 'test') {
+      console.log(aTestVariable);
+    }
+
   }
 
   //this init function initializes the functions ran
