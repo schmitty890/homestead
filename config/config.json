@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": null,
-    "database": "homestead_db",
+    "database": "homestead",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
