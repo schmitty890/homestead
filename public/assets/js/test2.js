@@ -1,4 +1,1 @@
-var globalVar = 'global test variable!';
-
-
-Test.privateFunction();
+console.log('test2');
