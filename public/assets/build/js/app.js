@@ -5,10 +5,7 @@ var Test = function(){
   //another function private to Module
   function privateFunction(){
     //this can log the 'aTestVariable' because it is defined outside of this Module function, but aTestVariable is kept private to this Module
-    if (aTestVariable === 'test') {
       console.log(aTestVariable);
-    }
-
   }
 
   //this init function initializes the functions ran
@@ -27,7 +24,4 @@ var Test = function(){
 //how we call the Test Module to execute its functions
 Test.init();
 
-var globalVar = 'global test variable!';
-
-
-Test.privateFunction();
+console.log('test2');
