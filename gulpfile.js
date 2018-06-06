@@ -7,7 +7,7 @@ const runSequence = require('run-sequence');
 wrench
   .readdirSyncRecursive('./gulp-tasks')
   .filter(function(file) {
-    return(/\.(js)$/i).test(file);
+    return (/\.(js)$/i).test(file);
   })
   .map(function(file) {
     require('./gulp-tasks/' + file)

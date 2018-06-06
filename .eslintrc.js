@@ -13,6 +13,11 @@ module.exports = {
     "no-multiple-empty-lines": "warn",
     "no-var": "error",
     "prefer-const": "error",
-    "quotes": ["error", "single"]
+    "quotes": ["error", "single"],
+    "indent": ["error", 2],
+    "no-unused-vars": "error",
+    "keyword-spacing": 2,
+    "space-before-function-paren": ["error", "never"],
+    "eqeqeq": ["error", "always"]
   }
 };

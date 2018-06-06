@@ -6,7 +6,6 @@ const clean = require('gulp-clean');
 const maps = require('gulp-sourcemaps');
 const concat = require('gulp-concat');
 const sass = require('gulp-sass');
-const watchSass = require("gulp-watch-sass");
 const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
 
@@ -37,7 +36,7 @@ gulp.task('nodemon', ['sass', 'concatScripts'], function(done) {
     watch: 'public/assets/'
   }).on('start', function() {
     console.log('-----------------start-----------------');
-    if(!running) {
+    if (!running) {
       done();
     }
     running = true;
@@ -63,8 +62,8 @@ gulp.task('clean', function() {
   console.log('gulp clean task');
   return gulp.src([ // return acts as sort of a promise, without the return statement, other tasks wont know until the clean task is finished.
     'public/assets/build/'
-      ])
-      .pipe(clean());
+  ])
+    .pipe(clean());
 });
 
 // concat, map, and write js to build folder
@@ -72,12 +71,12 @@ gulp.task('concatScripts', function() {
   console.log('gulp concatScripts task');
   return gulp.src([
     './public/assets/js/*.js'
-      ])
-      .pipe(maps.init())
-      .pipe(concat('app.js'))
-      .pipe(gulp.dest('public/assets/build/js'))
-      .pipe(uglify())
-      .pipe(rename({ extname: '.min.js' }))
-      .pipe(maps.write('./'))
-      .pipe(gulp.dest('public/assets/build/js'));
+  ])
+    .pipe(maps.init())
+    .pipe(concat('app.js'))
+    .pipe(gulp.dest('public/assets/build/js'))
+    .pipe(uglify())
+    .pipe(rename({ extname: '.min.js' }))
+    .pipe(maps.write('./'))
+    .pipe(gulp.dest('public/assets/build/js'));
 });
