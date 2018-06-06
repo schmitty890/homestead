@@ -5,6 +5,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars');
 const dotenv = require('dotenv').config();
+const passport   = require('passport')
+const session    = require('express-session')
 
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -21,10 +23,20 @@ app.use(express.static('public'));
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
+// For Passport
+app.use(session({ secret: 'keyboard cat',resave: true, saveUninitialized:true})); // session secret
+app.use(passport.initialize()); //initializes passport
+app.use(passport.session()); // creates persistent login sessions
+
 // Routes
 // =============================================================
-require('./controller/api-routes.js')(app);
-require('./controller/html-routes.js')(app);
+require('./routes/api-routes.js')(app);
+require('./routes/html-routes.js')(app);
+require('./routes/auth-routes.js')(app,passport);
+
+//Load Passport Strategies
+// =============================================================
+require('./config/passport/passport.js')(passport, db.user);
 
 // Starting our Express app
 // =============================================================
