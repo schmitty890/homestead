@@ -34,6 +34,7 @@
   },
   "devDependencies": {
     "browser-sync": "^2.24.4",
+    "chai": "^4.1.2",
     "eslint": "^4.19.1",
     "gulp": "^3.9.1",
     "gulp-clean": "^0.4.0",
@@ -45,6 +46,7 @@
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.0",
     "gulp-watch-sass": "^1.4.1",
+    "mocha": "^5.2.0",
     "run-sequence": "^2.2.1",
     "wrench": "^1.5.9"
   }
