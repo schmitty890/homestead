@@ -1,13 +1,13 @@
-const exports = module.exports = {}
+var exports = module.exports = {}
 //not using this yet
 //const db = require("../models");
 
 exports.signup = function(req,res){
-  res.render('signup'); 
+  res.render('signup');
 }
 
 exports.signin = function(req,res){
-  res.render('signin'); 
+  res.render('signin');
 }
 
 //example of how we can grab data coming through the route before rendering.
