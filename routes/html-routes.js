@@ -6,8 +6,14 @@
 
 module.exports = function(app) {
 
+  // Home Page
   app.get('/', function(req, res) {
     res.render('index', {title: 'homestead'});
   });
+
+  // Frequently Asked Questions
+  app.get('/faq', function(req, res) {
+    res.render('faq')
+  })
 
 };
