@@ -12,10 +12,10 @@ a:hover, a:focus, a:active {
   text-decoration: none;
 }
 a:hover {
-  color: #ff0000;
+  color: $color-accent;
 }
 a.icon i {
-  color: #ff0000;
+  color: $color-accent;
   margin-right: 1rem;
   font-size: 1.2rem;
 }
@@ -39,23 +39,23 @@ a.text-uppercase {
   font-weight: 600;
 }
 a.link {
-  color: #ff0000;
+  color: $color-accent;
 }
 a.nav-link i {
   color: inherit;
   opacity: .3;
 }
 a.nav-link.active {
-  color: #ff0000;
+  color: $color-accent;
 }
 a.nav-link.active i {
-  color: #ff0000;
+  color: $color-accent;
   opacity: 1;
 }
 body, html {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: $font-details;
   font-weight: 500;
   position: relative;
 }
@@ -64,7 +64,7 @@ html {
 }
 body {
   font-size: 1.4rem;
-  background-color: #f2f2f2;
+  background-color: $color-content-background;
   height: 100%;
   overflow-x: hidden;
 }
@@ -80,17 +80,17 @@ dl dd {
   padding: .2rem 0;
 }
 h1 {
-  font-family: 'Varela Round', sans-serif;
+  font-family: $font-headers;
   font-size: 3.6rem;
 }
 h2 {
-  font-family: 'Varela Round', sans-serif;
+  font-family: $font-headers;
   font-size: 2.4rem;
   margin-bottom: 4rem;
   padding-top: 1rem;
 }
 h3 {
-  font-family: 'Varela Round', sans-serif;
+  font-family: $font-headers;
   font-size: 1.8rem;
   margin-bottom: 2rem;
 }
@@ -114,7 +114,7 @@ figure.with-icon {
   padding-left: 2.5rem;
 }
 figure.with-icon i {
-  color: #ff0000;
+  color: $color-accent;
   position: absolute;
   line-height: 2rem;
   left: 0;
@@ -157,7 +157,7 @@ ul.features-checkboxes li, ol.features-checkboxes li, dl.features-checkboxes li 
 ul.features-checkboxes li:before, ol.features-checkboxes li:before, dl.features-checkboxes li:before {
   width: 2rem;
   height: 2rem;
-  background-color: #ff0000;
+  background-color: $color-accent;
   border-radius: .3rem;
   content: "";
   display: inline-block;

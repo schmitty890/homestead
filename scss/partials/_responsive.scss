@@ -636,7 +636,7 @@
   -webkit-transform: rotate(-45deg);
   width: 140px;
   display: block;
-  background: #ff0000;
+  background: $color-accent;
   // box-shadow: $bs;
   position: absolute;
   top: 25px;
@@ -670,7 +670,7 @@
   box-sizing: content-box;
   width: 0;
   height: 40px;
-  border: 15px solid #ff0000;
+  border: 15px solid $color-accent;
   border-top: 0 solid;
   border-bottom: 15px solid rgba(0,0,0,0);
   color: #fff;
