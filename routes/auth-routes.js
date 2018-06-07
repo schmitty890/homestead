@@ -1,4 +1,4 @@
-var authController = require('../controller/authcontroller');
+const authController = require('../controller/authcontroller');
 const passport   = require('passport')
 
 module.exports = function(app) {
@@ -19,7 +19,7 @@ module.exports = function(app) {
   //function to protect routes
   function isLoggedIn(req, res, next) {
     if (req.isAuthenticated())
-        return next();
+      return next();
     res.redirect('/signin');
-}
+  }
 }
