@@ -6,6 +6,7 @@
 
 module.exports = function(app) {
 
+  // Home Page
   app.get('/', function(req, res) {
     res.render('index', {title: 'homestead'});
   });
@@ -53,22 +54,5 @@ module.exports = function(app) {
   app.get('/itemsneeded', function(req, res) {
     res.render('itemsneeded');
   });
-}
+};
 
-/* │──Resource Share Route: "/resources" Template: home->home4
-│ │
-│ │──Skills Offered Route: "/skillsoffered" *Template:*Either Listing or Masony, Sbar?
-│ │ │
-│ │ │──Post Event Route: "/postresource" *Template:*duplicate
-│ │
-│ │──Skills Needed Route: "/itemsneeded" *Template:*Either Listing or Masony, Sbar?
-│ │ │
-│ │ │──Post Class Route: "/postresource" *Template:*duplicate
-│ │
-│ │──Items Offered Route: "/itemsoffered" *Template:*Either Listing or Masony, Sbar?
-│ │ │
-│ │ │──Post Meetups Route: "/postresource" *Template:*duplicate
-│ │ │
-│ │──Items Needed Route: "/itemsneeded" *Template:*Either Listing or Masony, Sbar?
-│ │ │
-│ │ │──Post Meetups Route: "/postresource" *Template:*duplicate */
