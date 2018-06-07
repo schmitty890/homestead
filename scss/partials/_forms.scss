@@ -16,8 +16,8 @@
   outline: none !important;
 }
 .btn.btn-primary {
-  background-color: #ff0000;
-  border-color: #ff0000;
+  background-color: $color-accent;
+  border-color: $color-accent;
 }
 .btn.btn-primary:hover, .btn.btn-primary:focus, .btn.btn-primary:active {
   color: #fff;
@@ -30,11 +30,11 @@
   background-color: transparent;
 }
 .btn.btn-framed.btn-primary {
-  color: #ff0000;
+  color: $color-accent;
 }
 .btn.btn-framed.btn-primary:hover, .btn.btn-framed.btn-primary:focus, .btn.btn-framed.btn-primary:active {
-  background-color: #ff0000;
-  border-color: #ff0000;
+  background-color: $color-accent;
+  border-color: $color-accent;
   box-shadow: none;
   color: #fff;
 }
@@ -190,7 +190,7 @@ input[type="text"], input[type="email"], input[type="date"], input[type="time"],
   box-shadow: inset 0 0 1rem 0 rgba(0,0,0, .1);
   border: .1rem solid rgba(0,0,0, .15);
   border-radius: .3rem;
-  color: #363636;
+  color: $col-header-nav;
   transition: .3s;
   transform-style: preserve-3d;
   -webkit-appearance: none;
@@ -236,7 +236,7 @@ input[type="text"].small, input[type="email"].small, input[type="date"].small, i
   left: .5rem;
 }
 .icheckbox.checked, .iradio.checked {
-  box-shadow: inset 0 0 0 1rem #ff0000;
+  box-shadow: inset 0 0 0 1rem $color-accent;
 }
 .iradio {
   border-radius: 50%;
@@ -245,7 +245,7 @@ input[type="text"].small, input[type="email"].small, input[type="date"].small, i
   display: none;
 }
 .iradio.checked {
-  box-shadow: inset 0 0 0 .6rem #ff0000;
+  box-shadow: inset 0 0 0 .6rem $color-accent;
 }
 label {
   padding-bottom: .5rem;
@@ -393,9 +393,9 @@ label.required:after {
   position: relative;
 }
 .form.hero-form .main-search-form .form-group label {
-  font-family: 'Varela Round',sans-serif;
+  font-family: $font-headers;
   font-size: 2.4rem;
-  color: #ff0000;
+  color: $color-accent;
   position: absolute;
   top: -5rem;
   font-weight: normal;
@@ -412,11 +412,11 @@ label.required:after {
 }
 .form.form-submit .icheckbox {}
 .form.form-submit .icheckbox.checked {
-  box-shadow: inset 0 0 0 1rem #ff0000;
+  box-shadow: inset 0 0 0 1rem $color-accent;
 }
 .form.form-submit .iradio {}
 .form.form-submit .iradio.checked {
-  box-shadow: inset 0 0 0 .6rem #ff0000;
+  box-shadow: inset 0 0 0 .6rem $color-accent;
 }
 .form-group {
   margin-bottom: 1.5rem;
@@ -433,7 +433,7 @@ label.required:after {
   opacity: .5;
 }
 .form-group .input-group-addon.geo-location, .form-group .input-group-addon.search-icon {
-  color: #ff0000;
+  color: $color-accent;
   cursor: pointer;
   opacity: 1;
   position: absolute;
@@ -517,7 +517,7 @@ label.required:after {
 .form-slides#category-tabs:before {
   border-style: solid;
   border-width: .9rem 1rem .9rem 0;
-  border-color: transparent #f2f2f2 transparent transparent;
+  border-color: transparent $col-content-background transparent transparent;
   content: "";
   position: absolute;
   left: -.9rem;
@@ -571,7 +571,7 @@ label.required:after {
   color: rgba(0,0,0,.5);
 }
 .file-upload span i {
-  color: #ff0000;
+  color: $color-accent;
   margin-right: 1rem;
 }
 .file-upload-previews > .MultiFile-label {
