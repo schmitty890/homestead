@@ -9,12 +9,24 @@ module.exports = function(app) {
     successRedirect: '/account',
     failureRedirect: '/signup'
   }));
-  app.get('/dashboard',isLoggedIn, authController.account);
-  app.get('/logout',authController.logout);
   app.post('/signin', passport.authenticate('local-signin',  { 
     successRedirect: '/account',
     failureRedirect: '/signin'}
   ));
+  app.get('/account',isLoggedIn, authController.account);
+  app.get('/postcommunity', isLoggedIn, authController.postcommunity);
+  app.get('/postclassified', isLoggedIn, authController.postclassified);
+  app.get('/postresource', isLoggedIn, authController.postresource);
+  app.get('/contact', isLoggedIn, authController.contact);
+  app.get('/logout',authController.logout);
+/*
+│ │──Post to Community Route: "/postcommunity" *Template:*Submit Ad
+│ │
+│ │──Post to Classifieds Route: "/postclassified" *Template:*Submit Ad
+│ │
+│ │──Post to Resources Route: "/postresource" *Template:*Submit Ad
+│ │
+│ │──Message HOA Route: "/contact" *Template:*Contact */
 
   //function to protect routes
   function isLoggedIn(req, res, next) {
