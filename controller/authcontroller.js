@@ -17,6 +17,23 @@ exports.account = function(req, res) {
   res.render('account', { userId: req.user.id });
 }
 
+exports.postcommunity = function(req, res) {
+  res.render('postcommunity', { userId: req.user.id });
+}
+
+exports.postclassified = function(req, res) {
+  res.render('postclassified', { userId: req.user.id });
+}
+
+exports.postresource = function(req, res) {
+  res.render('postresource', { userId: req.user.id });
+}
+
+exports.contact = function(req, res) {
+  res.render('contact', { userId: req.user.id });
+}
+
+
 // logout route from header lands here and destroys the express session then redirects to home.
 exports.logout = function(req,res){
   req.session.destroy(function() {
