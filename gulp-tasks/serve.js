@@ -11,9 +11,6 @@ const rename = require('gulp-rename');
 
 // when served, watch files. call browser-sync
 gulp.task('serve', ['browser-sync'], function() {
-  // gulp.watch('public/assets/js/*.js').on('change', reload);
-  gulp.watch('public/assets/build/js/*.js').on('change', reload);
-  gulp.watch('public/assets/build/css/*.css').on('change', reload);
   gulp.watch('scss/partials/*.scss', ['sass']);
   gulp.watch('public/assets/js/*.js', ['concatScripts']);
 });
