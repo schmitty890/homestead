@@ -402,7 +402,7 @@ Headers:		'Varela Round', sans-serif;
 /********
 --- E ---
 ********/
-.elements-grid [class*="col"] div, .elements-grid [class*="col-"] div {
+.elements-grid [class*="col"] div, .elements-grid [class*="color-"] div {
   background-color: rgba(0,0,0,.1);
   text-align: center;
   border: .1rem solid rgba(0,0,0,.1);
@@ -674,7 +674,7 @@ Headers:		'Varela Round', sans-serif;
   opacity: 0;
 }
 .hero .secondary-navigation {
-  background-color: $col-header-nav;
+  background-color: $color-header-nav;
   color: #fff;
   font-size: 1.1rem;
   font-weight: 500;
@@ -1647,7 +1647,7 @@ Headers:		'Varela Round', sans-serif;
   background-color: #fff;
 }
 .page >.content {
-  background-color: $col-content-background;
+  background-color: $color-content-background;
   z-index: 1;
 }
 .page >.content:after {
@@ -1670,7 +1670,7 @@ Headers:		'Varela Round', sans-serif;
   padding-top: 2rem;
 }
 .page.sub-page .form.hero-form .main-search-form {
-  background-color: $col-content-background;
+  background-color: $color-content-background;
   padding: 5rem 3rem 1rem 3rem;
   border-radius: .3rem;
   margin-bottom: 1rem;
@@ -1686,7 +1686,7 @@ Headers:		'Varela Round', sans-serif;
 .page.sub-page .form.hero-form .main-search-form:before {
   border-style: solid;
   border-width: 0 .45rem .6rem .45rem;
-  border-color: transparent transparent $col-content-background transparent;
+  border-color: transparent transparent $color-content-background transparent;
   position: absolute;
   top: -.6rem;
   right: 1.5rem;
@@ -1860,11 +1860,11 @@ Headers:		'Varela Round', sans-serif;
   height: 10rem;
   width: 100%;
   content: "";
-  pointer-events: none;/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/$col-content-background+0,f2f2f2+100&0+0,1+66 */
+  pointer-events: none;/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/$color-content-background+0,f2f2f2+100&0+0,1+66 */
   background: -moz-linear-gradient(top,  rgba(242,242,242,0) 0%, rgba(242,242,242,1) 66%, rgba(242,242,242,1) 100%);/* FF3.6-15 */
   background: -webkit-linear-gradient(top,  rgba(242,242,242,0) 0%,rgba(242,242,242,1) 66%,rgba(242,242,242,1) 100%);/* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom,  rgba(242,242,242,0) 0%,rgba(242,242,242,1) 66%,rgba(242,242,242,1) 100%);/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00f2f2f2', endColorstr='$col-content-background',GradientType=0 );/* IE6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00f2f2f2', endColorstr='$color-content-background',GradientType=0 );/* IE6-9 */
 }
 /*------ Ribbon ------*/
 .ribbon-featured {
