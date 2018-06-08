@@ -1,0 +1,207 @@
+// hp-classifieds.json holds data for the home page classifieds section.
+// update this array of objects to update the classifieds on the homepage
+[{
+  "title": "classifieds 1",
+  "url": "classifieds1url",
+  "icon": "fa-bed",
+  "subcats": [
+  {
+    "title": "first",
+    "url": "/first"
+  },
+  {
+    "title": "second",
+    "url": "/second"
+  },
+  {
+    "title": "third",
+    "url": "/third"
+  }]
+},{
+  "title": "classifieds 2",
+  "url": "classifieds2url",
+  "icon": "fa-paw",
+  "subcats": [
+  {
+    "title": "first",
+    "url": "/first"
+  },
+  {
+    "title": "second",
+    "url": "/second"
+  },
+  {
+    "title": "third",
+    "url": "/third"
+  }]
+},{
+  "title": "classifieds 3",
+  "url": "classifieds3url",
+  "icon": "fa-ravelry",
+  "subcats": [
+  {
+    "title": "first",
+    "url": "/first"
+  },
+  {
+    "title": "second",
+    "url": "/second"
+  },
+  {
+    "title": "third",
+    "url": "/third"
+  }]
+},{
+  "title": "classifieds 4",
+  "url": "classifieds4url",
+  "icon": "fa-user-circle-o",
+  "subcats": [
+  {
+    "title": "first",
+    "url": "/first"
+  },
+  {
+    "title": "second",
+    "url": "/second"
+  },
+  {
+    "title": "third",
+    "url": "/third"
+  }]
+},{
+  "title": "classifieds 5",
+  "url": "classifieds5url",
+  "icon": "fa-arrows",
+  "subcats": [
+  {
+    "title": "first",
+    "url": "/first"
+  },
+  {
+    "title": "second",
+    "url": "/second"
+  },
+  {
+    "title": "third",
+    "url": "/third"
+  }]
+},{
+  "title": "classifieds 6",
+  "url": "classifieds6url",
+  "icon": "fa-bolt",
+  "subcats": [
+  {
+    "title": "first",
+    "url": "/first"
+  },
+  {
+    "title": "second",
+    "url": "/second"
+  },
+  {
+    "title": "third",
+    "url": "/third"
+  }]
+},{
+  "title": "classifieds 7",
+  "url": "classifieds7url",
+  "icon": "fa-car",
+  "subcats": [
+  {
+    "title": "first",
+    "url": "/first"
+  },
+  {
+    "title": "second",
+    "url": "/second"
+  },
+  {
+    "title": "third",
+    "url": "/third"
+  }]
+},{
+  "title": "classifieds 8",
+  "url": "classifieds8url",
+  "icon": "fa-cutlery",
+  "subcats": [
+  {
+    "title": "first",
+    "url": "/first"
+  },
+  {
+    "title": "second",
+    "url": "/second"
+  },
+  {
+    "title": "third",
+    "url": "/third"
+  }]
+},{
+  "title": "classifieds 9",
+  "url": "classifieds9url",
+  "icon": "fa-flag",
+  "subcats": [
+  {
+    "title": "first",
+    "url": "/first"
+  },
+  {
+    "title": "second",
+    "url": "/second"
+  },
+  {
+    "title": "third",
+    "url": "/third"
+  }]
+},{
+  "title": "classifieds 10",
+  "url": "classifieds10url",
+  "icon": "fa-hand-lizard-o",
+  "subcats": [
+  {
+    "title": "first",
+    "url": "/first"
+  },
+  {
+    "title": "second",
+    "url": "/second"
+  },
+  {
+    "title": "third",
+    "url": "/third"
+  }]
+},{
+  "title": "classifieds 11",
+  "url": "classifieds11url",
+  "icon": "fa-hourglass-start",
+  "subcats": [
+  {
+    "title": "first",
+    "url": "/first"
+  },
+  {
+    "title": "second",
+    "url": "/second"
+  },
+  {
+    "title": "third",
+    "url": "/third"
+  }]
+},{
+  "title": "classifieds 12",
+  "url": "classifieds12url",
+  "icon": "fa-location-arrow",
+  "subcats": [
+  {
+    "title": "first",
+    "url": "/first"
+  },
+  {
+    "title": "second",
+    "url": "/second"
+  },
+  {
+    "title": "third",
+    "url": "/third"
+  }]
+}]

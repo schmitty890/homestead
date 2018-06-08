@@ -3,12 +3,16 @@
 // *********************************************************************************
 
 // var db = require("../models");
+let classifieds = require('../data/hp-classifieds.json')
 
 module.exports = function(app) {
 
   // Home Page
   app.get('/', function(req, res) {
-    res.render('index', {title: 'homestead'});
+    var hbsObject = {
+      classifieds: classifieds
+    }
+    res.render('index', { hbsObject: hbsObject });
   });
 
   app.get('/community', function(req, res) {
