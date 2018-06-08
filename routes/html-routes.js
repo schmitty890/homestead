@@ -4,6 +4,7 @@
 
 var db = require("../models");
 let classifieds = require('../data/hp-classifieds.json');
+let faqs = require('../data/faq.json');
 
 module.exports = function(app) {
 
@@ -44,7 +45,11 @@ module.exports = function(app) {
   });
 
   app.get('/faq', function(req, res) {
-    res.render('faq');
+    let hbsObject = {
+      faqs: faqs
+    }
+    console.log(hbsObject);
+    res.render('faq', { hbsObject: hbsObject });
   });
 
   app.get('/classifieds', function(req, res) {
