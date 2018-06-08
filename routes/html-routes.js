@@ -14,7 +14,12 @@ module.exports = function(app) {
       classifieds: classifieds
     }
 
-    db.Event.findAll({}).then(function(eventInfo) {
+    db.Event.findAll({
+      limit: 6,
+      order: [
+        ['date', 'ASC']
+      ]
+    }).then(function(eventInfo) {
       hbsObject.eventInfo = eventInfo;
       // console.log(hbsObject);
       res.render('index', { hbsObject: hbsObject });
