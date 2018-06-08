@@ -42,12 +42,10 @@ require('./config/passport/passport.js')(passport, db.user);
 // Starting our Express app
 // =============================================================
 
-// Comment out one of the db.sequelize lines
-
-// db.sequelize.sync().then(function() {
-
-db.sequelize.sync({ force: true }).then(function () {
-  seeds(); // populates with seed data
+// Comment out one of the db.sequelize lines. force:true drops/rebuilds tables
+db.sequelize.sync().then(function() {
+// db.sequelize.sync({ force: true }).then(function () {
+  // seeds(); // populates with seed data
 
   app.listen(PORT, function () {
     // console.log("App listening on PORT " + PORT);
