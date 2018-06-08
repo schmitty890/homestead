@@ -9,7 +9,7 @@ module.exports = function(app) {
 
   // Home Page
   app.get('/', function(req, res) {
-    var hbsObject = {
+    let hbsObject = {
       classifieds: classifieds
     }
     res.render('index', { hbsObject: hbsObject });

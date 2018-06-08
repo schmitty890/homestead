@@ -1,5 +1,3 @@
-// hp-classifieds.json holds data for the home page classifieds section.
-// update this array of objects to update the classifieds on the homepage
 [{
   "title": "classifieds 1",
   "url": "classifieds1url",
