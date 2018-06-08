@@ -15,7 +15,7 @@ module.exports = function(app) {
       classifieds: classifieds
     }
 
-    db.Event.findAll({
+    db.event.findAll({
       limit: 6,
       order: [
         ['date', 'ASC']
