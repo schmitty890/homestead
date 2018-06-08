@@ -10,13 +10,22 @@ module.exports = function(sequelize, Sequelize) {
       notEmpty: true
     },
     username: {
-      type: Sequelize.TEXT
+      type: Sequelize.STRING
+    },
+    name: {
+      type: Sequelize.TEXT,
+      notEmpty: true
     },
     email: {
       type: Sequelize.STRING,
+      notEmpty: true,
       validate: {
         isEmail: true
       }
+    },
+    phone: {
+      type:Sequelize.TEXT,
+      notEmpty: true
     },
     title: {
       type: Sequelize.STRING,
@@ -30,7 +39,7 @@ module.exports = function(sequelize, Sequelize) {
       notEmpty: true,
 
     },
-    description: {
+    details: {
       type: Sequelize.TEXT,
       notEmpty: true,
       validate: {
@@ -50,4 +59,5 @@ module.exports = function(sequelize, Sequelize) {
     },
   });
   return classifieds;
-}
+} 
+  
