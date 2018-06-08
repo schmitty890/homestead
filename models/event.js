@@ -30,6 +30,13 @@ module.exports = function(sequelize, Sequelize) {
         len: [1,50]
       }
     },
+    location: {
+      type: Sequelize.TEXT,
+      notEmpty: true,
+      validate: {
+        len: [1, 250]
+      }
+    },
     date: {
       type: Sequelize.DATE
     }
