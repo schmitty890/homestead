@@ -58,5 +58,10 @@ module.exports = function(app) {
   app.get('/itemsneeded', function(req, res) {
     res.render('itemsneeded');
   });
+
+  app.get('*', function(req, res) {
+    res.render('404');
+  });
+
 };
 
