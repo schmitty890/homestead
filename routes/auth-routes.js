@@ -19,16 +19,7 @@ module.exports = function(app) {
   app.get('/postresource', isLoggedIn, authController.postresource);
   app.get('/contact', isLoggedIn, authController.contact);
   app.get('/logout',authController.logout);
-/*
-│ │──Post to Community Route: "/postcommunity" *Template:*Submit Ad
-│ │
-│ │──Post to Classifieds Route: "/postclassified" *Template:*Submit Ad
-│ │
-│ │──Post to Resources Route: "/postresource" *Template:*Submit Ad
-│ │
-│ │──Message HOA Route: "/contact" *Template:*Contact */
 
-  //function to protect routes
   function isLoggedIn(req, res, next) {
     if (req.isAuthenticated())
       return next();
