@@ -47,6 +47,11 @@ require('./routes/auth-routes.js')(app, passport);
 // =============================================================
 require('./config/passport/passport.js')(passport, db.user);
 
+
+app.get('*', function(req, res) {
+  res.render('404');
+});
+
 // Starting our Express app
 // =============================================================
 
