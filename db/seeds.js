@@ -23,11 +23,7 @@ function seeds() {
       // last_login: 
       status: 'active'
     }
-  ]).then(() => { // Notice: There are no arguments here, as of right now you'll have to...
-      return db.user.findAll();
-    }).then(users => {
-    // console.log(resources)
-  });
+  ]);
 
   db.resource.bulkCreate([
     {
@@ -45,11 +41,7 @@ function seeds() {
       category: "service offered",
       condition: "excellent"
     }
-  ]).then(() => { // Notice: There are no arguments here, as of right now you'll have to...
-    return db.resource.findAll();
-  }).then(resources => {
-    // console.log(resources)
-  });
+  ]);
 }
 
 seeds();
