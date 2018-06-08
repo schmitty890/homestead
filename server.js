@@ -5,8 +5,9 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars');
 const dotenv = require('dotenv').config();
-const passport = require('passport')
-const session = require('express-session')
+const passport = require('passport');
+const session = require('express-session');
+const moment = require('moment');
 
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -21,7 +22,14 @@ app.use(bodyParser.json());
 // Static directory
 app.use(express.static('public'));
 
-app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
+app.engine('handlebars', exphbs({
+  defaultLayout: 'main',
+  helpers: {
+    momentFromNowTime: function (time) {
+      return moment(time).fromNow();
+    }
+  }
+}));
 app.set('view engine', 'handlebars');
 
 // For Passport
@@ -38,6 +46,11 @@ require('./routes/auth-routes.js')(app, passport);
 //Load Passport Strategies
 // =============================================================
 require('./config/passport/passport.js')(passport, db.user);
+
+
+app.get('*', function(req, res) {
+  res.render('404');
+});
 
 // Starting our Express app
 // =============================================================

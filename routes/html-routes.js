@@ -2,17 +2,30 @@
 // html-routes.js - this file offers a set of routes for sending users to the various html pages
 // *********************************************************************************
 
-// var db = require("../models");
-let classifieds = require('../data/hp-classifieds.json')
+var db = require("../models");
+let classifieds = require('../data/hp-classifieds.json');
+let faqs = require('../data/faq.json');
 
 module.exports = function(app) {
 
   // Home Page
   app.get('/', function(req, res) {
+
     let hbsObject = {
       classifieds: classifieds
     }
-    res.render('index', { hbsObject: hbsObject });
+
+    db.Event.findAll({
+      limit: 6,
+      order: [
+        ['date', 'ASC']
+      ]
+    }).then(function(eventInfo) {
+      hbsObject.eventInfo = eventInfo;
+      // console.log(hbsObject);
+      res.render('index', { hbsObject: hbsObject });
+    });
+
   });
 
   app.get('/community', function(req, res) {
@@ -32,7 +45,11 @@ module.exports = function(app) {
   });
 
   app.get('/faq', function(req, res) {
-    res.render('faq');
+    let hbsObject = {
+      faqs: faqs
+    }
+    console.log(hbsObject);
+    res.render('faq', { hbsObject: hbsObject });
   });
 
   app.get('/classifieds', function(req, res) {

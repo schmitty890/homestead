@@ -22,7 +22,10 @@ exports.postcommunity = function(req, res) {
 }
 
 exports.postclassified = function(req, res) {
-  res.render('postclassified', { userId: req.user.id });
+  res.render('postclassified', { 
+    userId: req.user.id,
+    userName: req.user.username
+  });
 }
 
 exports.postresource = function(req, res) {
