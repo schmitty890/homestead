@@ -9,18 +9,17 @@ module.exports = function(app) {
 
   // Home Page
   app.get('/', function(req, res) {
+
     let hbsObject = {
       classifieds: classifieds
     }
-    // console.log(db.Event);
+
     db.Event.findAll({}).then(function(eventInfo) {
-      // console.log(eventInfo);
       hbsObject.eventInfo = eventInfo;
-      console.log(hbsObject);
+      // console.log(hbsObject);
       res.render('index', { hbsObject: hbsObject });
     });
-    // console.log(hbsObject.events);
-    // res.render('index', { hbsObject: hbsObject });
+
   });
 
   app.get('/community', function(req, res) {
