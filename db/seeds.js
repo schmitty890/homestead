@@ -51,17 +51,17 @@ function seeds() {
       author_id: 527,
       title: "yard sale",
       description: "everybody get out any items you wish to sell",
-      date: "07/15/2018"
+      date: "07/29/2018"
     }, {
       author_id: 4421,
       title: "block party",
       description: "party it up with the block!",
-      date: "07/24/2018"
+      date: "06/24/2018"
     }, {
       author_id: 527,
       title: "cookout",
       description: "hamburgers and hotdogs on da grill!",
-      date: "08/10/2018"
+      date: "06/13/2018"
     }, {
       author_id: 123,
       title: "pool party",
