@@ -1,152 +1,20 @@
-<!--============ Categories =============================================================================-->
 <section class="block">
   <div class="container">
     <h2>Classifides</h2>
     <ul class="categories-list clearfix">
-      <li>
-        <i class="category-icon">
-          <img src="assets/icons/category-furniture-b.png" alt="">
-        </i>
-        <h3><a href="#">Furniture</a></h3>
-        <div class="sub-categories">
-          <a href="#">Beds</a>
-          <a href="#">Sofas</a>
-          <a href="#">Garden</a>
-        </div>
-      </li>
-      <!--end category item-->
-      <li>
-        <i class="category-icon">
-          <img src="assets/icons/category-pets-b.png" alt="">
-        </i>
-        <h3><a href="#">Pets</a></h3>
-        <div class="sub-categories">
-          <a href="#">Dogs</a>
-          <a href="#">Cats</a>
-          <a href="#">Exotic</a>
-        </div>
-      </li>
-      <!--end category item-->
-      <li>
-        <i class="category-icon">
-          <img src="assets/icons/category-real-estate-b.png" alt="">
-        </i>
-        <h3><a href="#">Real Estate</a></h3>
-        <div class="sub-categories">
-          <a href="#">Houses</a>
-          <a href="#">Apartments</a>
-        </div>
-      </li>
-      <!--end category item-->
-      <li>
-        <i class="category-icon">
-          <img src="assets/icons/category-jobs-b.png" alt="">
-        </i>
-        <h3><a href="#">Jobs</a></h3>
-        <div class="sub-categories">
-          <a href="#">Find Job</a>
-          <a href="#">Offer Job</a>
-        </div>
-      </li>
-      <!--end category item-->
-      <li>
-        <i class="category-icon">
-          <img src="assets/icons/category-cars-b.png" alt="">
-        </i>
-        <h3><a href="#">Car</a></h3>
-        <div class="sub-categories">
-          <a href="#">New</a>
-          <a href="#">Used</a>
-          <a href="#">Rent</a>
-        </div>
-      </li>
-      <!--end category item-->
-      <li>
-        <i class="category-icon">
-          <img src="assets/icons/category-mobile-b.png" alt="">
-        </i>
-        <h3><a href="#">Mobile</a></h3>
-        <div class="sub-categories">
-          <a href="#">Apple</a>
-          <a href="#">Samsung</a>
-        </div>
-      </li>
-      <!--end category item-->
-      <li>
-        <i class="category-icon">
-          <img src="assets/icons/category-cameras-b.png" alt="">
-        </i>
-        <h3><a href="#">Cameras</a></h3>
-        <div class="sub-categories">
-          <a href="#">Photo</a>
-          <a href="#">Video</a>
-          <a href="#">Lenses</a>
-        </div>
-      </li>
-      <!--end category item-->
-      <li>
-        <i class="category-icon">
-          <img src="assets/icons/category-sport-b.png" alt="">
-        </i>
-        <h3><a href="#">Sport</a></h3>
-        <div class="sub-categories">
-          <a href="#">Ski</a>
-          <a href="#">Bike</a>
-          <a href="#">Hockey</a>
-        </div>
-      </li>
-      <!--end category item-->
-      <li>
-        <i class="category-icon">
-          <img src="assets/icons/category-electro-b.png" alt="">
-        </i>
-        <h3><a href="#">Electro</a></h3>
-        <div class="sub-categories">
-          <a href="#">TV</a>
-          <a href="#">Radio</a>
-          <a href="#">PC</a>
-        </div>
-      </li>
-      <!--end category item-->
-      <li>
-        <i class="category-icon">
-          <img src="assets/icons/category-clothing-b.png" alt="">
-        </i>
-        <h3><a href="#">Clothing</a></h3>
-        <div class="sub-categories">
-          <a href="#">Shirts</a>
-          <a href="#">Trousers</a>
-        </div>
-      </li>
-      <!--end category item-->
-      <li>
-        <i class="category-icon">
-          <img src="assets/icons/category-books-b.png" alt="">
-        </i>
-        <h3><a href="#">Books</a></h3>
-        <div class="sub-categories">
-          <a href="#">Fantasy</a>
-          <a href="#">History</a>
-          <a href="#">Sci-Fi</a>
-        </div>
-      </li>
-      <!--end category item-->
-      <li>
-        <i class="category-icon">
-          <img src="assets/icons/category-music-b.png" alt="">
-        </i>
-        <h3><a href="#">Music</a></h3>
-        <div class="sub-categories">
-          <a href="#">Rock</a>
-          <a href="#">Techno</a>
-          <a href="#">Folk</a>
-        </div>
-      </li>
-      <!--end category item-->
+      {{#each hbsObject.classifieds}}
+        <li>
+          <i class="fa {{this.icon}} fa-2x"></i>
+          <h3><a href="{{this.url}}">{{this.title}}</a></h3>
+          {{#if this.subcats}}
+          <div class="sub-categories">
+            {{#each this.subcats}}
+              <a href="{{this.url}}">{{this.title}}</a>
+            {{/each}}
+          </div>
+          {{/if}}
+        </li>
+      {{/each}}
     </ul>
-    <!--end categories-list-->
   </div>
-  <!--end container-->
 </section>
-<!--end block-->
-<!--============ End Categories =========================================================================-->
