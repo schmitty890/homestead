@@ -6,6 +6,7 @@ var db = require("../models");
 let classifieds = require('../data/hp-classifieds.json');
 let faqs = require('../data/faq.json');
 
+
 module.exports = function(app) {
 
   // Home Page
@@ -22,7 +23,7 @@ module.exports = function(app) {
       ]
     }).then(function(eventInfo) {
       hbsObject.eventInfo = eventInfo;
-      // console.log(hbsObject);
+      console.log(hbsObject);
       res.render('index', { hbsObject: hbsObject });
     });
 
@@ -33,7 +34,16 @@ module.exports = function(app) {
   });
 
   app.get('/events', function(req, res) {
-    res.render('events');
+
+    db.Event.findAll({
+      order: [
+        ['date', 'ASC']
+      ]
+    }).then( function(eventInfo) {
+      // console.log(eventInfo);
+      res.render('events', {events: eventInfo});
+    })
+    
   });
 
   app.get('/classes', function(req, res) {
