@@ -1,210 +1,163 @@
 <div class="page sub-page">
-  <!--*********************************************************************************************************-->
-  <!--************ HERO ***************************************************************************************-->
-  <!--*********************************************************************************************************-->
   <section class="hero">
-      <div class="hero-wrapper">
-        <div class="page-title">
-          <div class="container">
-            <h1>Submit Ad</h1>
-          </div>
-          <!--end container-->
+    <div class="hero-wrapper">
+      <div class="page-title">
+        <div class="container">
+          <h1>Submit Ad</h1>
         </div>
       </div>
-      <!--============ End Page Title =====================================================================-->
-    <div class="background"></div>
-    <!--end background-->
-
-  <!--end hero-wrapper-->
-</section>
-<!--end hero-->
-
-<!--*********************************************************************************************************-->
-<!--************ CONTENT ************************************************************************************-->
-<!--*********************************************************************************************************-->
-<section class="content">
-  <section class="block">
-    <div class="container">
-  </section>
-      <form class="form form-submit" id="postClassy">
-        <section>
-          <h2>Basic Information</h2>
-          <div class="row">
-            <div class="col-md-8">
-              <div class="form-group">
-                <label for="title" class="col-form-label required">Title</label>
-                <input name="title" type="text" class="form-control" id="title" placeholder="Title" required>
-              </div>
-              <!--end form-group-->
-            </div>
-            <!--end col-md-8-->
-            <div class="col-md-4">
-              <div class="form-group">
-                <label for="price" class="col-form-label required">Price</label>
-                <input name="price" type="text" class="form-control" id="price" required>
-                <span class="input-group-addon">$</span>
-              </div>
-              <!--end form-group-->
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4">
-              <div class="form-group">
-                <label for="name" class="col-form-label required">Your Name</label>
-                <input name="name" type="text" class="form-control" id="name" placeholder="Name" required>
-              </div>
-              <!--end form-group-->
-            </div>
-            <!--end col-md-4-->
-            <div class="col-md-4">
-              <div class="form-group">
-                <label for="email" class="col-form-label required">Your Email</label>
-                <input name="email" type="email" class="form-control" id="email" placeholder="Email" required>
-              </div>
-              <!--end form-group-->
-            </div>
-            <!--end col-md-4-->
-            <div class="col-md-4">
-              <div class="form-group">
-                <label for="phone" class="col-form-label required">Your Phone</label>
-                <input name="phone" type="text" class="form-control" id="phone" placeholder="Phone" required>
-              </div>
-              <!--end form-group-->
-            </div>
-            <!--end col-md-4-->
-          </div>
-        </section>
-        <!--end basic information-->
-        <section>
-          <div class="row">
-            <div class="col-md-4">
-              <h2>Category</h2>
-              <div class="form-group">
-                <label for="category" class="col-form-label">Category</label>
-                <select onchange="prefixMaker()" class="change-tab" data-change-tab-target="category-tabs" name="category" id="category" data-placeholder="Select Category" data-prefix="auto">
-                  <option value="">Select Category</option>
-                  <option value="autos">Vehicles/Boats</option>
-                  <option value="furniture">Furniture</option>
-                </select>
-              </div>
-              <!--end form-group-->
-            </div>
-            <!--end col-md-4-->
-            <div class="col-md-8">
-              <h2>Features</h2>
-              <div class="form-slides" id="category-tabs">
-                <div class="form-slide default">
-                  <h3>Please Select a Category</h3>
-                </div>
-                <div class="form-slide" id="furniture">
-                  <h3>Furniture</h3>
-                  <figure class="category-icon">
-                    <img src="assets/icons/furniture.png" alt="">
-                  </figure>
-                  <!--end category-icon-->
-                  <div class="row">
-                    <div class="col-md-4">
-                      <div class="form-group">
-                        <label for="condition" class="col-form-label">Type</label>
-                        <select name="condition" id="furnitureCondition" data-prefix="furn" data-placeholder="Type" >
-                          <option value="">Type</option>
-                          <option value="outdoor">Outdoor</option>
-                          <option value="couches">Couches</option>
-                          <option value="tablesdesks">Tables &AMP; Desks</option>
-                          <option value="chairs">Chairs</option>
-                        </select>
-                      </div>
-                      <!--end form-group-->
-                    </div>
-                    <!--end col-md-4-->
-                    <div class="col-md-4">
-                      <div class="form-group">
-                        <label for="status" class="col-form-label">Status</label>
-                        <select name="status" id="furnitureStatus" data-placeholder="Status" >
-                          <option value="">Status</option>
-                          <option value="new">New</option>
-                          <option value="likenew">Like New</option>
-                          <option value="used">Used</option>
-                        </select>
-                      </div>
-                      <!--end form-group-->
-                    </div>
-                    <!--end col-md-4-->
-                    <div class="col-md-4">
-                    </div>
-                    <!--end col-md-4-->
-                  </div>
-                  <!--end row-->
-                </div>
-                <!--end furniture.form-slide-->
-                <div class="form-slide" id="autos">
-                  <h3>Vehicles &AMP; Boats</h3>
-                  <figure class="category-icon">
-                    <img src="assets/icons/furniture.png" alt="">
-                  </figure>
-                  <!--end category-icon-->
-                  <div class="row">
-                    <div class="col-md-4">
-                      <div class="form-group">
-                        <label for="condition" class="col-form-label">Type</label>
-                        <select name="condition" id="autosCondition" class="condition" data-placeholder="Type" >
-                          <option value="">Type</option>
-                          <option value="cars">Cars</option>
-                          <option value="trucks">Trucks</option>
-                          <option value="rvs">RVs</option>
-                          <option value="motorcycles">Motorcycles</option>
-                          <option value="atvs">ATVs</option>
-                          <option value="boats">Boats</option>
-                        </select>
-                      </div>
-                      <!--end form-group-->
-                    </div>
-                    <!--end col-md-4-->
-                    <div class="col-md-4">
-                      <div class="form-group">
-                        <label for="status" class="col-form-label">Status</label>
-                        <select name="status" id="autosStatus" class="statusSelector" data-placeholder="Status" >
-                          <option value="">Status</option>
-                          <option value="new">New</option>
-                          <option value="likenew">Like New</option>
-                          <option value="used">Used</option>
-                        </select>
-                      </div>
-                      <!--end form-group-->
-                    </div>
-                    <!--end col-md-4-->
-                    <div class="col-md-4">
-                    </div>
-                    <!--end col-md-4-->
-                  </div>
-                  <!--end row-->
-                </div>
-                <!--end furniture.form-slide-->
-              </div>
-              <!--end form-slides-->
-            </div>
-            <!--end col-md-8-->
-          </div>
-          <!--end row-->
-        </section>
-        <section>
-          <h2>Details</h2>
-          <div class="form-group">
-            <label for="details" class="col-form-label">Additional Details</label>
-            <textarea name="details" id="details" class="form-control" rows="4"></textarea>
-          </div>
-          <!--end form-group-->
-        </section>
-        <section class="clearfix">
-          <div class="form-group">
-            <button type="submit" class="btn btn-primary large icon float-right" id="addClassBtn" data-id={{userId}} data-userName={{userName}}>Post<i class="fa fa-chevron-right"></i></button>
-          </div>
-        </section>
-      </form>
-      <!--end form-submit-->
     </div>
-    <!--end container-->
+    <div class="background"></div>
   </section>
-  <!--end block-->
-</section>
-<!--end content-->
+  <section class="content">
+    <section class="block">
+      <div class="container">
+        <form class="form form-submit" id="postClassy">
+          <section>
+            <h2>Basic Information</h2>
+            <div class="row">
+              <div class="col-md-8">
+                <div class="form-group">
+                  <label for="title" class="col-form-label required">Title</label>
+                  <input name="title" type="text" class="form-control" id="title" placeholder="Title" required>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="price" class="col-form-label required">Price</label>
+                  <input name="price" type="text" class="form-control" id="price" required>
+                  <span class="input-group-addon">$</span>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="name" class="col-form-label required">Your Name</label>
+                  <input name="name" type="text" class="form-control" id="name" placeholder="Name" required>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="email" class="col-form-label required">Your Email</label>
+                  <input name="email" type="email" class="form-control" id="email" placeholder="Email" required>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="phone" class="col-form-label required">Your Phone</label>
+                  <input name="phone" type="text" class="form-control" id="phone" placeholder="Phone" required>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="row">
+              <div class="col-md-4">
+                <h2>Category</h2>
+                <div class="form-group">
+                  <label for="category" class="col-form-label">Category</label>
+                  <select onchange="prefixMaker()" class="change-tab" data-change-tab-target="category-tabs" name="category" id="category" data-placeholder="Select Category" data-prefix="auto">
+                    <option value="">Select Category</option>
+                    <option value="autos">Vehicles/Boats</option>
+                    <option value="furniture">Furniture</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <h2>Features</h2>
+                <div class="form-slides" id="category-tabs">
+                  <div class="form-slide default">
+                    <h3>Please Select a Category</h3>
+                  </div>
+                  <!-- start furniture.form-slide -->
+                  <div class="form-slide" id="furniture">
+                    <h3>Furniture</h3>
+                    <figure class="category-icon">
+                      <img src="assets/icons/furniture.png" alt="">
+                    </figure>
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="condition" class="col-form-label">Type</label>
+                          <select name="condition" id="furnitureCondition" data-prefix="furn" data-placeholder="Type">
+                            <option value="">Type</option>
+                            <option value="outdoor">Outdoor</option>
+                            <option value="couches">Couches</option>
+                            <option value="tablesdesks">Tables &AMP; Desks</option>
+                            <option value="chairs">Chairs</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="status" class="col-form-label">Status</label>
+                          <select name="status" id="furnitureStatus" data-placeholder="Status">
+                            <option value="">Status</option>
+                            <option value="new">New</option>
+                            <option value="likenew">Like New</option>
+                            <option value="used">Used</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                      </div>
+                    </div>
+                  </div>
+                  <!--end furniture.form-slide-->
+                  <div class="form-slide" id="autos">
+                    <h3>Vehicles &AMP; Boats</h3>
+                    <figure class="category-icon">
+                      <img src="assets/icons/furniture.png" alt="">
+                    </figure>
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="condition" class="col-form-label">Type</label>
+                          <select name="condition" id="autosCondition" class="condition" data-placeholder="Type">
+                            <option value="">Type</option>
+                            <option value="cars">Cars</option>
+                            <option value="trucks">Trucks</option>
+                            <option value="rvs">RVs</option>
+                            <option value="motorcycles">Motorcycles</option>
+                            <option value="atvs">ATVs</option>
+                            <option value="boats">Boats</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="status" class="col-form-label">Status</label>
+                          <select name="status" id="autosStatus" class="statusSelector" data-placeholder="Status">
+                            <option value="">Status</option>
+                            <option value="new">New</option>
+                            <option value="likenew">Like New</option>
+                            <option value="used">Used</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Details</h2>
+            <div class="form-group">
+              <label for="details" class="col-form-label">Additional Details</label>
+              <textarea name="details" id="details" class="form-control" rows="4"></textarea>
+            </div>
+          </section>
+          <section class="clearfix">
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary large icon float-right" id="addClassBtn" data-id={{userId}} data-userName={{userName}}>Post<i class="fa fa-chevron-right"></i></button>
+            </div>
+          </section>
+        </form>
+      </div>
+    </section>
+  </section>
+</div>

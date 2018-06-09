@@ -46,7 +46,7 @@ function seeds() {
   ]);
 
   // seeds for events
-  db.Event.bulkCreate([
+  db.event.bulkCreate([
     {
       author_id: 527,
       title: "yard sale",
