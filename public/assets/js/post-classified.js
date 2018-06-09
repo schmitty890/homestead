@@ -1,12 +1,12 @@
 function prefixMaker() {
   //let prefix = $("#category").val();
   $("#category").attr("data-prefix", $("#category").val())
-}  
+}
 
 $("#postClassy").on("submit", function (event) {
   event.preventDefault();
   var prefixboi = $("#category").data("prefix");
-  
+
   if ($.trim($("#title").val()) === "") {
     alert('you did not fill out title');
     return false;
@@ -18,24 +18,24 @@ $("#postClassy").on("submit", function (event) {
   if ($.trim($("#name").val()) === "") {
     alert('you did not fill out name');
     return false;
-  } 
+  }
   if ($.trim($("#email").val()) === "") {
     alert('you did not fill out email');
     return false;
-  } 
+  }
   if ($.trim($("#phone").val()) === "") {
     alert('you did not fill out a phone');
     return false;
-  } 
+  }
   if ($.trim($("#category").val()) === "") {
     alert('you did not select a category');
     return false;
-  } 
+  }
   if ($.trim($("#"+prefixboi+"Condition").val()) === "") {
     alert('you did not fill out a sub category');
     return false;
   }
-  
+
   if ($.trim($("#"+prefixboi+"Status").val()) === "") {
     alert('you did not fill out status');
     return false;
