@@ -8,7 +8,6 @@ var PostEvent = function(){
   var formValues = {};
 
   function gatherFormElements() {
-    console.log('we here');
     formValues = {
       title: $('#title').val().trim(),
       date: $('#date').val().trim(),
@@ -20,13 +19,16 @@ var PostEvent = function(){
     passToBackend(formValues);
   }
 
-  function passToBackend(data) {
+  function passToBackend(formValues) {
+    console.log(formValues);
     $.ajax('/api/events', {
-      url: 'POST',
-      data: data
-    }).then(function() {
-      location.reload();
-    });
+      type: 'POST',
+      data: formValues
+    }).then(
+      function() {
+        location.reload();
+      }
+    );
   }
 
   function onSubmit() {

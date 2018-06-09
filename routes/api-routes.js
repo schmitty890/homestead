@@ -18,5 +18,17 @@ module.exports = function(app) {
         res.json({ status: "ERROR", message: err })
       })
   });
+
+  app.post("/api/events", function(req, res) {
+    var userId = '';
+    db.event.create(req.body)
+      .then(function(classified) {
+        res.json(classified);
+      })
+      .catch(function(err) {
+        res.json({ status: "ERROR", message: err })
+      })
+  });
+
 };
 
