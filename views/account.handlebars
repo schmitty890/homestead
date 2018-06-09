@@ -1,14 +1,10 @@
 <div class="page home-page">
-  <!--*********************************************************************************************************-->
-  <!--************ CONTENT ************************************************************************************-->
-  <!--*********************************************************************************************************-->
   <section class="content">
-    <!--============ Featured Ads ===========================================================================-->
+    {{> profile}}
     <section class="block">
       <div class="container">
         <h2>Your HOA</h2>
-        <div class="items grid grid-xl-4-items grid-lg-4-items grid-md-2-items">
-          <!--start item-->
+        <div id="your-hoa" class="items grid grid-xl-4-items grid-lg-4-items grid-md-2-items">
           <div class="item">
             <div class="wrapper">
               <div class="image">
@@ -20,18 +16,13 @@
                   <img src="assets/img/image-01.jpg" alt="">
                 </a>
               </div>
-            <!--end image-->
               <div class="meta">
               </div>
-            <!--end meta-->
               <div class="description">
                 <p>Want to organize an event, class, or meetup?  Post it here!</p>
               </div>
-            <!--end description-->
             </div>
           </div>
-          <!--end item-->
-          <!--start item-->
           <div class="item">
             <div class="wrapper">
               <div class="image">
@@ -43,18 +34,13 @@
                     <img src="assets/img/image-01.jpg" alt="">
                   </a>
               </div>
-                          <!--end image-->
               <div class="meta">
               </div>
-              <!--end meta-->
               <div class="description">
                 <p>Have an item or service to sell?  Post it here!</p>
               </div>
-              <!--end description-->
             </div>
           </div>
-          <!--end item-->
-          <!--start item-->
           <div class="item">
             <div class="wrapper">
               <div class="image">
@@ -66,18 +52,13 @@
                   <img src="assets/img/image-01.jpg" alt="">
                 </a>
               </div>
-              <!--end image-->
               <div class="meta">
               </div>
-              <!--end meta-->
               <div class="description">
                 <p>Have a skill or item that you want to offer, request, or barter for?  Post it here!</p>
               </div>
-              <!--end description-->
             </div>
           </div>
-          <!--end item-->
-          <!--start item-->
             <div class="item">
               <div class="wrapper">
                 <div class="image">
@@ -89,89 +70,36 @@
                       <img src="assets/img/image-01.jpg" alt="">
                   </a>
                 </div>
-                <!--end image-->
                 <div class="meta">
                 </div>
-                <!--end meta-->
                 <div class="description">
                   <p>View our HOA FAQ, and get in touch with us!</p>
                 </div>
-                <!--end description-->
               </div>
             </div>
-            <!--end item-->
+            <div class="item">
+              <div class="wrapper">
+                <div class="image">
+                  <h3>
+                    <a href="/events" class="tag category">Event</a>
+                    <a href="/postevent" class="title">Post an Event</a>
+                  </h3>
+                  <a href="/events" class="image-wrapper background-image">
+                      <img src="assets/img/image-01.jpg" alt="">
+                  </a>
+                </div>
+                <div class="meta">
+                </div>
+                <div class="description">
+                  <p>Post an Event! The 'hood wants to party!</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="background" data-background-color="#fff"></div>
-        <!--end background-->
       </section>
-      <!--============ End Categorys for Acct =======================================================================-->
-      <!--============ Features Steps =========================================================================-->
-      <section class="block has-dark-background">
-        <div class="container">
-          <div class="block">
-            <h2>Interacting With Our Neighborhood is as Simple as a Click!</h2>
-            <div class="row">
-              <div class="col-md-3">
-                <div class="feature-box">
-                  <figure>
-                    <img src="assets/icons/feature-user.png" alt="">
-                    <span>1</span>
-                  </figure>
-                  <h3>Create an Account</h3>
-                  <p>Etiam molestie viverra dui vitae mattis. Ut velit est</p>
-                </div>
-                <!--end feature-box-->
-              </div>
-              <!--end col-->
-              <div class="col-md-3">
-                <div class="feature-box">
-                  <figure>
-                    <img src="assets/icons/feature-upload.png" alt="">
-                    <span>2</span>
-                  </figure>
-                  <h3>Submit</h3>
-                  <p>Use the Post buttons available in your account dashboard to submit Events, Classes, Meetups, Classifieds, or Resources you have to share!</p>
-                </div>
-                <!--end feature-box-->
-              </div>
-              <!--end col-->
-              <div class="col-md-3">
-                <div class="feature-box">
-                  <figure>
-                    <img src="assets/icons/feature-like.png" alt="">
-                    <span>3</span>
-                  </figure>
-                  <h3>Browse</h3>
-                  <p>Find things happening or available in your neighborhood relevant to you!</p>
-                </div>
-                <!--end feature-box-->
-              </div>
-              <!--end col-->
-              <div class="col-md-3">
-                <div class="feature-box">
-                  <figure>
-                    <img src="assets/icons/feature-wallet.png" alt="">
-                    <span>4</span>
-                  </figure>
-                  <h3>Enjoy our Community!</h3>
-                  <p>There are so many ways to enjoy our wonderful neighborhood!</p>
-                </div>
-                <!--end feature-box-->
-              </div>
-              <!--end col-->
-            </div>
-            <!--end row-->
-          </div>
-          <!--end block-->
-        </div>
-        <!--end container-->
-        <div class="background" data-background-color="#2b2b2b"></div>
-          <!--end background-->
-      </section>
-      <!--end block-->
-      <!--============ End Features Steps =====================================================================-->
-      <!--============ Recent Ads =============================================================================-->
+
       <section class="block">
         <div class="container">
           <h2>Recent Posts</h2>
@@ -188,7 +116,6 @@
                       <img src="assets/img/image-04.jpg" alt="">
                     </a>
                   </div>
-                  <!--end image-->
                   <h4 class="location">
                     <a href="#">Greeley, CO</a>
                   </h4>
@@ -203,11 +130,9 @@
                       </a>
                     </figure>
                   </div>
-                  <!--end meta-->
                   <div class="description">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis lobortis</p>
                   </div>
-                  <!--end description-->
                   <div class="additional-info">
                     <ul>
                       <li>
@@ -228,19 +153,12 @@
                       </li>
                     </ul>
                   </div>
-                  <!--end addition-info-->
                   <a href="single-listing-1.html" class="detail text-caps underline">Detail</a>
                 </div>
               </div>
-                <!--end item-->
             </div>
           </div>
-          <!--end container-->
         </section>
-      <!--end block-->
-      <!--============ End Recent Ads =========================================================================-->
-      <!--============ Newsletter =============================================================================-->
-      
 
       <section class="block">
         <div class="container">
@@ -250,4 +168,3 @@
       </section>
 
   </section>
-  <!--end content-->
