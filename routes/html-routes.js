@@ -73,7 +73,7 @@ module.exports = function(app) {
         resource: data
       }
 
-      console.log(JSON.stringify(hbsObject));
+      // console.log(JSON.stringify(hbsObject));
 
       res.render('resources', hbsObject);
     });
