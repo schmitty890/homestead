@@ -1,0 +1,31 @@
+<div class="items list grid-xl-4-items grid-lg-3-items grid-md-2-items">
+    {{#each events}}
+    <div class="item">
+        <div class="wrapper">
+            <div class="image">
+                <h3>
+                    <a href="#" class="tag category">{{this.category}}</a>
+                    <a href="single-listing-1.html" class="title">{{this.title}}</a>
+                </h3>
+                <a href="single-listing-1.html" class="image-wrapper background-image">
+                    <img src="assets/img/image-01.jpg" alt="">
+                </a>
+            </div>
+            <!--end image-->
+            <h4 class="location">
+                <a href="#">{{this.location}}</a>
+            </h4>
+            <div class="meta">
+                <figure>
+                    <i class="fa fa-calendar-o"></i>{{this.date}}
+                </figure>
+            </div>
+            <!--end meta-->
+            <div class="description">
+                <p>{{this.description}}</p>
+            </div>
+            <!--end description-->
+        </div>
+    </div>
+    {{/each}}
+</div>
