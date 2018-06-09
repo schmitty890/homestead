@@ -25,8 +25,14 @@ app.use(express.static('public'));
 app.engine('handlebars', exphbs({
   defaultLayout: 'main',
   helpers: {
+    upperCase: function(str) {
+      return str.charAt(0).toUpperCase() + str.slice(1);
+    },
     momentFromNowTime: function (time) {
       return moment(time).fromNow();
+    },
+    formatDateForEvents: function (time) {
+      return moment(time).format("ddd, MMM Do")
     }
   }
 }));
