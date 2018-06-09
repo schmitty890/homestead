@@ -8,15 +8,27 @@ var db = require("../models");
 // Routes
 // =============================================================
 module.exports = function(app) {
-  app.post("/api/classifieds", function (req, res) {
+  app.post("/api/classifieds", function(req, res) {
     var userId = '';
     db.classifieds.create(req.body)
-    .then(function (classified) {
+      .then(function(classified) {
         res.json(classified);
-    })
-    .catch(function (err) {
-      res.json({status: "ERROR", message: err})
-    })
+      })
+      .catch(function(err) {
+        res.json({ status: "ERROR", message: err })
+      })
   });
+
+  app.post("/api/events", function(req, res) {
+    var userId = '';
+    db.event.create(req.body)
+      .then(function(events) {
+        res.json(events);
+      })
+      .catch(function(err) {
+        res.json({ status: "ERROR", message: err })
+      })
+  });
+
 };
 

@@ -49,7 +49,7 @@ module.exports = function(sequelize, Sequelize) {
       }
     },
     category: {
-      type: Sequelize.ENUM('service needed','service offered','item needed','item offered'),
+      type: Sequelize.ENUM('services needed','services offered','items needed','items offered'),
       notEmpty: true
     },
     //with the wide variety

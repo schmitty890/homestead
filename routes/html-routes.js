@@ -66,24 +66,48 @@ module.exports = function(app) {
     res.render('classifieds');
   });
 
-  app.get('/resources', function(req, res) {
-    res.render('resources');
+  app.get('/resources/:type?', function(req, res) {
+    let type = req.params.type.replace('+',' ');
+
+    db.resource.findAll({
+      where: {
+        // author_id: ?, // pass in
+        category: type
+      },
+      limit: 20,
+      order: [
+        ['createdAt']
+      ]
+    }).then(function(data) {
+      let hbsObject = {
+        resource: data
+      }
+
+      // console.log(JSON.stringify(hbsObject));
+
+      res.render('resources', hbsObject);
+    });
+
   })
 
-  app.get('/skillsoffered', function(req, res) {
-    res.render('skillsoffered');
-  });
+  //planning to use param instead of these routes
+  //see above
+  //leaving this commented out for now, only in case of objections
 
-  app.get('/skillsneeded', function(req, res) {
-    res.render('skillsneeded');
-  });
+  // app.get('/skillsoffered', function(req, res) {
+  //   res.render('skillsoffered');
+  // });
 
-  app.get('/itemsoffered', function(req, res) {
-    res.render('itemsoffered');
-  });
+  // app.get('/skillsneeded', function(req, res) {
+  //   res.render('skillsneeded');
+  // });
 
-  app.get('/itemsneeded', function(req, res) {
-    res.render('itemsneeded');
-  });
+  // app.get('/itemsoffered', function(req, res) {
+  //   res.render('itemsoffered');
+  // });
+
+  // app.get('/itemsneeded', function(req, res) {
+  //   res.render('itemsneeded');
+  // });
 };
 
