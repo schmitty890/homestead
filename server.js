@@ -8,7 +8,6 @@ const dotenv = require('dotenv').config();
 const passport = require('passport');
 const session = require('express-session');
 const moment = require('moment');
-const flatpickr = require("flatpickr");
 
 const app = express();
 const PORT = process.env.PORT || 8080;
