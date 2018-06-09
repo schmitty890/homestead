@@ -33,16 +33,32 @@ function seeds() {
       title: "lawnmower for rent",
       description: "rent any weekend $20 (includes gas)",
       price: 20,
-      category: "item offered",
+      category: "items offered",
       condition: "good"
     }, {
       author_id: 4421,
       title: "celebration cakes",
       description: "I make great event cakes starting at $30.",
       price: 30,
-      category: "service offered",
+      category: "services offered",
       condition: "excellent"
+    },
+    {
+      author_id: 12,
+      title: "ladder needed",
+      description: "time to clean the downspouts",
+      price: 5,
+      category: "items needed",
+      condition: "n/a"
+    }, {
+      author_id: 4421,
+      title: "painting gig",
+      description: "Someone please paint my living room.",
+      price: 30,
+      category: "services needed",
+      condition: "n/a"
     }
+
   ]);
 
   // seeds for events
@@ -51,17 +67,17 @@ function seeds() {
       author_id: 527,
       title: "yard sale",
       description: "everybody get out any items you wish to sell",
-      date: "07/15/2018"
+      date: "07/29/2018"
     }, {
       author_id: 4421,
       title: "block party",
       description: "party it up with the block!",
-      date: "07/24/2018"
+      date: "06/24/2018"
     }, {
       author_id: 527,
       title: "cookout",
       description: "hamburgers and hotdogs on da grill!",
-      date: "08/10/2018"
+      date: "06/13/2018"
     }, {
       author_id: 123,
       title: "pool party",

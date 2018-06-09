@@ -9,13 +9,19 @@ module.exports = function(app) {
     successRedirect: '/account',
     failureRedirect: '/signup'
   }));
-  app.post('/signin', passport.authenticate('local-signin',  { 
+  app.post('/signin', passport.authenticate('local-signin',  {
     successRedirect: '/account',
-    failureRedirect: '/signin'}
-  ));
+    failureRedirect: '/signin'
+  }));
   app.get('/account',isLoggedIn, authController.account);
   app.get('/postcommunity', isLoggedIn, authController.postcommunity);
   app.get('/postclassified', isLoggedIn, authController.postclassified);
+  app.get('/postevent', isLoggedIn, authController.postevent);
+  app.post('/postclassified', passport.authenticate('local-signin', {
+    successRedirect: '/classifieds',
+    failureRedirect: '/account'
+  }))
+
   app.get('/postresource', isLoggedIn, authController.postresource);
   app.get('/contact', isLoggedIn, authController.contact);
   app.get('/logout',authController.logout);

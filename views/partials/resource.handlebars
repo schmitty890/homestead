@@ -1,9 +1,9 @@
 <section class="block">
 <div class="container">
-  <h2>Upcoming Events</h2>
+  <h2>Resources</h2>
   <div class="upcoming-events items grid grid-xl-3-items grid-lg-3-items grid-md-2-items">
     <!-- item -->
-    {{#each hbsObject.eventInfo}}
+    {{#each resource}}
     <div class="item">
       <div class="wrapper">
         <div class="image">
@@ -18,7 +18,7 @@
         <!--end image-->
         <div class="meta">
           <figure>
-            <i class="fa fa-calendar-o"></i>{{momentFromNowTime this.date}}
+            <i class="fa fa-calendar-o"></i>{{momentFromNowTime this.createdAt}}
           </figure>
           <figure>
             <a href="#">

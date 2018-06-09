@@ -1,5 +1,5 @@
 module.exports = function(sequelize, Sequelize) {
-  const Event = sequelize.define('event', {
+  var Event = sequelize.define('event', {
     id: {
       autoIncrement: true,
       primaryKey: true,
