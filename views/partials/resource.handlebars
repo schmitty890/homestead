@@ -1,0 +1,43 @@
+<section class="block">
+<div class="container">
+  <h2>Resources</h2>
+  <div class="upcoming-events items grid grid-xl-3-items grid-lg-3-items grid-md-2-items">
+    <!-- item -->
+    {{#each resource}}
+    <div class="item">
+      <div class="wrapper">
+        <div class="image">
+          <h3>
+            <a href="#" class="tag category">category</a>
+            <a href="single-listing-1.html" class="title">{{this.title}}</a>
+          </h3>
+          <a href="#" class="image-wrapper background-image">
+            <img src="assets/img/image-01.jpg" alt="">
+          </a>
+        </div>
+        <!--end image-->
+        <div class="meta">
+          <figure>
+            <i class="fa fa-calendar-o"></i>{{momentFromNowTime this.createdAt}}
+          </figure>
+          <figure>
+            <a href="#">
+              <i class="fa fa-user"></i>{{this.author_id}}
+            </a>
+          </figure>
+        </div>
+        <!--end meta-->
+        <div class="description">
+          <p>{{this.description}}</p>
+        </div>
+        <!--end description-->
+        <a href="#" class="detail text-caps underline">Detail</a>
+      </div>
+    </div>
+    {{/each}}
+    <!-- end item -->
+  </div>
+</div>
+<div class="background" data-background-color="#fff"></div>
+<!--end background-->
+</section>

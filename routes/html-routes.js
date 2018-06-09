@@ -58,9 +58,26 @@ module.exports = function(app) {
 
   app.get('/resources/:type?', function(req, res) {
     let type = req.params.type.replace('+',' ');
-    console.log(type);
 
-    res.render('resources');
+    db.resource.findAll({
+      where: {
+        // author_id: ?, // pass in
+        category: type
+      },
+      limit: 20,
+      order: [
+        ['createdAt']
+      ]
+    }).then(function(data) {
+      let hbsObject = {
+        resource: data
+      }
+
+      console.log(JSON.stringify(hbsObject));
+
+      res.render('resources', hbsObject);
+    });
+
   })
 
   //planning to use param instead of these routes

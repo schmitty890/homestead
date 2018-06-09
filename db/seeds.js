@@ -33,16 +33,32 @@ function seeds() {
       title: "lawnmower for rent",
       description: "rent any weekend $20 (includes gas)",
       price: 20,
-      category: "item offered",
+      category: "items offered",
       condition: "good"
     }, {
       author_id: 4421,
       title: "celebration cakes",
       description: "I make great event cakes starting at $30.",
       price: 30,
-      category: "service offered",
+      category: "services offered",
       condition: "excellent"
+    },
+    {
+      author_id: 12,
+      title: "ladder needed",
+      description: "time to clean the downspouts",
+      price: 5,
+      category: "items needed",
+      condition: "n/a"
+    }, {
+      author_id: 4421,
+      title: "painting gig",
+      description: "Someone please paint my living room.",
+      price: 30,
+      category: "services needed",
+      condition: "n/a"
     }
+
   ]);
 
   // seeds for events
