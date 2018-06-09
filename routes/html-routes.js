@@ -23,7 +23,7 @@ module.exports = function(app) {
       ]
     }).then(function(eventInfo) {
       hbsObject.eventInfo = eventInfo;
-      console.log(hbsObject);
+      // console.log(hbsObject);
       res.render('index', { hbsObject: hbsObject });
     });
 
@@ -35,7 +35,7 @@ module.exports = function(app) {
 
   app.get('/events', function(req, res) {
 
-    db.Event.findAll({
+    db.event.findAll({
       order: [
         ['date', 'ASC']
       ]
