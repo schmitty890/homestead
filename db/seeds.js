@@ -51,35 +51,23 @@ function seeds() {
       author_id: 527,
       title: "yard sale",
       description: "everybody get out any items you wish to sell",
-<<<<<<< HEAD
       category: "Sell",
-      date: "07/15/2018",
+      date: "07/27/2018",
       location: "Lot 115"
-=======
-      date: "07/29/2018"
->>>>>>> e0fe00415c61c77773fe359a59e965a369b80efe
     }, {
       author_id: 4421,
       title: "block party",
       description: "party it up with the block!",
-<<<<<<< HEAD
       category: "Social",
-      date: "07/24/2018",
+      date: "06/24/2018",
       location: "Seasame Street Cul-de-sac"
-=======
-      date: "06/24/2018"
->>>>>>> e0fe00415c61c77773fe359a59e965a369b80efe
     }, {
       author_id: 527,
       title: "cookout",
       description: "hamburgers and hotdogs on da grill!",
-<<<<<<< HEAD
       category: "Social",
-      date: "08/10/2018",
+      date: "06/13/2018",
       location: "Neighboorhood Cabana"
-=======
-      date: "06/13/2018"
->>>>>>> e0fe00415c61c77773fe359a59e965a369b80efe
     }, {
       author_id: 123,
       title: "pool party",
