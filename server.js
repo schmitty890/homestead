@@ -63,6 +63,6 @@ db.sequelize.sync().then(function() {
 
   app.listen(PORT, function () {
     // console.log("App listening on PORT " + PORT);
-    console.log('App development is using brower-sync, proxied on PORT 3000');
+    console.log('App development is using brower-sync, proxied on http://localhost:3000');
   });
 });
