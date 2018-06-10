@@ -14,11 +14,10 @@ exports.signin = function(req,res){
 //when in doubt about carrying data into a new route, console.log your req here.
 //hit me up if you run into confusion obviously -Joe
 exports.account = function(req, res) {
-  res.render('account', { userId: req.user.id });
-}
-
-exports.postcommunity = function(req, res) {
-  res.render('postcommunity', { userId: req.user.id });
+  res.render('account', {
+    userId: req.user.id,
+    userName: req.user.username
+  });
 }
 
 exports.postclassified = function(req, res) {
@@ -36,11 +35,17 @@ exports.postevent = function(req, res) {
 }
 
 exports.postresource = function(req, res) {
-  res.render('postresource', { userId: req.user.id });
+  res.render('postresource', {
+    userId: req.user.id,
+    userName: req.user.username
+  });
 }
 
 exports.contact = function(req, res) {
-  res.render('contact', { userId: req.user.id });
+  res.render('contact', {
+    userId: req.user.id,
+    userName: req.user.username
+  });
 }
 
 
