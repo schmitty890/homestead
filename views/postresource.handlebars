@@ -29,7 +29,38 @@
                 </div>
               </div>
             </div>
+
+            <div class="row">
+              <div class="col-md-8">
+                <div class="form-group">
+                  <label for="submit-category-selectized" class="col-form-label">Category</label>
+                  <select class="change-tab selectized" data-change-tab-target="category-tabs" name="submit_category" id="submit-category"
+                    data-placeholder="Select Category" tabindex="-1" style="display: none;">
+                    <option value="" selected="selected">Select Category</option>
+                  </select>
+
+                  {{!-- i don't think this will work until selectize js implemented --}}
+                  <div class="selectize-control change-tab single">
+                    <div class="selectize-input items full has-options has-items">
+                      <div class="item" data-value="">Select Category</div>
+                      <input type="text" autocomplete="off" tabindex="" id="submit-category-selectized" style="width: 4px; opacity: 0; position: absolute; left: -10000px;">
+                    </div>
+
+                    <div class="selectize-dropdown single change-tab" style="display: none; width: 349.99px; top: 55.3333px; left: 0px; visibility: visible;">
+                      <div class="selectize-dropdown-content">
+                        <div class="option selected" data-selectable="" data-value="">Select Category</div>
+                        <div class="option" data-selectable="" data-value="service offered">Service Offered</div>
+                        <div class="option" data-selectable="" data-value="item offered">Item Offered</div>
+                        <div class="option" data-selectable="" data-value="service needed">Service Needed</div>
+                        <div class="option" data-selectable="" data-value="item needed">Item Needed</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </section>
+          
           <section>
             <h2>Details</h2>
             <div class="form-group">
@@ -39,7 +70,10 @@
           </section>
           <section class="clearfix">
             <div class="form-group">
-              <button type="submit" class="btn btn-primary large icon float-right" id="post-event" data-id={{userId}} data-userName={{userName}}>Post<i class="fa fa-chevron-right"></i></button>
+              <button type="submit" class="btn btn-primary large icon float-right" id="post-event" data-id={{userId}}
+                data-userName={{userName}}>Post
+                <i class="fa fa-chevron-right"></i>
+              </button>
             </div>
           </section>
         </form>

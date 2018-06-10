@@ -41,6 +41,8 @@ module.exports = function(sequelize, Sequelize) {
         len: [1,1000]
       }
     },    
+    //do we want a price?
+    //or maybe something like "proposed trade"?
     price: {
       type: Sequelize.INTEGER,
       defaultValue: 0,

@@ -105,7 +105,7 @@ module.exports = function (app) {
   })
 
   //form to post new resource
-  app.get('/resources/:type', function (req, res) {
+  app.get('/new-resource', function (req, res) {
     //if not logged in, redirect to login
 
     //if logged in
