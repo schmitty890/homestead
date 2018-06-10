@@ -12,7 +12,7 @@
   <section class="content">
     <section class="block">
       <div class="container">
-        <form class="form form-submit" id="post-event-form">
+        <form class="form form-submit" id="post-resource-form">
           <section>
             <h2>Basic Information</h2>
             <div class="row">
@@ -29,49 +29,33 @@
                 </div>
               </div>
             </div>
-
             <div class="row">
               <div class="col-md-6">
-
                 <div class="form-group">
-                  <label for="submit-category-selectized" class="col-form-label">Category</label>
-                  <select class="change-tab selectized" data-change-tab-target="category-tabs" name="submit_category" id="submit-category"
-                    data-placeholder="Select Category" tabindex="-1" style="display: none;">
-                    <option value="" selected="selected">Select Category</option>
+                  <label for="category" class="col-form-label">Type</label>
+                  <select id="resource-category-select" name="category">
+                    <option value="">Category</option>
+                    <option value="services offered">Services Offered</option>
+                    <option value="items offered">Items Offered</option>
+                    <option value="services needed">Services Needed</option>
+                    <option value="items needed">Items Needed</option>
                   </select>
-
-                  <div class="selectize-control change-tab single">
-                    <div class="selectize-input items full has-options has-items">
-                      <div class="item" data-value="">Select Category</div>
-                      <input type="text" autocomplete="off" tabindex="" id="submit-category-selectized" style="width: 4px; opacity: 0; position: absolute; left: -10000px;">
-                    </div>
-
-                    <div class="selectize-dropdown single change-tab" style="display: none; width: 349.99px; top: 55.3333px; left: 0px; visibility: visible;">
-                      <div class="selectize-dropdown-content">
-                        <div class="option selected" data-selectable="" data-value="">Select Category</div>
-                        <div class="option" data-selectable="" data-value="service offered">Service Offered</div>
-                        <div class="option" data-selectable="" data-value="item offered">Item Offered</div>
-                        <div class="option" data-selectable="" data-value="service needed">Service Needed</div>
-                        <div class="option" data-selectable="" data-value="item needed">Item Needed</div>
-                      </div>
-                    </div>
-                  </div>
-                </div> {{!-- end form group --}}
-              </div> {{!-- end col --}}
-            </div> {{!-- end row --}}
+                </div>
+              </div>
+            </div>
           </section>
 
           <section>
             <h2>Details</h2>
             <div class="form-group">
-              <label for="details" class="col-form-label">Additional Details</label>
+              <label for="details" class="col-form-label">Describe your post. Propose a trade. This part is up to you.</label>
               <textarea name="details" id="details" class="form-control" rows="4"></textarea>
             </div>
           </section>
           <section class="clearfix">
             <div class="form-group">
-              <button type="submit" class="btn btn-primary large icon float-right" id="post-event" data-id={{userId}}
-                data-userName={{userName}}>Post
+              <button type="submit" class="btn btn-primary large icon float-right" id="post-resource" data-id={{this.userId}}
+                data-userName={{this.userName}}>Post
                 <i class="fa fa-chevron-right"></i>
               </button>
             </div>

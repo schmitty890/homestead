@@ -17,12 +17,14 @@ module.exports = function(app) {
   app.get('/postcommunity', isLoggedIn, authController.postcommunity);
   app.get('/postclassified', isLoggedIn, authController.postclassified);
   app.get('/postevent', isLoggedIn, authController.postevent);
+  app.get('/postresource', isLoggedIn, authController.postevent);
+
   app.post('/postclassified', passport.authenticate('local-signin', {
     successRedirect: '/classifieds',
     failureRedirect: '/account'
   }))
 
-  app.get('/postresource', isLoggedIn, authController.postresource);
+  app.get('/new-resource', isLoggedIn, authController.postresource);
   app.get('/contact', isLoggedIn, authController.contact);
   app.get('/logout',authController.logout);
 

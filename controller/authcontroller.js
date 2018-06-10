@@ -36,7 +36,10 @@ exports.postevent = function(req, res) {
 }
 
 exports.postresource = function(req, res) {
-  res.render('postresource', { userId: req.user.id });
+  res.render('postresource', { 
+    userId: req.user.id,
+    userName: req.user.username
+  });
 }
 
 exports.contact = function(req, res) {

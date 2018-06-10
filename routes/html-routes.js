@@ -86,7 +86,7 @@ module.exports = function (app) {
         resource: data
       }
 
-      res.render('resources', { hbsObject: hbsObject });
+      res.render('resources', hbsObject);
     });
   })
 
