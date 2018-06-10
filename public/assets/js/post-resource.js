@@ -1,10 +1,15 @@
 /**
- * [PostEvent captures values from the form on /postevent]
+ * [PostResource captures values from the form on /postevent]
  * steps
  * 1. on submit of the postevent collect values from form
- * 2. pass values of form to ajax call to the backend api, /api/events
+ * 2. pass values of form to ajax call to the backend api, /api/resource
  */
-var PostEvent = function(){
+var PostResource = function () {
+
+  $('#submit-category').selectize({
+    sortField: 'text'
+  });
+
   var formValues = {};
   $("#date").flatpickr({
     enableTime: true,
@@ -17,7 +22,7 @@ var PostEvent = function(){
       date: $('#date').val().trim(),
       description: $('#details').val().trim()
     }
-    if (formValues.title === '' || formValues.date === '') {
+    if (formValues.title === '' || formValues.description === '') {
       alert('fill out ALL required forms.');
     }
     passToBackend(formValues);
@@ -25,18 +30,19 @@ var PostEvent = function(){
 
   function passToBackend(formValues) {
     console.log(formValues);
-    $.ajax('/api/events', {
+    $.ajax('/api/resources', {
       type: 'POST',
       data: formValues
     }).then(
-      function() {
+      function () {
+        //redirect to resource page?
         location.reload();
       }
     );
   }
 
   function onSubmit() {
-    $(document).on('submit', '#post-event-form', function(e) {
+    $(document).on('submit', '#post-resource-form', function (e) {
       e.preventDefault();
       gatherFormElements();
     });
@@ -52,4 +58,4 @@ var PostEvent = function(){
 
 }();
 
-PostEvent.init();
+PostResource.init();

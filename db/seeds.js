@@ -67,32 +67,44 @@ function seeds() {
       author_id: 527,
       title: "yard sale",
       description: "everybody get out any items you wish to sell",
-      date: "07/29/2018"
+      category: "Sell",
+      date: "07/27/2018",
+      location: "Lot 115"
     }, {
       author_id: 4421,
       title: "block party",
       description: "party it up with the block!",
-      date: "06/24/2018"
+      category: "Social",
+      date: "06/24/2018",
+      location: "Seasame Street Cul-de-sac"
     }, {
       author_id: 527,
       title: "cookout",
       description: "hamburgers and hotdogs on da grill!",
-      date: "06/13/2018"
+      category: "Social",
+      date: "06/13/2018",
+      location: "Neighboorhood Cabana"
     }, {
       author_id: 123,
       title: "pool party",
       description: "get the floaties out!",
-      date: "08/13/2018"
+      category: "Social",
+      date: "08/13/2018",
+      location: "Clubhouse/Pool"
     }, {
       author_id: 321,
       title: "block party",
       description: "its gonna be wild!",
-      date: "09/25/2018"
+      category: "Social",
+      date: "09/25/2018",
+      location: "Seasame Street Cul-de-sac"
     }, {
       author_id: 555,
       title: "volleyball tournament",
       description: "serve it up!",
-      date: "09/25/2018"
+      category: "Sports",
+      date: "09/25/2018",
+      location: "Pool-side beach volleyball court"
     }
   ]);
 

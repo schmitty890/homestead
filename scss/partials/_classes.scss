@@ -501,6 +501,13 @@ Headers:		'Varela Round', sans-serif;
 .hero .main-navigation .navbar ul.navbar-nav li.nav-item {
   position: relative;
 }
+.nav-link-read-only{
+  padding: 1rem 1.5rem;
+}
+.nav-link-read-only:hover{
+  background-color:white;
+}
+
 .hero .main-navigation .navbar ul.navbar-nav li.nav-item.has-child > a.nav-link {}
 .hero .main-navigation .navbar ul.navbar-nav li.nav-item.has-child > a.nav-link:after {
   font-family: 'fontawesome';
@@ -569,6 +576,7 @@ Headers:		'Varela Round', sans-serif;
   border-bottom: .1rem solid rgba(0,0,0,.04);
   transition: .3s ease;
 }
+
 .hero .main-navigation .navbar ul.navbar-nav > li.nav-item ul.child li a.nav-link {
   padding: 1rem 1.5rem;
 }
@@ -605,9 +613,17 @@ Headers:		'Varela Round', sans-serif;
 .hero .main-navigation .navbar ul.navbar-nav > li.nav-item ul.child li ul li:first-child:hover:before {
   border-color: transparent transparent transparent #fafafa;
 }
-.hero .main-navigation .navbar ul.navbar-nav > li.nav-item ul.child li:hover {
+
+// .hero .main-navigation .navbar ul.navbar-nav > li.nav-item ul.child li:hover {
+//   background-color: rgba(0,0,0,.02);
+// }
+
+//replaces commented out class above
+//in order to exclude nav-link-read-oonly li's
+.hero .main-navigation .navbar ul.navbar-nav > li.nav-item ul.child li.nav-item:hover {
   background-color: rgba(0,0,0,.02);
 }
+
 .hero .main-navigation .navbar ul.navbar-nav > li.nav-item ul.child li.has-child > a.nav-link {}
 .hero .main-navigation .navbar ul.navbar-nav > li.nav-item ul.child li.has-child > a.nav-link:after {
   content: "\f0d9";
