@@ -6,7 +6,6 @@ var db = require("../models");
 let classifieds = require('../data/hp-classifieds.json');
 let faqs = require('../data/faq.json');
 
-
 module.exports = function (app) {
 
   // Home Page
@@ -66,8 +65,16 @@ module.exports = function (app) {
     res.render('classifieds');
   });
 
+  //form to post new resource
+  app.get('/new-resource', function (req, res) {
+    //if not logged in, redirect to login
+
+    //if logged in
+    res.render('postresource');
+  })
+  
+  //show all resources
   app.get('/resources', function (req, res) {
-    // let type = req.params.type.replace('%20',' ');
 
     db.resource.findAll({
       limit: 20,
@@ -81,10 +88,9 @@ module.exports = function (app) {
 
       res.render('resources', { hbsObject: hbsObject });
     });
-
-
   })
 
+  //show category of resource
   app.get('/resources/:type', function (req, res) {
     let type = req.params.type.replace('%20', ' ');
 
@@ -101,9 +107,9 @@ module.exports = function (app) {
       let hbsObject = {
         resource: data
       }
-
       res.render('resources', hbsObject);
     })
   })
+
 };
 
