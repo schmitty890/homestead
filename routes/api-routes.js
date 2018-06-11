@@ -41,6 +41,16 @@ module.exports = function(app) {
       })
   });
 
+  app.get("/api/events", function(req, res) {
+    db.event.findAll({
+      order: [
+        ['date', 'ASC']
+      ]
+    }).then( function(eventData) {
+      res.json(eventData);
+    })
+  })
+
 
 };
 
