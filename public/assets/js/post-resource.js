@@ -6,21 +6,19 @@
  */
 var PostResource = function () {
 
-  $('#submit-category').selectize({
-    sortField: 'text'
-  });
+  // $('#submit-category').selectize({
+  //   sortField: 'text'
+  // });
 
   var formValues = {};
-  $("#date").flatpickr({
-    enableTime: true,
-    dateFormat: "Y-m-d H:i"
-  });
 
   function gatherFormElements() {
+
     formValues = {
       title: $('#title').val().trim(),
       date: $('#date').val().trim(),
-      description: $('#details').val().trim()
+      description: $('#details').val().trim(),
+      category: $('#resource-category-select').val()
     }
     if (formValues.title === '' || formValues.description === '') {
       alert('fill out ALL required forms.');
@@ -29,20 +27,22 @@ var PostResource = function () {
   }
 
   function passToBackend(formValues) {
-    console.log(formValues);
+    console.log("formValues", formValues);
     $.ajax('/api/resources', {
       type: 'POST',
       data: formValues
     }).then(
       function () {
         //redirect to resource page?
-        location.reload();
+        //location.reload();
       }
     );
   }
 
   function onSubmit() {
-    $(document).on('submit', '#post-resource-form', function (e) {
+    // $(document).on('submit', '#post-resource-form', function (e) {
+    $(document).on('click', '#post-resource', function (e) {
+      console.log("clicked", this);
       e.preventDefault();
       gatherFormElements();
     });
