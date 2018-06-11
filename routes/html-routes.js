@@ -37,12 +37,16 @@ module.exports = function (app) {
 
   });
 
-  app.get('/community', function (req, res) {
-    res.render('community');
-  });
+/*   app.get('/community', function (req, res) {
+    let hbsObject = {
+      user: req.user
+    }
+    res.render('community', {hbsObject: hbsObject });
+  }); */
 
   app.get('/events', function (req, res) {
-
+    //didn't mess with, seems like we need to make eventInfo a sub of the handlebars object
+    //don't want to break all of Eric's work on accident
     db.event.findAll({
       order: [
         ['date', 'ASC']
@@ -54,40 +58,72 @@ module.exports = function (app) {
 
   });
 
-  app.get('/classes', function (req, res) {
+/*   app.get('/classes', function (req, res) {
     res.render('community');
   });
 
   app.get('/meetups', function (req, res) {
     res.render('meetups');
-  });
+  }); */
 
   app.get('/faq', function (req, res) {
     let hbsObject = {
-      faqs: faqs
+      faqs: faqs,
+      user: req.user
     }
-    // console.log(hbsObject);
     res.render('faq', { hbsObject: hbsObject });
   });
 
   app.get('/classifieds', function (req, res) {
-    let hbsObject = {};
-
-    db.event.findAll({
-    }).then(function (eventInfo) {
-      hbsObject.eventInfo = eventInfo[0];
-      hbsObject.eventCount = eventInfo.length;
-    });
+    let hbsObject = {
+      user: req.user
+    }
 
     db.classifieds.findAll({
+      order: [
+        ['createdAt', 'DESC']
+      ]
     }).then(function (classifiedsInfo) {
-      hbsObject.classifiedsInfo = classifiedsInfo[0];
-      hbsObject.classifiedsCount = classifiedsInfo.length;
+      // console.log('--------------------------------');
+      // console.log(classifiedsInfo[0])
+      hbsObject.total = {
+        classifiedsCount: classifiedsInfo.length,
+        latest: classifiedsInfo[0]
+      }
+      db.classifieds.findAll({
+        where: {
+          category: 'bikes'
+        },
+        order: [
+          ['createdAt', 'DESC']
+        ]
+      }).then(function (classifiedBikes) {
+        // console.log('--------------------------------');
+        // console.log(classifiedBikes);
+        hbsObject.bikes = {
+          classifiedBikeCount: classifiedBikes.length,
+          latest: classifiedBikes[0]
+        }
+
+        db.classifieds.findAll({
+          where: {
+            category: 'electronics'
+          },
+          order: [
+            ['createdAt', 'DESC']
+          ]
+        }).then(function (classifiedElectronics) {
+          // console.log('--------------------------------');
+          // console.log(classifiedElectronics);
+          hbsObject.electronics = {
+            classifiedElectronicCount: classifiedElectronics.length,
+            latest: classifiedElectronics[0]
+          }
+
+          res.render('classifieds', { hbsObject: hbsObject });
+        });
+      });
     });
-
-    console.log(hbsObject);
-    res.render('classifieds', { hbsObject: hbsObject });
-
   });
 
   //form to post new resource
@@ -100,15 +136,18 @@ module.exports = function (app) {
 
   //show all resources
   app.get('/resources', function (req, res) {
-
+    //console.log(req)
+    //let resourceUserHolder = req.user
     db.resource.findAll({
       limit: 20,
       order: [
         ['createdAt']
       ]
-    }).then(function (data) {
+    }).then(function (data/*, resourceUserHolder */) {
+      //console.log(resourceUserHolder)
       let hbsObject = {
-        resource: data
+        resource: data,
+        //user: resourceUserHolder
       }
 
       res.render('resources', hbsObject);
