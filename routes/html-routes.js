@@ -75,10 +75,55 @@ module.exports = function (app) {
   });
 
   app.get('/classifieds', function (req, res) {
-    let hbsOBject = {
+    let hbsObject = {
       user: req.user
     }
-    res.render('classifieds', { hbsObject: hbsOBject });
+
+    db.classifieds.findAll({
+      order: [
+        ['createdAt', 'DESC']
+      ]
+    }).then(function (classifiedsInfo) {
+      // console.log('--------------------------------');
+      // console.log(classifiedsInfo[0])
+      hbsObject.total = {
+        classifiedsCount: classifiedsInfo.length,
+        latest: classifiedsInfo[0]
+      }
+      db.classifieds.findAll({
+        where: {
+          category: 'bikes'
+        },
+        order: [
+          ['createdAt', 'DESC']
+        ]
+      }).then(function (classifiedBikes) {
+        // console.log('--------------------------------');
+        // console.log(classifiedBikes);
+        hbsObject.bikes = {
+          classifiedBikeCount: classifiedBikes.length,
+          latest: classifiedBikes[0]
+        }
+
+        db.classifieds.findAll({
+          where: {
+            category: 'electronics'
+          },
+          order: [
+            ['createdAt', 'DESC']
+          ]
+        }).then(function (classifiedElectronics) {
+          // console.log('--------------------------------');
+          // console.log(classifiedElectronics);
+          hbsObject.electronics = {
+            classifiedElectronicCount: classifiedElectronics.length,
+            latest: classifiedElectronics[0]
+          }
+
+          res.render('classifieds', { hbsObject: hbsObject });
+        });
+      });
+    });
   });
 
   //form to post new resource
