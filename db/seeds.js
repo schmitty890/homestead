@@ -108,6 +108,132 @@ function seeds() {
     }
   ]);
 
+  // seeds for classifieds
+  db.classifieds.bulkCreate([
+    {
+      author_id: 99,
+      username: "BuckyBoi",
+      name: "Bucky",
+      email: "Bucky@gmail.com",
+      phone: "9191234567",
+      title: "title to an awesome post",
+      price: "1",
+      details: "details about this product",
+      date_added: "10/10/2018",
+      category: "outdoor",
+      condition: "Used"
+    },{
+      author_id: 100,
+      username: "SkaterDude89",
+      name: "Bill",
+      email: "SkaterDude89@gmail.com",
+      phone: "9191232367",
+      title: "title to an awesome post",
+      price: "10",
+      details: "details about this product",
+      date_added: "06/18/2018",
+      category: "auto",
+      condition: "Like new"
+    },{
+      author_id: 101,
+      username: "StarGazer",
+      name: "Star",
+      email: "StarGazer@gmail.com",
+      phone: "9191234567",
+      title: "title to an awesome post",
+      price: "4",
+      details: "details about this product",
+      date_added: "11/10/2018",
+      category: "auto",
+      condition: "Like new"
+    },{
+      author_id: 102,
+      username: "LukeSky",
+      name: "Luke",
+      email: "LukeSky@gmail.com",
+      phone: "9191234567",
+      title: "title to an awesome post",
+      price: "105",
+      details: "details about this product",
+      date_added: "12/10/2018",
+      category: "outdoor",
+      condition: "Used"
+    },{
+      author_id: 103,
+      username: "Lucy99",
+      name: "Lucy",
+      email: "Lucy99@gmail.com",
+      phone: "9191234567",
+      title: "title to an awesome post",
+      price: "7",
+      details: "details about this product",
+      date_added: "08/03/2018",
+      category: "outdoor",
+      condition: "Used"
+    },{
+      author_id: 104,
+      username: "Troll",
+      name: "Bucky",
+      email: "blah@gmail.com",
+      phone: "9191234567",
+      title: "title to an awesome post",
+      price: "23",
+      details: "details about this product",
+      date_added: "08/13/2018",
+      category: "auto",
+      condition: "Used"
+    },{
+      author_id: 105,
+      username: "DanTheMan",
+      name: "Dan",
+      email: "DanTheMan@gmail.com",
+      phone: "9191234567",
+      title: "title to an awesome post",
+      price: "78",
+      details: "details about this product",
+      date_added: "10/18/2018",
+      category: "outdoor",
+      condition: "Like new"
+    },{
+      author_id: 106,
+      username: "Tazman",
+      name: "Taz",
+      email: "Tazman@gmail.com",
+      phone: "9191234567",
+      title: "title to an awesome post",
+      price: "5",
+      details: "details about this product",
+      date_added: "11/22/2018",
+      category: "auto",
+      condition: "Like new"
+    },{
+      author_id: 107,
+      username: "SuzySue",
+      name: "Suz",
+      email: "SuzySue@gmail.com",
+      phone: "9191234567",
+      title: "title to an awesome post",
+      price: "99",
+      details: "details about this product",
+      date_added: "10/10/2018",
+      category: "outdoor",
+      condition: "Like new"
+    },{
+      author_id: 108,
+      username: "BillyBob",
+      name: "Bill bob",
+      email: "BillyBob@gmail.com",
+      phone: "9191875567",
+      title: "title to an awesome post",
+      price: "193",
+      details: "details about this product",
+      date_added: "09/03/2018",
+      category: "auto",
+      condition: "Like new"
+    }
+  ]);
+
+
 }
 // commenting this out as we are invoking it on server.js
 // seeds();
