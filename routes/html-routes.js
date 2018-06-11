@@ -22,7 +22,15 @@ module.exports = function (app) {
       ]
     }).then(function (eventInfo) {
       hbsObject.eventInfo = eventInfo;
-      // console.log(hbsObject);
+    });
+
+    db.classifieds.findAll({
+      limit: 6,
+      order: [
+        ['date_added', 'ASC']
+      ]
+    }).then(function (classifiedsInfo) {
+      hbsObject.classifiedsInfo = classifiedsInfo;
       res.render('index', { hbsObject: hbsObject });
     });
 
@@ -72,7 +80,7 @@ module.exports = function (app) {
     //if logged in
     res.render('postresource');
   })
-  
+
   //show all resources
   app.get('/resources', function (req, res) {
 

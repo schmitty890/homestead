@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $('.upcoming-events').slick({
+  $('.upcoming-events, .recent-classifieds').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
