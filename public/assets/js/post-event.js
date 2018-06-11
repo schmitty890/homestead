@@ -6,10 +6,6 @@
  */
 var PostEvent = function(){
   var formValues = {};
-  $("#date").flatpickr({
-    enableTime: true,
-    dateFormat: "Y-m-d H:i"
-  });
 
   function gatherFormElements() {
     formValues = {
