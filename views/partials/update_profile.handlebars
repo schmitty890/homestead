@@ -1,0 +1,81 @@
+<div class="page sub-page">
+  <section class="hero">
+    <div class="hero-wrapper">
+      <div class="page-title">
+        <div class="container">
+          <h1>Update Your Profile</h1>
+        </div>
+      </div>
+    </div>
+    <div class="background"></div>
+  </section>
+  <section class="content">
+    <section class="block">
+      <div class="container">
+        <form class="form form-submit" id="updateUserNameForm">
+          <section>
+            <h2>Update User Name</h2>
+            <div class="row">
+              <div class="col-md-8">
+                <div class="form-group">
+                  <label for="updateUserName" class="col-form-label required">New User Name</label>
+                  <input name="updateUserName" type="text" class="form-control" id="updateName" placeholder="New User Name" required>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="clearfix">
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary large icon float-right" {{!-- id="post-resource" data-id={{this.userId}}
+                data-userName={{this.userName}} --}}>Update User Name
+                <i class="fa fa-chevron-right"></i>
+              </button>
+            </div>
+          </section>
+        </form>
+        <form class="form form-submit" id="updateEmailForm">
+          <section>
+            <h2>Update User Email</h2>
+            <div class="row">
+              <div class="col-md-8">
+                <div class="form-group">
+                  <label for="updateUserEmail" class="col-form-label required">New Email</label>
+                  <input name="updateUserEmail" type="email" class="form-control" id="updateEmail" placeholder="New Email" required>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="clearfix">
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary large icon float-right" {{!-- id="post-resource" data-id={{this.userId}}
+                data-userName={{this.userName}} --}}>Update Email
+                <i class="fa fa-chevron-right"></i>
+              </button>
+            </div>
+          </section>
+        </form>
+        <form class="form form-submit" id="updateUserNameForm">
+          <section>
+            <h2>Update User Description</h2>
+            <div class="row">
+              <div class="col-md-8">
+                <div class="form-group">
+                  <label for="updateDescription" class="col-form-label required">Update Description</label>
+                  <textarea name="updateDescription" id="updateDescription" class="form-control" rows="4" placeholder="Update Description" required></textarea>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="clearfix">
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary large icon float-right" {{!-- id="post-resource" data-id={{this.userId}}
+                data-userName={{this.userName}} --}}>Update Description
+                <i class="fa fa-chevron-right"></i>
+              </button>
+            </div>
+          </section>
+        </form>
+      </div>
+    </section>
+  </section>
+</div> 
