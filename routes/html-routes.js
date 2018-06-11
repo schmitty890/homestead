@@ -15,9 +15,6 @@ module.exports = function (app) {
       classifieds: classifieds,
       user: req.user
     }
-    console.log('-------------------------');
-    console.log(hbsObject);
-    console.log('-------------------------');
 
     db.event.findAll({
       limit: 6,
