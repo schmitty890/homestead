@@ -37,12 +37,16 @@ module.exports = function (app) {
 
   });
 
-  app.get('/community', function (req, res) {
-    res.render('community');
-  });
+/*   app.get('/community', function (req, res) {
+    let hbsObject = {
+      user: req.user
+    }
+    res.render('community', {hbsObject: hbsObject });
+  }); */
 
   app.get('/events', function (req, res) {
-
+    //didn't mess with, seems like we need to make eventInfo a sub of the handlebars object
+    //don't want to break all of Eric's work on accident
     db.event.findAll({
       order: [
         ['date', 'ASC']
@@ -54,24 +58,27 @@ module.exports = function (app) {
 
   });
 
-  app.get('/classes', function (req, res) {
+/*   app.get('/classes', function (req, res) {
     res.render('community');
   });
 
   app.get('/meetups', function (req, res) {
     res.render('meetups');
-  });
+  }); */
 
   app.get('/faq', function (req, res) {
     let hbsObject = {
-      faqs: faqs
+      faqs: faqs,
+      user: req.user
     }
-    // console.log(hbsObject);
     res.render('faq', { hbsObject: hbsObject });
   });
 
   app.get('/classifieds', function (req, res) {
-    res.render('classifieds');
+    let hbsOBject = {
+      user: req.user
+    }
+    res.render('classifieds', { hbsObject: hbsOBject });
   });
 
   //form to post new resource
@@ -84,15 +91,18 @@ module.exports = function (app) {
 
   //show all resources
   app.get('/resources', function (req, res) {
-
+    //console.log(req)
+    //let resourceUserHolder = req.user
     db.resource.findAll({
       limit: 20,
       order: [
         ['createdAt']
       ]
-    }).then(function (data) {
+    }).then(function (data/*, resourceUserHolder */) {
+      //console.log(resourceUserHolder)
       let hbsObject = {
-        resource: data
+        resource: data,
+        //user: resourceUserHolder
       }
 
       res.render('resources', hbsObject);

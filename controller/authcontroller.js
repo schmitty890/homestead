@@ -14,44 +14,68 @@ exports.signin = function(req,res){
 //when in doubt about carrying data into a new route, console.log your req here.
 //hit me up if you run into confusion obviously -Joe
 exports.account = function(req, res) {
+  let hbsObject = {
+    user: req.user
+  }
   res.render('account', {
     userId: req.user.id,
-    userName: req.user.username
+    userName: req.user.username,
+    hbsObject: hbsObject
   });
 }
 
 exports.postcommunity = function(req, res) {
+  let hbsObject = {
+    user: req.user
+  }
   res.render('postcommunity', {
     userId: req.user.id,
-    userName: req.user.username
+    userName: req.user.username,
+    hbsObject: hbsObject
   });
 }
 
 exports.postclassified = function(req, res) {
+  let hbsObject = {
+    user: req.user
+  }
   res.render('postclassified', {
     userId: req.user.id,
-    userName: req.user.username
+    userName: req.user.username,
+    hbsObject: hbsObject
   });
 }
 
 exports.postevent = function(req, res) {
+  let hbsObject = {
+    user: req.user
+  }
   res.render('postevent', {
     userId: req.user.id,
-    userName: req.user.username
+    userName: req.user.username,
+    hbsObject: hbsObject
   });
 }
 
 exports.postresource = function(req, res) {
+  let hbsObject = {
+    user: req.user
+  }
   res.render('postresource', { 
     userId: req.user.id,
-    userName: req.user.username
+    userName: req.user.username,
+    hbsObject: hbsObject
   });
 }
 
 exports.contact = function(req, res) {
+  let hbsObject = {
+    user: req.user
+  }
   res.render('contact', {
     userId: req.user.id,
-    userName: req.user.username
+    userName: req.user.username,
+    hbsObject: hbsObject
   });
 }
 
