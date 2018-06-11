@@ -6,8 +6,8 @@
         <ul class="left">
           <li>
             <span>
-              {{#if userName}}
-                Posting As: {{{userName}}}
+              {{#if hbsObject.user}}
+                Posting As: {{hbsObject.user.email}}
               {{/if}}
             </span>
           </li>
@@ -19,6 +19,13 @@
               <i class="fa fa-heart"></i>My Ads
             </a>
           </li>
+          {{#if hbsObject.user}}
+          <li>
+            <a href="/logout">
+              <i class="fa fa-sign-in"></i>Logout
+            </a>
+          </li>
+          {{else}}
           <li>
             <a href="/signin">
               <i class="fa fa-sign-in"></i>Sign In
@@ -29,6 +36,8 @@
               <i class="fa fa-pencil-square-o"></i>Register
             </a>
           </li>
+          {{/if}}
+
         </ul>
         <!--end right-->
       </div>

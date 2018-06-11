@@ -1,5 +1,131 @@
 <div class="page classifieds-page">
   <section class="content">
-
+    <section class="block">
+      <div class="container">
+        <div class="items list grid-xl-4-items grid-lg-3-items grid-md-2-items">
+          <!-- All Classifieds -->
+          <div class="item">
+            <div class="wrapper">
+              <div class="image">
+                <h3>
+                  <a href="#" class="title">Classifieds - All</a>
+                </h3>
+                <a href="#" class="image-wrapper background-image">
+                    <img src="assets/img/image-02.jpg" alt="">
+                </a>
+              </div>
+              <div class="price">${{hbsObject.total.latest.price}}</div>
+              <div class="meta">
+                <figure>
+                  <i class="fa fa-calendar-o"></i>{{momentFromNowTime hbsObject.total.latest.createdAt}}
+                </figure>
+                <figure>
+                  <a href="#">
+                    <i class="fa fa-user"></i>{{hbsObject.total.latest.email}}
+                  </a>
+                </figure>
+              </div>
+              <div class="description">
+                <p>{{hbsObject.total.latest.details}}</p>
+              </div>
+              <div class="additional-info">
+                <ul>
+                  <li>
+                    <figure>Latest Post</figure>
+                    <aside>{{momentFromNowTime hbsObject.total.latest.createdAt}}</aside>
+                  </li>
+                  <li>
+                    <figure>Length</figure>
+                    <aside>{{hbsObject.total.latest.condition}}</aside>
+                  </li>
+                  <li>
+                    <figure>Total Number of Classifieds</figure>
+                    <aside>{{hbsObject.total.classifiedsCount}}</aside>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Bike Classifieds -->
+          <div class="item">
+            <div class="wrapper">
+              <div class="image">
+                <h3>
+                  <a href="#" class="title">Bikes</a>
+                </h3>
+                <a href="#" class="image-wrapper background-image">
+                    <img src="assets/img/image-02.jpg" alt="">
+                </a>
+              </div>
+              <div class="price">${{hbsObject.bikes.latest.price}}</div>
+              <div class="meta">
+                <figure>
+                  <i class="fa fa-calendar-o"></i>{{momentFromNowTime hbsObject.bikes.latest.createdAt}}
+                </figure>
+                <figure>
+                  <a href="#">
+                    <i class="fa fa-user"></i>{{hbsObject.bikes.latest.email}}
+                  </a>
+                </figure>
+              </div>
+              <div class="description">
+                <p>{{hbsObject.bikes.latest.details}}</p>
+              </div>
+              <div class="additional-info">
+                <ul>
+                  <li>
+                    <figure>Latest Post</figure>
+                    <aside>{{momentFromNowTime hbsObject.bikes.latest.createdAt}}</aside>
+                  </li>
+                  <li>
+                    <figure>Length</figure>
+                    <aside>{{hbsObject.bikes.latest.condition}}</aside>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- electronics Classifieds -->
+          <div class="item">
+            <div class="wrapper">
+              <div class="image">
+                <h3>
+                  <a href="#" class="title">Electronics</a>
+                </h3>
+                <a href="#" class="image-wrapper background-image">
+                    <img src="assets/img/image-02.jpg" alt="">
+                </a>
+              </div>
+              <div class="price">${{hbsObject.electronics.latest.price}}</div>
+              <div class="meta">
+                <figure>
+                  <i class="fa fa-calendar-o"></i>{{momentFromNowTime hbsObject.electronics.latest.createdAt}}
+                </figure>
+                <figure>
+                  <a href="#">
+                    <i class="fa fa-user"></i>{{hbsObject.electronics.latest.email}}
+                  </a>
+                </figure>
+              </div>
+              <div class="description">
+                <p>{{hbsObject.electronics.latest.details}}</p>
+              </div>
+              <div class="additional-info">
+                <ul>
+                  <li>
+                    <figure>Latest Post</figure>
+                    <aside>{{momentFromNowTime hbsObject.electronics.latest.createdAt}}</aside>
+                  </li>
+                  <li>
+                    <figure>Length</figure>
+                    <aside>{{hbsObject.electronics.latest.condition}}</aside>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </section>
 </div>
