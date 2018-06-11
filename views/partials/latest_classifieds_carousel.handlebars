@@ -1,0 +1,39 @@
+<section class="block">
+  <div class="container">
+    <h2>Recent Classifieds</h2>
+    <div class="recent-classifieds items grid grid-xl-4-items grid-lg-3-items grid-md-2-items">
+      {{#each hbsObject.classifiedsInfo}}
+        <div class="item">
+          <div class="wrapper">
+            <div class="image">
+              <h3>
+                <a href="#" class="tag category">{{this.category}}</a>
+                <a href="single-listing-1.html" class="title">{{this.title}}</a>
+              </h3>
+              <a href="single-listing-1.html" class="image-wrapper background-image">
+                <img src="assets/img/image-04.jpg" alt="">
+              </a>
+            </div>
+            <h4 class="location">
+              <a href="#">LOCATION</a>
+            </h4>
+            <div class="price">${{this.price}}</div>
+            <div class="meta">
+              <figure>
+                <i class="fa fa-calendar-o"></i>{{momentFromNowTime this.date_added}}
+              </figure>
+              <figure>
+                <a href="#">
+                  <i class="fa fa-user"></i>{{this.username}}
+                </a>
+              </figure>
+            </div>
+            <div class="description">
+              <p>{{this.details}}</p>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</section>
