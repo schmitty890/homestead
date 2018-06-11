@@ -30,5 +30,17 @@ module.exports = function(app) {
       })
   });
 
+  app.post("/api/resources", function(req, res) {
+    var userId = '';
+    db.resource.create(req.body)
+      .then(function(resources) {
+        res.json(resources);
+      })
+      .catch(function(err) {
+        res.json({ status: "ERROR", message: err })
+      })
+  });
+
+
 };
 
