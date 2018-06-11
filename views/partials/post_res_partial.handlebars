@@ -1,0 +1,68 @@
+<div class="page sub-page">
+  <section class="hero">
+    <div class="hero-wrapper">
+      <div class="page-title">
+        <div class="container">
+          <h1>Submit Resource</h1>
+        </div>
+      </div>
+    </div>
+    <div class="background"></div>
+  </section>
+  <section class="content">
+    <section class="block">
+      <div class="container">
+        <form class="form form-submit" id="post-resource-form">
+          <section>
+            <h2>Basic Information</h2>
+            <div class="row">
+              <div class="col-md-8">
+                <div class="form-group">
+                  <label for="title" class="col-form-label required">Title</label>
+                  <input name="title" type="text" class="form-control" id="title" placeholder="Title" required>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="date" class="col-form-label required">Date</label>
+                  <input name="date" type="text" class="form-control" placeholder="07/14/2018" id="date" required>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="category" class="col-form-label">Type</label>
+                  <select id="resource-category-select" name="category">
+                    <option value="">Category</option>
+                    <option value="services offered">Services Offered</option>
+                    <option value="items offered">Items Offered</option>
+                    <option value="services needed">Services Needed</option>
+                    <option value="items needed">Items Needed</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2>Details</h2>
+            <div class="form-group">
+              <label for="details" class="col-form-label">Describe your post. Propose a trade. This part is up to you.</label>
+              <textarea name="details" id="details" class="form-control" rows="4"></textarea>
+            </div>
+          </section>
+          <section class="clearfix">
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary large icon float-right" id="post-resource" data-id={{this.userId}}
+                data-userName={{this.userName}}>Post
+                <i class="fa fa-chevron-right"></i>
+              </button>
+            </div>
+          </section>
+        </form>
+      </div>
+    </section>
+  </section>
+
+</div>
