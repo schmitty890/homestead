@@ -7,7 +7,7 @@
             <img src="assets/img/logo.png" alt="">
           </a>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec tincidunt arcu, sit amet fermentum sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra.
+            To learn more about the tech that drives this page, visit <a href="https://github.com/schmitty890/homestead">here.</a>
           </p>
         </div>
         <!--end col-md-5-->
@@ -18,22 +18,19 @@
               <nav>
                 <ul class="list-unstyled">
                   <li>
-                    <a href="#">Home</a>
+                    <a href="/">Home</a>
                   </li>
                   <li>
-                    <a href="#">Listing</a>
+                    <a href="/account">Account</a>
                   </li>
                   <li>
-                    <a href="#">Pages</a>
+                    <a href="/events">Events</a>
                   </li>
                   <li>
-                    <a href="#">Extras</a>
+                    <a href="classifieds">Classifieds</a>
                   </li>
                   <li>
-                    <a href="#">Contact</a>
-                  </li>
-                  <li>
-                    <a href="#">Submit Ad</a>
+                    <a href="/resources">Resource Share</a>
                   </li>
                 </ul>
               </nav>
@@ -41,15 +38,23 @@
             <div class="col-md-6 col-sm-6">
               <nav>
                 <ul class="list-unstyled">
-                  <li>
+                  <!--commenting out until we have this functional
+                   <li>
                     <a href="#">My Ads</a>
-                  </li>
-                  <li>
-                    <a href="#">Sign In</a>
-                  </li>
-                  <li>
-                    <a href="#">Register</a>
-                  </li>
+                  </li> -->
+                  {{#if hbsObject.user}}
+                    <li>
+                      <a href="/signout">Logout</a>
+                    </li>
+                  {{else}}
+                    <li>
+                      <a href="/signin">Sign In</a>
+                    </li>
+                    <li>
+                      <a href="/signup">Register</a>
+                    </li>                  
+                  {{/if}}
+
                 </ul>
               </nav>
             </div>
@@ -60,16 +65,14 @@
           <h2>Contact</h2>
           <address>
             <figure>
-              124 Abia Martin Drive
-              <br> New York, NY 10011
+              HOA Main Office<br>
+              109 Fidelity Court Rd.<br>
+              Carrboro, NC 27510
             </figure>
-            <br>
-            <strong>Email:</strong> <a href="#">hello@example.com</a>
-            <br>
-            <strong>Skype: </strong> Craigs
+            <strong>Phone: </strong> (919) 555-5555
             <br>
             <br>
-            <a href="contact.html" class="btn btn-primary text-caps btn-framed">Contact Us</a>
+            <a href="/contact" class="btn btn-primary text-caps btn-framed">Contact Us</a>
           </address>
         </div>
         <!--end col-md-4-->

@@ -12,7 +12,8 @@ module.exports = function (app) {
   app.get('/', function (req, res) {
 
     let hbsObject = {
-      classifieds: classifieds
+      classifieds: classifieds,
+      user: req.user
     }
 
     db.event.findAll({
