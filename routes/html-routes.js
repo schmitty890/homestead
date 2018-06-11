@@ -70,7 +70,18 @@ module.exports = function (app) {
   });
 
   app.get('/classifieds', function (req, res) {
-    res.render('classifieds');
+    let hbsObject = {};
+
+    db.event.findAll({
+    }).then(function (eventInfo) {
+      hbsObject.eventInfo = eventInfo;
+    });
+
+    db.classifieds.findAll({
+    }).then(function (classifiedsInfo) {
+      hbsObject.classifiedsInfo = classifiedsInfo;
+      res.render('classifieds', { hbsObject: hbsObject });
+    });
   });
 
   //form to post new resource

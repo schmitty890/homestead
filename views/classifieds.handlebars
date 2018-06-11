@@ -1,84 +1,60 @@
-    <div class="page classifieds-page">
-        <section class="content">
-            <section class="block">
-                <div class="container">
-                    <!--============ Section Title===================================================================-->
-                    <div class="section-title clearfix">
-                        <div class="float-left float-xs-none">
-                            <label class="mr-3 align-text-bottom">Sort by: </label>
-                            <select name="sorting" id="sorting" class="small width-200px" data-placeholder="Default Sorting" >
-                                <option value="">Default Sorting</option>
-                                <option value="1">Newest First</option>
-                                <option value="2">Oldest First</option>
-                                <option value="3">Lowest Price First</option>
-                                <option value="4">Highest Price First</option>
-                            </select>
+<div class="page classifieds-page">
+  <section class="content">
+    <section class="block">
+      <div class="container">
 
-                        </div>
-                        <div class="float-right d-xs-none thumbnail-toggle">
-                            <a href="#" class="change-class" data-change-from-class="list" data-change-to-class="grid" data-parent-class="items">
-                                <i class="fa fa-th"></i>
-                            </a>
-                            <a href="#" class="change-class active" data-change-from-class="grid" data-change-to-class="list" data-parent-class="items">
-                                <i class="fa fa-th-list"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <!--============ Items ==========================================================================-->
-                    <div class="items list grid-xl-4-items grid-lg-3-items grid-md-2-items">
-
-
-                        <div class="item">
-                            <div class="wrapper">
-                                <div class="image">
-                                    <h3>
-                                        <a href="#" class="tag category">Education</a>
-                                        <a href="single-listing-1.html" class="title">Creative Course</a>
-                                        <span class="tag">Offer</span>
-                                    </h3>
-                                    <a href="single-listing-1.html" class="image-wrapper background-image">
-                                        <img src="assets/img/image-02.jpg" alt="">
-                                    </a>
-                                </div>
-                                <h4 class="location">
-                                    <a href="#">Nashville, TN</a>
-                                </h4>
-                                <div class="price">$125</div>
-                                <div class="meta">
-                                    <figure>
-                                        <i class="fa fa-calendar-o"></i>28.04.2017
-                                    </figure>
-                                    <figure>
-                                        <a href="#">
-                                            <i class="fa fa-user"></i>Peter Browner
-                                        </a>
-                                    </figure>
-                                </div>
-                                <div class="description">
-                                    <p>Proin at tortor eros. Phasellus porta nec elit non lacinia. Nam bibendum erat at leo faucibus vehicula. Ut laoreet porttitor risus, eget suscipit tellus tincidunt sit amet. </p>
-                                </div>
-                                <div class="additional-info">
-                                    <ul>
-                                        <li>
-                                            <figure>Start Date</figure>
-                                            <aside>25.06.2017 09:00</aside>
-                                        </li>
-                                        <li>
-                                            <figure>Length</figure>
-                                            <aside>2 months</aside>
-                                        </li>
-                                        <li>
-                                            <figure>Bedrooms</figure>
-                                            <aside>3</aside>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <!--============ End Items ======================================================================-->
-                </div>
-            </section>
-        </section>
-    </div>
+        <div class="items list grid-xl-4-items grid-lg-3-items grid-md-2-items">
+          {{#each hbsObject.eventInfo}}
+          <div class="item">
+            <div class="wrapper">
+              <div class="image">
+                <h3>
+                  <a href="#" class="tag category">Education</a>
+                  <a href="single-listing-1.html" class="title">Creative Course</a>
+                  <span class="tag">Offer</span>
+                </h3>
+                <a href="single-listing-1.html" class="image-wrapper background-image">
+                    <img src="assets/img/image-02.jpg" alt="">
+                </a>
+              </div>
+              <h4 class="location">
+                <a href="#">Nashville, TN</a>
+              </h4>
+              <div class="price">$125</div>
+              <div class="meta">
+                <figure>
+                  <i class="fa fa-calendar-o"></i>28.04.2017
+                </figure>
+                <figure>
+                  <a href="#">
+                    <i class="fa fa-user"></i>Peter Browner
+                  </a>
+                </figure>
+              </div>
+              <div class="description">
+                <p>Proin at tortor eros. Phasellus porta nec elit non lacinia. Nam bibendum erat at leo faucibus vehicula. Ut laoreet porttitor risus, eget suscipit tellus tincidunt sit amet. </p>
+              </div>
+              <div class="additional-info">
+                <ul>
+                  <li>
+                    <figure>Start Date</figure>
+                    <aside>25.06.2017 09:00</aside>
+                  </li>
+                  <li>
+                    <figure>Length</figure>
+                    <aside>2 months</aside>
+                  </li>
+                  <li>
+                    <figure>Bedrooms</figure>
+                    <aside>3</aside>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    </section>
+  </section>
+</div>
