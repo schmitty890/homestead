@@ -75,14 +75,19 @@ module.exports = function (app) {
 
     db.event.findAll({
     }).then(function (eventInfo) {
-      hbsObject.eventInfo = eventInfo;
+      hbsObject.eventInfo = eventInfo[0];
+      hbsObject.eventCount = eventInfo.length;
     });
 
     db.classifieds.findAll({
     }).then(function (classifiedsInfo) {
-      hbsObject.classifiedsInfo = classifiedsInfo;
-      res.render('classifieds', { hbsObject: hbsObject });
+      hbsObject.classifiedsInfo = classifiedsInfo[0];
+      hbsObject.classifiedsCount = classifiedsInfo.length;
     });
+
+    console.log(hbsObject);
+    res.render('classifieds', { hbsObject: hbsObject });
+
   });
 
   //form to post new resource

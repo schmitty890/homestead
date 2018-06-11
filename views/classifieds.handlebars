@@ -4,23 +4,22 @@
       <div class="container">
 
         <div class="items list grid-xl-4-items grid-lg-3-items grid-md-2-items">
-          {{#each hbsObject.eventInfo}}
           <div class="item">
             <div class="wrapper">
               <div class="image">
                 <h3>
-                  <a href="#" class="tag category">Education</a>
-                  <a href="single-listing-1.html" class="title">Creative Course</a>
-                  <span class="tag">Offer</span>
+                  <!-- <a href="#" class="tag category">Education</a> -->
+                  <a href="single-listing-1.html" class="title">Events</a>
+                  <!-- <span class="tag">Offer</span> -->
                 </h3>
                 <a href="single-listing-1.html" class="image-wrapper background-image">
                     <img src="assets/img/image-02.jpg" alt="">
                 </a>
               </div>
-              <h4 class="location">
+              <!-- <h4 class="location">
                 <a href="#">Nashville, TN</a>
-              </h4>
-              <div class="price">$125</div>
+              </h4> -->
+              <!-- <div class="price">$125</div> -->
               <div class="meta">
                 <figure>
                   <i class="fa fa-calendar-o"></i>28.04.2017
@@ -32,7 +31,7 @@
                 </figure>
               </div>
               <div class="description">
-                <p>Proin at tortor eros. Phasellus porta nec elit non lacinia. Nam bibendum erat at leo faucibus vehicula. Ut laoreet porttitor risus, eget suscipit tellus tincidunt sit amet. </p>
+                <p>{{hbsObject.eventInfo}}</p>
               </div>
               <div class="additional-info">
                 <ul>
@@ -45,14 +44,13 @@
                     <aside>2 months</aside>
                   </li>
                   <li>
-                    <figure>Bedrooms</figure>
-                    <aside>3</aside>
+                    <figure>Number of Events</figure>
+                    <aside>{{hbsObject.eventCount}}</aside>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
-          {{/each}}
         </div>
       </div>
     </section>
