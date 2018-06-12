@@ -51,6 +51,68 @@ module.exports = function(app) {
     })
   })
 
-
+  app.put("/api/users/:id", function(req, res) {
+    console.log(req.body)
+    var updateLine;
+    var pingID = req.params.id;
+    if (req.body.name) {
+      updateLine = req.body.name;
+      console.log(req.body)
+      db.user.update({
+        username: updateLine
+      }, {
+        where: {
+          id: pingID
+        }
+      }).then(function() {
+        if (result.changedRows == 0) {
+          return res.status(404).end();
+        } else {
+          res.status(200).end();
+        }
+      })
+      .catch(function(err) {
+        res.json({status: "ERROR", message: err})
+      })
+    }
+    if (req.body.email) {
+      updateLine = req.body.email;
+      db.user.update({
+        email: updateLine
+      }, {
+        where: {
+          id: pingID
+        }
+      }).then(function() {
+        if (result.changedRows == 0) {
+          return res.status(404).end();
+        } else {
+          res.status(200).end();
+        }
+      })
+      .catch(function(err) {
+        res.json({status: "ERROR", message: err})
+      })
+    }
+    if (req.body.about) {
+      updateLine = req.body.about;
+      db.user.update({
+        about: updateLine
+      }, {
+        where: {
+          id: pingID
+        }
+      }).then(function() {
+        if (result.changedRows == 0) {
+          return res.status(404).end();
+        } else {
+          res.status(200).end();
+        }
+      })
+      .catch(function(err) {
+        res.json({status: "ERROR", message: err})
+      })
+    }
+  })
 };
 
