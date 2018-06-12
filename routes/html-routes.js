@@ -283,6 +283,33 @@ module.exports = function (app) {
     });
   });
 
+  app.get('/classifieds/:category', function(req, res) {
+    var category = req.params.category;
+
+    let hbsObject = {
+      user: req.user
+    }
+
+    db.classifieds.findAll({
+      where: {
+        category: category
+      },
+      order: [
+        ['createdAt', 'DESC']
+      ]
+    }).then(function (classifieds) {
+      console.log('--------------------------------');
+      // console.log(classifiedAutos);
+      hbsObject.category = {
+        classifieds: classifieds
+      }
+      // console.log(hbsObject.category.classifieds);
+
+      res.render('classifieds_list_page', { hbsObject: hbsObject });
+    });
+
+  });
+
   //form to post new resource
   app.get('/new-resource', function (req, res) {
     //if not logged in, redirect to login
