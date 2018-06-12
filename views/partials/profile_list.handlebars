@@ -1,6 +1,31 @@
-<div class="col-md-9">
+
+<div class="col-md-9" id="profileUpdateForm" style="display: none">
   <div class="section-title clearfix">
-    <div class="float-right d-xs-none thumbnail-toggle">
+    {{> update_user}}
+  </div>
+</div>
+<div class="col-md-9" id="profileEventForm" style="display: none">
+  <div class="section-title clearfix">
+    {{> post_event_partial}}
+  </div>
+</div>
+<div class="col-md-9" id="profileClassForm" style="display: none">
+  <div class="section-title clearfix">
+    {{> post_class_partial}}
+  </div>
+</div>
+<div class="col-md-9" id="profileResForm" style="display: none">
+  <div class="section-title clearfix">
+    {{> post_res_partial}}
+  </div>
+</div>
+<div class="col-md-9" id="profileContactForm" style="display: none">
+  <div class="section-title clearfix">
+    {{> contact_partial}}
+  </div>
+</div>
+ <div class="col-md-9">
+  <div class="section-title clearfix"><div class="float-right d-xs-none thumbnail-toggle">
       <a href="#" class="change-class" data-change-from-class="list" data-change-to-class="grid" data-parent-class="items">
         <i class="fa fa-th"></i>
       </a>

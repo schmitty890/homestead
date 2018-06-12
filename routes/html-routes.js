@@ -12,7 +12,8 @@ module.exports = function (app) {
   app.get('/', function (req, res) {
 
     let hbsObject = {
-      classifieds: classifieds
+      classifieds: classifieds,
+      user: req.user
     }
 
     db.event.findAll({
@@ -36,12 +37,16 @@ module.exports = function (app) {
 
   });
 
-  app.get('/community', function (req, res) {
-    res.render('community');
-  });
+/*   app.get('/community', function (req, res) {
+    let hbsObject = {
+      user: req.user
+    }
+    res.render('community', {hbsObject: hbsObject });
+  }); */
 
   app.get('/events', function (req, res) {
-
+    //didn't mess with, seems like we need to make eventInfo a sub of the handlebars object
+    //don't want to break all of Eric's work on accident
     db.event.findAll({
       order: [
         ['date', 'ASC']
@@ -53,24 +58,229 @@ module.exports = function (app) {
 
   });
 
-  app.get('/classes', function (req, res) {
+/*   app.get('/classes', function (req, res) {
     res.render('community');
   });
 
   app.get('/meetups', function (req, res) {
     res.render('meetups');
-  });
+  }); */
 
   app.get('/faq', function (req, res) {
     let hbsObject = {
-      faqs: faqs
+      faqs: faqs,
+      user: req.user
     }
-    // console.log(hbsObject);
     res.render('faq', { hbsObject: hbsObject });
   });
 
   app.get('/classifieds', function (req, res) {
-    res.render('classifieds');
+    let hbsObject = {
+      user: req.user
+    }
+
+    // find and count all categories
+    db.classifieds.findAll({
+      order: [
+        ['createdAt', 'DESC']
+      ]
+    }).then(function (classifiedsInfo) {
+      // console.log('--------------------------------');
+      // console.log(classifiedsInfo[0])
+      hbsObject.total = {
+        classifiedsCount: classifiedsInfo.length,
+        latest: classifiedsInfo[0]
+      }
+
+      // bikes category
+      db.classifieds.findAll({
+        where: {
+          category: 'bikes'
+        },
+        order: [
+          ['createdAt', 'DESC']
+        ]
+      }).then(function (classifiedBikes) {
+        // console.log('--------------------------------');
+        // console.log(classifiedBikes);
+        hbsObject.bikes = {
+          classifiedBikeCount: classifiedBikes.length,
+          latest: classifiedBikes[0]
+        }
+
+        // electronics category
+        db.classifieds.findAll({
+          where: {
+            category: 'electronics'
+          },
+          order: [
+            ['createdAt', 'DESC']
+          ]
+        }).then(function (classifiedElectronics) {
+          // console.log('--------------------------------');
+          // console.log(classifiedElectronics);
+          hbsObject.electronics = {
+            classifiedElectronicCount: classifiedElectronics.length,
+            latest: classifiedElectronics[0]
+          }
+
+          // appliances category
+          db.classifieds.findAll({
+            where: {
+              category: 'appliances'
+            },
+            order: [
+              ['createdAt', 'DESC']
+            ]
+          }).then(function (classifiedAppliances) {
+            // console.log('--------------------------------');
+            // console.log(classifiedAppliances);
+            hbsObject.appliances = {
+              classifiedApplianceCount: classifiedAppliances.length,
+              latest: classifiedAppliances[0]
+            }
+
+            // babyKid category
+            db.classifieds.findAll({
+              where: {
+                category: 'babyKid'
+              },
+              order: [
+                ['createdAt', 'DESC']
+              ]
+            }).then(function (classifiedBabyKid) {
+              // console.log('--------------------------------');
+              // console.log(classifiedBabyKid);
+              hbsObject.BabyKid = {
+                classifiedBabyKidCount: classifiedBabyKid.length,
+                latest: classifiedBabyKid[0]
+              }
+
+              // clothes category
+              db.classifieds.findAll({
+                where: {
+                  category: 'clothes'
+                },
+                order: [
+                  ['createdAt', 'DESC']
+                ]
+              }).then(function (classifiedClothes) {
+                // console.log('--------------------------------');
+                // console.log(classifiedClothes);
+                hbsObject.clothes = {
+                  classifiedClothesCount: classifiedClothes.length,
+                  latest: classifiedClothes[0]
+                }
+
+                // furniture category
+                db.classifieds.findAll({
+                  where: {
+                    category: 'furniture'
+                  },
+                  order: [
+                    ['createdAt', 'DESC']
+                  ]
+                }).then(function (classifiedFurniture) {
+                  // console.log('--------------------------------');
+                  // console.log(classifiedFurniture);
+                  hbsObject.furniture = {
+                    classifiedFurnitureCount: classifiedFurniture.length,
+                    latest: classifiedFurniture[0]
+                  }
+
+                  // lawn category
+                  db.classifieds.findAll({
+                    where: {
+                      category: 'lawn'
+                    },
+                    order: [
+                      ['createdAt', 'DESC']
+                    ]
+                  }).then(function (classifiedLawn) {
+                    // console.log('--------------------------------');
+                    // console.log(classifiedLawn);
+                    hbsObject.lawn = {
+                      classifiedLawnCount: classifiedLawn.length,
+                      latest: classifiedLawn[0]
+                    }
+
+                    // music category
+                    db.classifieds.findAll({
+                      where: {
+                        category: 'music'
+                      },
+                      order: [
+                        ['createdAt', 'DESC']
+                      ]
+                    }).then(function (classifiedMusic) {
+                      // console.log('--------------------------------');
+                      // console.log(classifiedMusic);
+                      hbsObject.music = {
+                        classifiedMusicCount: classifiedMusic.length,
+                        latest: classifiedMusic[0]
+                      }
+
+                      // sports category
+                      db.classifieds.findAll({
+                        where: {
+                          category: 'sports'
+                        },
+                        order: [
+                          ['createdAt', 'DESC']
+                        ]
+                      }).then(function (classifiedSports) {
+                        // console.log('--------------------------------');
+                        // console.log(classifiedSports);
+                        hbsObject.sports = {
+                          classifiedSportsCount: classifiedSports.length,
+                          latest: classifiedSports[0]
+                        }
+
+                        // tickets category
+                        db.classifieds.findAll({
+                          where: {
+                            category: 'tickets'
+                          },
+                          order: [
+                            ['createdAt', 'DESC']
+                          ]
+                        }).then(function (classifiedTickets) {
+                          // console.log('--------------------------------');
+                          // console.log(classifiedTickets);
+                          hbsObject.tickets = {
+                            classifiedTicketsCount: classifiedTickets.length,
+                            latest: classifiedTickets[0]
+                          }
+
+                          // autos category
+                          db.classifieds.findAll({
+                            where: {
+                              category: 'autos'
+                            },
+                            order: [
+                              ['createdAt', 'DESC']
+                            ]
+                          }).then(function (classifiedAutos) {
+                            // console.log('--------------------------------');
+                            // console.log(classifiedAutos);
+                            hbsObject.autos = {
+                              classifiedAutosCount: classifiedAutos.length,
+                              latest: classifiedAutos[0]
+                            }
+
+                            res.render('classifieds', { hbsObject: hbsObject });
+                          });
+                        });
+                      });
+                    });
+                  });
+                });
+              });
+            });
+          });
+        });
+      });
+    });
   });
 
   //form to post new resource
@@ -83,15 +293,18 @@ module.exports = function (app) {
 
   //show all resources
   app.get('/resources', function (req, res) {
-
+    //console.log(req)
+    //let resourceUserHolder = req.user
     db.resource.findAll({
       limit: 20,
       order: [
         ['createdAt']
       ]
-    }).then(function (data) {
+    }).then(function (data/*, resourceUserHolder */) {
+      //console.log(resourceUserHolder)
       let hbsObject = {
-        resource: data
+        resource: data,
+        //user: resourceUserHolder
       }
 
       res.render('resources', hbsObject);

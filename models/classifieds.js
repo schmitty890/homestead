@@ -36,8 +36,7 @@ module.exports = function(sequelize, Sequelize) {
     },
     price: {
       type: Sequelize.INTEGER,
-      notEmpty: true,
-
+      notEmpty: true
     },
     details: {
       type: Sequelize.TEXT,
@@ -59,5 +58,5 @@ module.exports = function(sequelize, Sequelize) {
     },
   });
   return classifieds;
-} 
-  
+}
+
