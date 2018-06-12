@@ -52,12 +52,10 @@ module.exports = function(app) {
   })
 
   app.put("/api/users/:id", function(req, res) {
-    console.log(req.body)
     var updateLine;
     var pingID = req.params.id;
     if (req.body.name) {
       updateLine = req.body.name;
-      console.log(req.body)
       db.user.update({
         username: updateLine
       }, {
