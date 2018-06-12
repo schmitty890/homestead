@@ -1,1 +1,77 @@
-<h1>Coming Soon</h1>
+<div class="page sub-page">
+  <section class="hero">
+    <div class="hero-wrapper">
+      <div class="page-title">
+        <div class="container">
+          <h1>Contact the HOA</h1>
+        </div>
+      </div>
+    </div>
+    <div class="background"></div>
+  </section>
+  <section class="content">
+    <section class="block">
+      <div class="container">
+        <form class="form form-submit" id="post-resource-form">
+          <section>
+            <h2>Basic Information</h2>
+            <div class="row">
+              <div class="col-md-8">
+                <div class="form-group">
+                  <label for="name" class="col-form-label required">Name</label>
+                  <input name="name" type="text" class="form-control" id="name" placeholder="Name" required>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-8">
+                <div class="form-group">
+                  <label for="email" class="col-form-label required">Preferred Email</label>
+                  <input name="email" type="email" class="form-control" id="email" placeholder="Email" required>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-8">
+                <div class="form-group">
+                  <label for="subject" class="col-form-label required">Subject</label>
+                  <input name="subject" type="text" class="form-control" id="subject" placeholder="Subject" required>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="category" class="col-form-label">Message Category</label>
+                  <select id="contact-category-select" name="category">
+                    <option value="">Select Category</option>
+                    <option value="contactUrgent">Urgent</option>
+                    <option value="contactIssue">Report Issue</option>
+                    <option value="contactIdea">Submit an Idea</option>
+                    <option value="contactOther">Other</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2>Details</h2>
+            <div class="form-group">
+              <label for="message" class="col-form-label">Message:</label>
+              <textarea name="message" id="message" class="form-control" rows="4" required></textarea>
+            </div>
+          </section>
+          <section class="clearfix">
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary large icon float-right" {{!-- id="post-resource" data-id={{this.userId}}
+                data-userName={{this.userName}} --}}>Post
+                <i class="fa fa-chevron-right"></i>
+              </button>
+            </div>
+          </section>
+        </form>
+      </div>
+    </section>
+  </section>
+</div>
