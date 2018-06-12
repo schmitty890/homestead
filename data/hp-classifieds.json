@@ -1,6 +1,6 @@
 [{
-  "title": "classifieds 1",
-  "url": "classifieds1url",
+  "title": "Autos",
+  "url": "classifieds/autos",
   "icon": "fa-bed",
   "subcats": [
   {
@@ -16,8 +16,8 @@
     "url": "/third"
   }]
 },{
-  "title": "classifieds 2",
-  "url": "classifieds2url",
+  "title": "bikes",
+  "url": "classifieds/bikes",
   "icon": "fa-paw",
   "subcats": [
   {
@@ -33,8 +33,8 @@
     "url": "/third"
   }]
 },{
-  "title": "classifieds 3",
-  "url": "classifieds3url",
+  "title": "electronics",
+  "url": "classifieds/electronics",
   "icon": "fa-ravelry",
   "subcats": [
   {
@@ -50,8 +50,8 @@
     "url": "/third"
   }]
 },{
-  "title": "classifieds 4",
-  "url": "classifieds4url",
+  "title": "appliances",
+  "url": "classifieds/appliances",
   "icon": "fa-user-circle-o",
   "subcats": [
   {
@@ -67,8 +67,8 @@
     "url": "/third"
   }]
 },{
-  "title": "classifieds 5",
-  "url": "classifieds5url",
+  "title": "babyKid",
+  "url": "classifieds/babyKid",
   "icon": "fa-arrows",
   "subcats": [
   {
@@ -84,8 +84,8 @@
     "url": "/third"
   }]
 },{
-  "title": "classifieds 6",
-  "url": "classifieds6url",
+  "title": "clothes",
+  "url": "classifieds/clothes",
   "icon": "fa-bolt",
   "subcats": [
   {
@@ -101,8 +101,8 @@
     "url": "/third"
   }]
 },{
-  "title": "classifieds 7",
-  "url": "classifieds7url",
+  "title": "furniture",
+  "url": "classifieds/furniture",
   "icon": "fa-car",
   "subcats": [
   {
@@ -118,8 +118,8 @@
     "url": "/third"
   }]
 },{
-  "title": "classifieds 8",
-  "url": "classifieds8url",
+  "title": "lawn",
+  "url": "classifieds/lawn",
   "icon": "fa-cutlery",
   "subcats": [
   {
@@ -135,8 +135,8 @@
     "url": "/third"
   }]
 },{
-  "title": "classifieds 9",
-  "url": "classifieds9url",
+  "title": "music",
+  "url": "classifieds/music",
   "icon": "fa-flag",
   "subcats": [
   {
@@ -152,8 +152,8 @@
     "url": "/third"
   }]
 },{
-  "title": "classifieds 10",
-  "url": "classifieds10url",
+  "title": "sports",
+  "url": "classifieds/sports",
   "icon": "fa-hand-lizard-o",
   "subcats": [
   {
@@ -169,8 +169,8 @@
     "url": "/third"
   }]
 },{
-  "title": "classifieds 11",
-  "url": "classifieds11url",
+  "title": "phones",
+  "url": "classifieds/phones",
   "icon": "fa-hourglass-start",
   "subcats": [
   {
@@ -186,8 +186,8 @@
     "url": "/third"
   }]
 },{
-  "title": "classifieds 12",
-  "url": "classifieds12url",
+  "title": "tickets",
+  "url": "classifieds/tickets",
   "icon": "fa-location-arrow",
   "subcats": [
   {
