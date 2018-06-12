@@ -120,7 +120,7 @@ function seeds() {
       price: "1",
       details: "details about this product",
       date_added: "10/10/2018",
-      category: "outdoor",
+      category: "phone",
       condition: "Used"
     },{
       author_id: 100,
@@ -132,7 +132,7 @@ function seeds() {
       price: "10",
       details: "details about this product",
       date_added: "06/18/2018",
-      category: "auto",
+      category: "clothes",
       condition: "Like new"
     },{
       author_id: 101,
@@ -144,7 +144,7 @@ function seeds() {
       price: "4",
       details: "details about this product",
       date_added: "11/10/2018",
-      category: "auto",
+      category: "autos",
       condition: "Like new"
     },{
       author_id: 102,
@@ -156,7 +156,7 @@ function seeds() {
       price: "105",
       details: "details about this product",
       date_added: "12/10/2018",
-      category: "outdoor",
+      category: "electronics",
       condition: "Used"
     },{
       author_id: 103,
@@ -168,7 +168,7 @@ function seeds() {
       price: "7",
       details: "details about this product",
       date_added: "08/03/2018",
-      category: "outdoor",
+      category: "lawn",
       condition: "Used"
     },{
       author_id: 104,
@@ -180,7 +180,7 @@ function seeds() {
       price: "23",
       details: "details about this product",
       date_added: "08/13/2018",
-      category: "auto",
+      category: "tickets",
       condition: "Used"
     },{
       author_id: 105,
@@ -192,7 +192,7 @@ function seeds() {
       price: "78",
       details: "details about this product",
       date_added: "10/18/2018",
-      category: "outdoor",
+      category: "babyKid",
       condition: "Like new"
     },{
       author_id: 106,
@@ -228,7 +228,7 @@ function seeds() {
       price: "193",
       details: "details about this product",
       date_added: "09/03/2018",
-      category: "auto",
+      category: "autos",
       condition: "Like new"
     }
   ]);
