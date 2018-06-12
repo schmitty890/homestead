@@ -5,6 +5,7 @@
 // Dependencies
 // =============================================================
 var db = require("../models");
+var axios = require('axios');
 // Routes
 // =============================================================
 module.exports = function(app) {
@@ -47,7 +48,16 @@ module.exports = function(app) {
       zipcode: 27510,
       city: 'Carrboro'
     }
-    res.send(openWeatherCreds);
+    var queryURLweather = 'https://api.openweathermap.org/data/2.5/weather?zip=' + openWeatherCreds.zipcode + '&q=' + openWeatherCreds.city + '&units=imperial&appid=' + openWeatherCreds.apiKey;
+
+    axios.get(queryURLweather)
+      .then(function (resp) {
+        res.send(resp.data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+
   });
 
   app.get("/api/events", function(req, res) {

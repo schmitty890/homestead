@@ -6,16 +6,7 @@ var Weather = function(){
       type: 'GET',
       url: '/api/weather'
     }).then(function(resp) {
-
-      var queryURLweather = 'https://api.openweathermap.org/data/2.5/weather?zip=' + resp.zipcode + '&q=' + resp.city + '&units=imperial&appid=' + resp.apiKey;
-
-      $.ajax({
-        type: 'GET',
-        url: queryURLweather
-      }).then(function(resp) {
-        createIcon(resp);
-      });
-
+      createIcon(resp);
     });
   }
 
