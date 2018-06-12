@@ -12,7 +12,7 @@
   <section class="content">
     <section class="block">
       <div class="container">
-        <form class="form form-submit" id="postClassy">
+        <form class="form form-submit" id="post-classified-form">
           <section>
             <h2>Basic Information</h2>
             <div class="row">
@@ -57,7 +57,7 @@
                 <h2>Category</h2>
                 <div class="form-group">
                   <label for="category" class="col-form-label">Category</label>
-                  <select onchange="prefixMaker()" class="change-tab" data-change-tab-target="category-tabs" name="category" id="category" data-placeholder="Select Category" data-prefix="auto">
+                  <select class="change-tab" data-change-tab-target="category-tabs" name="category" id="category" data-placeholder="Select Category" data-prefix="auto">
                     <option value="">Select Category</option>
                     <option value="appliances">Appliances</option>
                     <option value="babyKid">Baby &AMP; Kid</option>
@@ -101,7 +101,7 @@
                       <div class="col-md-4">
                         <div class="form-group">
                           <label for="status" class="col-form-label">Status</label>
-                          <select name="status" id="applianceStatus" data-placeholder="Status">
+                          <select name="status" id="applianceStatus" class="status-selector" data-placeholder="Status">
                             <option value="">Status</option>
                             <option value="new">New</option>
                             <option value="likenew">Like New</option>
@@ -137,7 +137,7 @@
                       <div class="col-md-4">
                         <div class="form-group">
                           <label for="status" class="col-form-label">Status</label>
-                          <select name="status" id="babyKidStatus" data-placeholder="Status">
+                          <select name="status" id="babyKidStatus" class="status-selector" data-placeholder="Status">
                             <option value="">Status</option>
                             <option value="new">New</option>
                             <option value="likenew">Like New</option>
@@ -173,7 +173,7 @@
                       <div class="col-md-4">
                         <div class="form-group">
                           <label for="status" class="col-form-label">Status</label>
-                          <select name="status" id="bikesStatus" data-placeholder="Status">
+                          <select name="status" id="bikesStatus" class="status-selector" data-placeholder="Status">
                             <option value="">Status</option>
                             <option value="new">New</option>
                             <option value="likenew">Like New</option>
@@ -208,7 +208,7 @@
                       <div class="col-md-4">
                         <div class="form-group">
                           <label for="status" class="col-form-label">Status</label>
-                          <select name="status" id="phonesStatus" data-placeholder="Status">
+                          <select name="status" id="phonesStatus" class="status-selector" data-placeholder="Status">
                             <option value="">Status</option>
                             <option value="new">New</option>
                             <option value="likenew">Like New</option>
@@ -244,7 +244,7 @@
                       <div class="col-md-4">
                         <div class="form-group">
                           <label for="status" class="col-form-label">Status</label>
-                          <select name="status" id="clothesStatus" data-placeholder="Status">
+                          <select name="status" id="clothesStatus" class="status-selector" data-placeholder="Status">
                             <option value="">Status</option>
                             <option value="new">New</option>
                             <option value="likenew">Like New</option>
@@ -280,7 +280,7 @@
                       <div class="col-md-4">
                         <div class="form-group">
                           <label for="status" class="col-form-label">Status</label>
-                          <select name="status" id="electronicsStatus" data-placeholder="Status">
+                          <select name="status" id="electronicsStatus" class="status-selector" data-placeholder="Status">
                             <option value="">Status</option>
                             <option value="new">New</option>
                             <option value="likenew">Like New</option>
@@ -316,7 +316,7 @@
                       <div class="col-md-4">
                         <div class="form-group">
                           <label for="status" class="col-form-label">Status</label>
-                          <select name="status" id="furnitureStatus" data-placeholder="Status">
+                          <select name="status" id="furnitureStatus" class="status-selector" data-placeholder="Status">
                             <option value="">Status</option>
                             <option value="new">New</option>
                             <option value="likenew">Like New</option>
@@ -352,7 +352,7 @@
                       <div class="col-md-4">
                         <div class="form-group">
                           <label for="status" class="col-form-label">Status</label>
-                          <select name="status" id="lawnStatus" data-placeholder="Status">
+                          <select name="status" id="lawnStatus" class="status-selector" data-placeholder="Status">
                             <option value="">Status</option>
                             <option value="new">New</option>
                             <option value="likenew">Like New</option>
@@ -389,7 +389,7 @@
                       <div class="col-md-4">
                         <div class="form-group">
                           <label for="status" class="col-form-label">Status</label>
-                          <select name="status" id="musicStatus" data-placeholder="Status">
+                          <select name="status" id="musicStatus" class="status-selector" data-placeholder="Status">
                             <option value="">Status</option>
                             <option value="new">New</option>
                             <option value="likenew">Like New</option>
@@ -425,7 +425,7 @@
                       <div class="col-md-4">
                         <div class="form-group">
                           <label for="status" class="col-form-label">Status</label>
-                          <select name="status" id="sportsStatus" data-placeholder="Status">
+                          <select name="status" id="sportsStatus" class="status-selector" data-placeholder="Status">
                             <option value="">Status</option>
                             <option value="new">New</option>
                             <option value="likenew">Like New</option>
@@ -460,7 +460,7 @@
                       <div class="col-md-4">
                         <div class="form-group">
                           <label for="status" class="col-form-label">Status</label>
-                          <select name="status" id="ticketsStatus" data-placeholder="Status">
+                          <select name="status" id="ticketsStatus" class="status-selector" data-placeholder="Status">
                             <option value="">Status</option>
                             <option value="new">New</option>
                             <option value="likenew">Like New</option>
@@ -496,7 +496,7 @@
                       <div class="col-md-4">
                         <div class="form-group">
                           <label for="status" class="col-form-label">Status</label>
-                          <select name="status" id="autosStatus" class="statusSelector" data-placeholder="Status">
+                          <select name="status" id="autosStatus" class="status-selector" data-placeholder="Status">
                             <option value="">Status</option>
                             <option value="new">New</option>
                             <option value="likenew">Like New</option>

@@ -79,6 +79,7 @@ module.exports = function (app) {
       user: req.user
     }
 
+    // find and count all categories
     db.classifieds.findAll({
       order: [
         ['createdAt', 'DESC']
@@ -90,6 +91,8 @@ module.exports = function (app) {
         classifiedsCount: classifiedsInfo.length,
         latest: classifiedsInfo[0]
       }
+
+      // bikes category
       db.classifieds.findAll({
         where: {
           category: 'bikes'
@@ -105,6 +108,7 @@ module.exports = function (app) {
           latest: classifiedBikes[0]
         }
 
+        // electronics category
         db.classifieds.findAll({
           where: {
             category: 'electronics'
@@ -120,7 +124,160 @@ module.exports = function (app) {
             latest: classifiedElectronics[0]
           }
 
-          res.render('classifieds', { hbsObject: hbsObject });
+          // appliances category
+          db.classifieds.findAll({
+            where: {
+              category: 'appliances'
+            },
+            order: [
+              ['createdAt', 'DESC']
+            ]
+          }).then(function (classifiedAppliances) {
+            // console.log('--------------------------------');
+            // console.log(classifiedAppliances);
+            hbsObject.appliances = {
+              classifiedApplianceCount: classifiedAppliances.length,
+              latest: classifiedAppliances[0]
+            }
+
+            // babyKid category
+            db.classifieds.findAll({
+              where: {
+                category: 'babyKid'
+              },
+              order: [
+                ['createdAt', 'DESC']
+              ]
+            }).then(function (classifiedBabyKid) {
+              // console.log('--------------------------------');
+              // console.log(classifiedBabyKid);
+              hbsObject.BabyKid = {
+                classifiedBabyKidCount: classifiedBabyKid.length,
+                latest: classifiedBabyKid[0]
+              }
+
+              // clothes category
+              db.classifieds.findAll({
+                where: {
+                  category: 'clothes'
+                },
+                order: [
+                  ['createdAt', 'DESC']
+                ]
+              }).then(function (classifiedClothes) {
+                // console.log('--------------------------------');
+                // console.log(classifiedClothes);
+                hbsObject.clothes = {
+                  classifiedClothesCount: classifiedClothes.length,
+                  latest: classifiedClothes[0]
+                }
+
+                // furniture category
+                db.classifieds.findAll({
+                  where: {
+                    category: 'furniture'
+                  },
+                  order: [
+                    ['createdAt', 'DESC']
+                  ]
+                }).then(function (classifiedFurniture) {
+                  // console.log('--------------------------------');
+                  // console.log(classifiedFurniture);
+                  hbsObject.furniture = {
+                    classifiedFurnitureCount: classifiedFurniture.length,
+                    latest: classifiedFurniture[0]
+                  }
+
+                  // lawn category
+                  db.classifieds.findAll({
+                    where: {
+                      category: 'lawn'
+                    },
+                    order: [
+                      ['createdAt', 'DESC']
+                    ]
+                  }).then(function (classifiedLawn) {
+                    // console.log('--------------------------------');
+                    // console.log(classifiedLawn);
+                    hbsObject.lawn = {
+                      classifiedLawnCount: classifiedLawn.length,
+                      latest: classifiedLawn[0]
+                    }
+
+                    // music category
+                    db.classifieds.findAll({
+                      where: {
+                        category: 'music'
+                      },
+                      order: [
+                        ['createdAt', 'DESC']
+                      ]
+                    }).then(function (classifiedMusic) {
+                      // console.log('--------------------------------');
+                      // console.log(classifiedMusic);
+                      hbsObject.music = {
+                        classifiedMusicCount: classifiedMusic.length,
+                        latest: classifiedMusic[0]
+                      }
+
+                      // sports category
+                      db.classifieds.findAll({
+                        where: {
+                          category: 'sports'
+                        },
+                        order: [
+                          ['createdAt', 'DESC']
+                        ]
+                      }).then(function (classifiedSports) {
+                        // console.log('--------------------------------');
+                        // console.log(classifiedSports);
+                        hbsObject.sports = {
+                          classifiedSportsCount: classifiedSports.length,
+                          latest: classifiedSports[0]
+                        }
+
+                        // tickets category
+                        db.classifieds.findAll({
+                          where: {
+                            category: 'tickets'
+                          },
+                          order: [
+                            ['createdAt', 'DESC']
+                          ]
+                        }).then(function (classifiedTickets) {
+                          // console.log('--------------------------------');
+                          // console.log(classifiedTickets);
+                          hbsObject.tickets = {
+                            classifiedTicketsCount: classifiedTickets.length,
+                            latest: classifiedTickets[0]
+                          }
+
+                          // autos category
+                          db.classifieds.findAll({
+                            where: {
+                              category: 'autos'
+                            },
+                            order: [
+                              ['createdAt', 'DESC']
+                            ]
+                          }).then(function (classifiedAutos) {
+                            // console.log('--------------------------------');
+                            // console.log(classifiedAutos);
+                            hbsObject.autos = {
+                              classifiedAutosCount: classifiedAutos.length,
+                              latest: classifiedAutos[0]
+                            }
+
+                            res.render('classifieds', { hbsObject: hbsObject });
+                          });
+                        });
+                      });
+                    });
+                  });
+                });
+              });
+            });
+          });
         });
       });
     });

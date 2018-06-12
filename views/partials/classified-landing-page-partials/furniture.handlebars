@@ -1,0 +1,40 @@
+{{#if hbsObject.furniture.latest.createdAt}}
+<div class="item">
+  <div class="wrapper">
+    <div class="image">
+      <h3>
+        <a href="#" class="title">Furniture</a>
+      </h3>
+      <a href="#" class="image-wrapper background-image">
+          <img src="assets/img/image-02.jpg" alt="">
+      </a>
+    </div>
+    <div class="price">${{hbsObject.furniture.latest.price}}</div>
+    <div class="meta">
+      <figure>
+        <i class="fa fa-calendar-o"></i>{{momentFromNowTime hbsObject.furniture.latest.createdAt}}
+      </figure>
+      <figure>
+        <a href="#">
+          <i class="fa fa-user"></i>{{hbsObject.furniture.latest.email}}
+        </a>
+      </figure>
+    </div>
+    <div class="description">
+      <p>{{hbsObject.furniture.latest.details}}</p>
+    </div>
+    <div class="additional-info">
+      <ul>
+        <li>
+          <figure>Latest Post</figure>
+          <aside>{{momentFromNowTime hbsObject.furniture.latest.createdAt}}</aside>
+        </li>
+        <li>
+          <figure>Total number of furniture listed</figure>
+          <aside>{{hbsObject.furniture.classifiedFurnitureCount}}</aside>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+{{/if}}
