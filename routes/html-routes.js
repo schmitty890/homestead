@@ -114,7 +114,7 @@ module.exports = function (app) {
           }
         });
       });
-
+      console.log(hbsObject.furniture);
       res.render('classifieds', { hbsObject: hbsObject });
     });
   });
