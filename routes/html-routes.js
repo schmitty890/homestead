@@ -90,7 +90,7 @@ module.exports = function (app) {
       // console.log('--------------------------------');
       // console.log(classifiedsInfo[0])
       hbsObject.total = {
-        classifiedsCount: classifiedsInfo.length,
+        classifiedCount: classifiedsInfo.length,
         latest: classifiedsInfo[0]
       }
 
