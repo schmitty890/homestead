@@ -45,7 +45,8 @@ module.exports = function(sequelize, Sequelize) {
       defaultValue: false,
     },
     date: {
-      type: Sequelize.DATE
+      type: Sequelize.DATE,
+      defaultValue: Sequelize.NOW
     }
   });
   return Message;
