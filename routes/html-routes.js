@@ -96,7 +96,7 @@ module.exports = function (app) {
 
       // loop over array of categories
       categories.forEach(function(category) {
-        console.log(category);
+        // console.log(category);
         db.classifieds.findAll({
           where: {
             category: category
@@ -114,13 +114,10 @@ module.exports = function (app) {
           }
         });
       });
-      console.log(hbsObject);
+
       res.render('classifieds', { hbsObject: hbsObject });
     });
   });
-
-
-
 
   app.get('/classifieds/:category', function(req, res) {
     var category = req.params.category;
