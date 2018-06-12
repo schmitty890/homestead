@@ -466,6 +466,9 @@ Headers:		'Varela Round', sans-serif;
 .footer address {
   opacity: .8;
 }
+.classified-font-awesome-icon {
+  color: #fff;
+}
 /********
 --- H ---
 ********/
@@ -2127,7 +2130,7 @@ Headers:		'Varela Round', sans-serif;
   user-select: none;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
-  touch-action: none;  
+  touch-action: none;
   -ms-touch-action: none;
   -ms-user-select: none;
   -moz-user-select: none;
@@ -2309,3 +2312,14 @@ Headers:		'Varela Round', sans-serif;
   float: right;
   text-align: right;
 }
+.weather-icon {
+  font-size: 14px;
+  top: 2px;
+  position: relative;
+}
+@media(max-width: 768px) {
+  .weather {
+    display: none;
+  }
+}
+

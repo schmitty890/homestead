@@ -41,6 +41,15 @@ module.exports = function(app) {
       })
   });
 
+  app.get('/api/weather', function(req, res) {
+    var openWeatherCreds = {
+      apiKey: process.env.openWeatherMap,
+      zipcode: 27510,
+      city: 'Carrboro'
+    }
+    res.send(openWeatherCreds);
+  });
+
   app.get("/api/events", function(req, res) {
     db.event.findAll({
       order: [
