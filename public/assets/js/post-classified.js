@@ -77,6 +77,13 @@
  */
 var PostClassified = function(){
   var formValues = {};
+  var $form = $('#post-classified-form'); // we cache this jquery selector, and then reference it below as a variable. this is good practice.
+
+  // when the category on the post-classified-form changes, grab the val of the category, and reassign it to data-prefix
+  $form.on('change', '.change-tab', function() {
+    var dataPrefix = $form.find('#category').val();
+    $form.find('#category').attr('data-prefix', dataPrefix);
+  });
 
   function gatherFormElements() {
     var userId = $("#addClassBtn").data("id");
@@ -84,15 +91,15 @@ var PostClassified = function(){
     formValues = {
       author_id: userId,
       username: userName,
-      name: $('#post-classified-form #name').val().trim(),
-      email: $('#post-classified-form #email').val().trim(),
-      phone: $('#post-classified-form #phone').val().trim(),
-      price: $('#post-classified-form #price').val().trim(),
-      title: $('#post-classified-form #title').val().trim(),
-      details: $('#post-classified-form #details').val().trim(),
-      category: $('#post-classified-form #category').val().trim(),
-      // condition: $("#"+prefixboi+"Condition").val().trim(),
-      status: $('#post-classified-form .status-selector').val().trim()
+      name: $form.find('#name').val().trim(),
+      email: $form.find('#email').val().trim(),
+      phone: $form.find('#phone').val().trim(),
+      price: $form.find('#price').val().trim(),
+      title: $form.find('#title').val().trim(),
+      details: $form.find('#details').val().trim(),
+      category: $form.find('#category').val().trim()
+      // condition: $form.find('.status-selector .item').val().trim(),
+      // status: $form.find('.status-selector .item').val().trim()
     }
 
     console.log(formValues);
@@ -100,12 +107,12 @@ var PostClassified = function(){
     // if (formValues.title === '' || formValues.date === '') {
     //   alert('fill out ALL required forms.');
     // }
-    // passToBackend(formValues);
+    passToBackend(formValues);
   }
 
   function passToBackend(formValues) {
     console.log(formValues);
-    $.ajax('/api/events', {
+    $.ajax('/api/classifieds', {
       type: 'POST',
       data: formValues
     }).then(

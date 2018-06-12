@@ -120,7 +120,55 @@ module.exports = function (app) {
             latest: classifiedElectronics[0]
           }
 
-          res.render('classifieds', { hbsObject: hbsObject });
+          db.classifieds.findAll({
+            where: {
+              category: 'appliances'
+            },
+            order: [
+              ['createdAt', 'DESC']
+            ]
+          }).then(function (classifiedAppliances) {
+            // console.log('--------------------------------');
+            // console.log(classifiedAppliances);
+            hbsObject.appliances = {
+              classifiedApplianceCount: classifiedAppliances.length,
+              latest: classifiedAppliances[0]
+            }
+
+            db.classifieds.findAll({
+              where: {
+                category: 'babyKid'
+              },
+              order: [
+                ['createdAt', 'DESC']
+              ]
+            }).then(function (classifiedBabyKid) {
+              // console.log('--------------------------------');
+              // console.log(classifiedBabyKid);
+              hbsObject.BabyKid = {
+                classifiedBabyKidCount: classifiedBabyKid.length,
+                latest: classifiedBabyKid[0]
+              }
+
+              db.classifieds.findAll({
+                where: {
+                  category: 'clothes'
+                },
+                order: [
+                  ['createdAt', 'DESC']
+                ]
+              }).then(function (classifiedClothes) {
+                // console.log('--------------------------------');
+                // console.log(classifiedClothes);
+                hbsObject.clothes = {
+                  classifiedClothesCount: classifiedClothes.length,
+                  latest: classifiedClothes[0]
+                }
+
+                res.render('classifieds', { hbsObject: hbsObject });
+              });
+            });
+          });
         });
       });
     });
