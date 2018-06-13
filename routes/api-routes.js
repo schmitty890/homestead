@@ -12,7 +12,22 @@ module.exports = function(app) {
     var userId = '';
     db.classifieds.create(req.body)
       .then(function(classified) {
+        console.log(classified, "made it here")
         res.json(classified);
+      })
+      .catch(function(err) {
+        res.json({ status: "ERROR", message: err })
+      })
+  });
+
+  app.post("/api/messages", function(req, res) {
+    var userId = '';
+    console.log(req.body)
+    db.message.create(req.body)
+      .then(function(message) {
+        console.log(message, "made it here")
+        res.json(message);
+        console.log("made it here")
       })
       .catch(function(err) {
         res.json({ status: "ERROR", message: err })

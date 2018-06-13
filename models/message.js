@@ -16,6 +16,12 @@ module.exports = function(sequelize, Sequelize) {
         len: [1,100]
       }
     },
+    email: {
+      type: Sequelize.STRING,
+      validate: {
+        isEmail: true
+      }
+    },
     subject: {
       type: Sequelize.STRING,
       notEmpty: true,
