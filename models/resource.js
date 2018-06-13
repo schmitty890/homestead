@@ -9,11 +9,6 @@ module.exports = function (sequelize, Sequelize) {
       type: Sequelize.STRING,
       notEmpty: true
     },
-    //will try to implement via
-    ///association with user
-    ///storing these (again)
-    ///seems suboptimal
-    ///
     // author_name: {
     //   type: Sequelize.STRING,
     //   notEmpty: true
@@ -21,12 +16,12 @@ module.exports = function (sequelize, Sequelize) {
     // username: {
     //   type: Sequelize.TEXT
     // },
-    // email: {
-    //   type: Sequelize.STRING,
-    //   validate: {
-    //     isEmail: true
-    //   }
-    // },
+    email: {
+      type: Sequelize.STRING,
+      validate: {
+        isEmail: true
+      }
+    },
     title: {
       type: Sequelize.STRING,
       notEmpty: true,

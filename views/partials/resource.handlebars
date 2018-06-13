@@ -12,11 +12,16 @@
         </a>
       </div>
       <!--end image-->
-      <div class="meta">
-        <figure>
-          <i class="fa fa-calendar-o"></i>{{formatDateForEvents this.date}}
-        </figure>
-      </div>
+    <div class="meta">
+      <figure>
+        <i class="fa fa-calendar-o"></i>{{momentFromNowTime this.createdAt}}
+      </figure>
+      <figure>
+        <a href="#">
+          <i class="fa fa-user"></i>{{hbsObject.user.email}}
+        </a>
+      </figure>
+    </div>
       <!--end meta-->
       <div class="description">
         <p>{{upperCase this.description}}</p>

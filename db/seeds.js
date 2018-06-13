@@ -30,33 +30,41 @@ function seeds() {
   db.resource.bulkCreate([
     {
       author_id: 527,
+      // username: "dondondumdums",
+      // author_name: "Donna Dumdums",
+      email: "Donna@Dumdums.com",
       title: "lawnmower for rent",
       description: "rent any weekend $20 (includes gas)",
       price: 20,
       category: "items offered",
-      condition: "good"
     }, {
       author_id: 4421,
+      // username: "dondondumdums",
+      // author_name: "Donna Dumdums",
+      email: "Donna@Dumdums.com",
       title: "celebration cakes",
       description: "I make great event cakes starting at $30.",
       price: 30,
       category: "services offered",
-      condition: "excellent"
     },
     {
       author_id: 12,
+      // username: "dondondumdums",
+      // author_name: "Donna Dumdums",
+      email: "Donna@Dumdums.com",
       title: "ladder needed",
       description: "time to clean the downspouts",
       price: 5,
       category: "items needed",
-      condition: "n/a"
     }, {
       author_id: 4421,
       title: "painting gig",
+      // username: "dondondumdums",
+      // author_name: "Donna Dumdums",
+      email: "Donna@Dumdums.com",
       description: "Someone please paint my living room.",
       price: 30,
       category: "services needed",
-      condition: "n/a"
     }
 
   ]);
