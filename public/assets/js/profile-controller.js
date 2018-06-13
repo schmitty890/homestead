@@ -3,6 +3,7 @@ $("#profileUpdate").on("click", function() {
   $("#profileClassForm").hide()
   $("#profileResForm").hide()
   $("#profileContactForm").hide()
+  $("#profileLander").hide()
   $("#profileUpdateForm").show()
 })
 $("#profilePostEvent").on("click", function() {
@@ -10,6 +11,7 @@ $("#profilePostEvent").on("click", function() {
   $("#profileResForm").hide()
   $("#profileContactForm").hide()
   $("#profileUpdateForm").hide()
+  $("#profileLander").hide()
   $("#profileEventForm").show()
 })
 $("#profilePostClass").on("click", function() {
@@ -17,6 +19,7 @@ $("#profilePostClass").on("click", function() {
   $("#profileResForm").hide()
   $("#profileContactForm").hide()
   $("#profileUpdateForm").hide()
+  $("#profileLander").hide()
   $("#profileClassForm").show()
 })
 $("#profilePostRes").on("click", function() {
@@ -24,6 +27,7 @@ $("#profilePostRes").on("click", function() {
   $("#profileClassForm").hide()
   $("#profileContactForm").hide()
   $("#profileUpdateForm").hide()
+  $("#profileLander").hide()
   $("#profileResForm").show()
 })
 $("#profileContact").on("click", function() {
@@ -31,5 +35,6 @@ $("#profileContact").on("click", function() {
   $("#profileClassForm").hide()
   $("#profileResForm").hide()
   $("#profileUpdateForm").hide()
+  $("#profileLander").hide()
   $("#profileContactForm").show()
 })
