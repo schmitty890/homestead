@@ -156,37 +156,6 @@ module.exports = function (app) {
 
   });
 
-  // app.get('/classifieds/:category/:type', function (req, res) {
-  //   var category = req.params.category;
-  //   var type = req.params.type;
-  //   console.log(category);
-  //   console.log(type);
-
-  //   let hbsObject = {
-  //     user: req.user
-  //   }
-
-  //   db.classifieds.findAll({
-  //     where: {
-  //       category: category,
-  //       type: type
-  //     },
-  //     order: [
-  //       ['createdAt', 'DESC']
-  //     ]
-  //   }).then(function (classifieds) {
-  //     // console.log('--------------------------------');
-  //     // console.log(classifiedAutos);
-  //     hbsObject.category = {
-  //       classifieds: classifieds
-  //     }
-  //     // console.log(hbsObject.category.classifieds);
-
-  //     res.render('classifieds_list_page', { hbsObject: hbsObject });
-  //   });
-
-  // });
-
   //form to post new resource
   app.get('/new-resource', function (req, res) {
 
