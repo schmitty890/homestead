@@ -10,7 +10,6 @@ var PostResource = function () {
 
   function gatherFormElements() {
 
-
     formValues = {
       author_id: $('#post-resource').attr('data-id'),
       email: $('#post-resource').attr('data-email'),

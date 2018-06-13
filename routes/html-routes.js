@@ -153,8 +153,6 @@ module.exports = function (app) {
       user: req.user
     }
 
-    // console.log(hbsObject);
-
     //if logged in
     res.render('postresource', { hbsObject: hbsObject });
   })
