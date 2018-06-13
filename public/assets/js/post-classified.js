@@ -33,12 +33,11 @@ var PostClassified = function(){
 
     // console.log(formValues);
 
-    // TODO: client side validation checks
-
-    // if (formValues.title === '' || formValues.date === '') {
-    //   alert('fill out ALL required forms.');
-    // }
-    passToBackend(formValues);
+    if (formValues.name === '' || formValues.email === '' || formValues.price === '' || formValues.phone === '' || formValues.title === '') {
+      alert('fill out ALL required forms.');
+    } else {
+      passToBackend(formValues);
+    }
   }
 
   function passToBackend(formValues) {
