@@ -48,7 +48,7 @@ module.exports = function(app) {
 
   app.post("/api/resources", function(req, res) {
     var userId = '';
-    console.log(req.body);
+    // console.log(req.body);
 
     db.resource.create(req.body)
       .then(function(resources) {
