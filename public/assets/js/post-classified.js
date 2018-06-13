@@ -18,7 +18,7 @@ var PostClassified = function(){
     var userId = $("#addClassBtn").data("id");
     var userName = $("#addClassBtn").data("username");
     var $category = $form.find('#category').val().trim();
-    console.log($category);
+
     formValues = {
       author_id: userId,
       username: userName,
