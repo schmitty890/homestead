@@ -1,205 +1,49 @@
 [{
   "title": "Autos",
   "url": "classifieds/autos",
-  "icon": "fa-car",
-  "subcats": [
-  {
-    "title": "first",
-    "url": "/first"
-  },
-  {
-    "title": "second",
-    "url": "/second"
-  },
-  {
-    "title": "third",
-    "url": "/third"
-  }]
+  "icon": "fa-car"
 },{
   "title": "Bikes",
   "url": "classifieds/bikes",
-  "icon": "fa-bicycle",
-  "subcats": [
-  {
-    "title": "first",
-    "url": "/first"
-  },
-  {
-    "title": "second",
-    "url": "/second"
-  },
-  {
-    "title": "third",
-    "url": "/third"
-  }]
+  "icon": "fa-bicycle"
 },{
   "title": "Electronics",
   "url": "classifieds/electronics",
-  "icon": "fa-gamepad",
-  "subcats": [
-  {
-    "title": "first",
-    "url": "/first"
-  },
-  {
-    "title": "second",
-    "url": "/second"
-  },
-  {
-    "title": "third",
-    "url": "/third"
-  }]
+  "icon": "fa-gamepad"
 },{
   "title": "Appliances",
   "url": "classifieds/appliances",
-  "icon": "fa-gears",
-  "subcats": [
-  {
-    "title": "first",
-    "url": "/first"
-  },
-  {
-    "title": "second",
-    "url": "/second"
-  },
-  {
-    "title": "third",
-    "url": "/third"
-  }]
+  "icon": "fa-gears"
 },{
   "title": "BabyKid",
   "url": "classifieds/babyKid",
-  "icon": "fa-child",
-  "subcats": [
-  {
-    "title": "first",
-    "url": "/first"
-  },
-  {
-    "title": "second",
-    "url": "/second"
-  },
-  {
-    "title": "third",
-    "url": "/third"
-  }]
+  "icon": "fa-child"
 },{
   "title": "Clothes",
   "url": "classifieds/clothes",
-  "icon": "fa-get-pocket",
-  "subcats": [
-  {
-    "title": "first",
-    "url": "/first"
-  },
-  {
-    "title": "second",
-    "url": "/second"
-  },
-  {
-    "title": "third",
-    "url": "/third"
-  }]
+  "icon": "fa-get-pocket"
 },{
   "title": "Furniture",
   "url": "classifieds/furniture",
-  "icon": "fa-bed",
-  "subcats": [
-  {
-    "title": "first",
-    "url": "/first"
-  },
-  {
-    "title": "second",
-    "url": "/second"
-  },
-  {
-    "title": "third",
-    "url": "/third"
-  }]
+  "icon": "fa-bed"
 },{
   "title": "Lawn",
   "url": "classifieds/lawn",
-  "icon": "fa-tree",
-  "subcats": [
-  {
-    "title": "first",
-    "url": "/first"
-  },
-  {
-    "title": "second",
-    "url": "/second"
-  },
-  {
-    "title": "third",
-    "url": "/third"
-  }]
+  "icon": "fa-tree"
 },{
   "title": "Music",
   "url": "classifieds/music",
-  "icon": "fa-music",
-  "subcats": [
-  {
-    "title": "first",
-    "url": "/first"
-  },
-  {
-    "title": "second",
-    "url": "/second"
-  },
-  {
-    "title": "third",
-    "url": "/third"
-  }]
+  "icon": "fa-music"
 },{
   "title": "Sports",
   "url": "classifieds/sports",
-  "icon": "fa-soccer-ball-o",
-  "subcats": [
-  {
-    "title": "first",
-    "url": "/first"
-  },
-  {
-    "title": "second",
-    "url": "/second"
-  },
-  {
-    "title": "third",
-    "url": "/third"
-  }]
+  "icon": "fa-soccer-ball-o"
 },{
   "title": "Phones",
   "url": "classifieds/phones",
-  "icon": "fa-phone",
-  "subcats": [
-  {
-    "title": "first",
-    "url": "/first"
-  },
-  {
-    "title": "second",
-    "url": "/second"
-  },
-  {
-    "title": "third",
-    "url": "/third"
-  }]
+  "icon": "fa-phone"
 },{
   "title": "Tickets",
   "url": "classifieds/tickets",
-  "icon": "fa-ticket",
-  "subcats": [
-  {
-    "title": "first",
-    "url": "/first"
-  },
-  {
-    "title": "second",
-    "url": "/second"
-  },
-  {
-    "title": "third",
-    "url": "/third"
-  }]
+  "icon": "fa-ticket"
 }]
