@@ -13,7 +13,7 @@ var PostResource = function () {
 
     formValues = {
       author_id: $('#post-resource').attr('data-id'),
-      author_email: $('#post-resource').attr('data-email'),
+      email: $('#post-resource').attr('data-email'),
       title: $('#title').val().trim(),
       description: $('#details').val().trim(),
       category: $('#resource-category-select').val()
