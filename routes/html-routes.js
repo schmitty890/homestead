@@ -37,12 +37,12 @@ module.exports = function (app) {
 
   });
 
-/*   app.get('/community', function (req, res) {
-    let hbsObject = {
-      user: req.user
-    }
-    res.render('community', {hbsObject: hbsObject });
-  }); */
+  /*   app.get('/community', function (req, res) {
+      let hbsObject = {
+        user: req.user
+      }
+      res.render('community', {hbsObject: hbsObject });
+    }); */
 
   app.get('/events', function (req, res) {
     //didn't mess with, seems like we need to make eventInfo a sub of the handlebars object
@@ -57,6 +57,14 @@ module.exports = function (app) {
     })
 
   });
+
+  /*   app.get('/classes', function (req, res) {
+      res.render('community');
+    });
+  
+    app.get('/meetups', function (req, res) {
+      res.render('meetups');
+    }); */
 
   app.get('/faq', function (req, res) {
     let hbsObject = {
@@ -87,7 +95,7 @@ module.exports = function (app) {
       }
 
       // loop over array of categories
-      categories.forEach(function(category) {
+      categories.forEach(function (category) {
         // console.log(category);
         db.classifieds.findAll({
           where: {
@@ -111,7 +119,7 @@ module.exports = function (app) {
     });
   });
 
-  app.get('/classifieds/:category', function(req, res) {
+  app.get('/classifieds/:category', function (req, res) {
     var category = req.params.category;
 
     let hbsObject = {
@@ -140,34 +148,44 @@ module.exports = function (app) {
 
   //form to post new resource
   app.get('/new-resource', function (req, res) {
-    //if not logged in, redirect to login
+
+    let hbsObject = {
+      user: req.user
+    }
 
     //if logged in
-    res.render('postresource');
+    res.render('postresource', { hbsObject: hbsObject });
   })
 
   //show all resources
   app.get('/resources', function (req, res) {
-    //console.log(req)
-    //let resourceUserHolder = req.user
+
+    let hbsObject = {
+      user: req.user
+    }
+
     db.resource.findAll({
       limit: 20,
       order: [
         ['createdAt']
       ]
-    }).then(function (data/*, resourceUserHolder */) {
-      //console.log(resourceUserHolder)
-      let hbsObject = {
-        resource: data,
-        //user: resourceUserHolder
+    }).then(function (data) {
+
+      hbsObject.resources = {
+        resources: data,
       }
 
-      res.render('resources', hbsObject);
+      res.render('resources', { hbsObject: hbsObject });
     });
   })
 
   //show category of resource
   app.get('/resources/:type', function (req, res) {
+
+    let hbsObject = {
+      user: req.user
+    }
+
     let type = req.params.type.replace('%20', ' ');
 
     db.resource.findAll({
@@ -180,10 +198,12 @@ module.exports = function (app) {
         ['createdAt']
       ]
     }).then(function (data) {
-      let hbsObject = {
-        resource: data
+
+      hbsObject.resources = {
+        resources: data,
       }
-      res.render('resources', hbsObject);
+
+      res.render('resources', { hbsObject: hbsObject });
     })
   })
 
