@@ -1,0 +1,54 @@
+<div class="page classifieds-page">
+  <section class="content">
+    <section class="block">
+      <div class="container">
+        <div class="items list grid-xl-4-items grid-lg-3-items grid-md-2-items">
+          {{#if hbsObject.category.classifieds}}
+            {{#each hbsObject.category.classifieds}}
+            <div class="item">
+              <div class="wrapper">
+                <div class="image">
+                  <h3>
+                    <a href="#" class="title">{{this.title}}</a>
+                  </h3>
+                  <a href="#" class="image-wrapper background-image">
+                      <img src="assets/img/image-02.jpg" alt="">
+                  </a>
+                </div>
+                <div class="price">${{this.price}}</div>
+                <div class="meta">
+                  <figure>
+                    <i class="fa fa-calendar-o"></i>{{momentFromNowTime this.createdAt}}
+                  </figure>
+                  <figure>
+                    <a href="#">
+                      <i class="fa fa-user"></i>{{this.email}}
+                    </a>
+                  </figure>
+                </div>
+                <div class="description">
+                  <p>{{this.details}}</p>
+                </div>
+                <div class="additional-info">
+                  <ul>
+                    <li>
+                      <figure>Some details</figure>
+                      <aside>Some other details</aside>
+                    </li>
+                    <li>
+                      <figure>Some details</figure>
+                      <aside>Some more details</aside>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            {{/each}}
+          {{else}}
+            {{> classified-landing-page-partials/no_classifieds}}
+          {{/if}}
+        </div>
+      </div>
+    </section>
+  </section>
+</div>
