@@ -64,47 +64,58 @@ function seeds() {
   // seeds for events
   db.event.bulkCreate([
     {
-      author_id: 527,
-      title: "yard sale",
-      description: "everybody get out any items you wish to sell",
+      author_id: "blah@gmail.com",
+      title: "Yard Sale",
+      description: "Everybody get out any items you wish to sell",
       category: "Sell",
-      date: "07/27/2018",
+      date: "2018-07-25 8:30:00",
+      endDate: "2018-07-25 14:30:00",
       location: "Lot 115"
     }, {
-      author_id: 4421,
-      title: "block party",
-      description: "party it up with the block!",
+      author_id: "catchbb14@gmail.com",
+      title: "Block Party",
+      description: "Party it up with the block!",
       category: "Social",
-      date: "06/24/2018",
+      date: "06/24/2018 19:00:00",
+      endDate: "06/25/2018 02:00:00",
       location: "Seasame Street Cul-de-sac"
     }, {
-      author_id: 527,
-      title: "cookout",
-      description: "hamburgers and hotdogs on da grill!",
+      author_id: "catchbb14@gmail.com",
+      title: "Cook-out",
+      description: "Hamburgers and hotdogs on da grill!",
       category: "Social",
       date: "06/13/2018",
       location: "Neighboorhood Cabana"
     }, {
-      author_id: 123,
-      title: "pool party",
-      description: "get the floaties out!",
+      author_id: "dumdum@gmail.com",
+      title: "Pool Party",
+      description: "Get the floaties out!",
       category: "Social",
       date: "08/13/2018",
       location: "Clubhouse/Pool"
     }, {
-      author_id: 321,
-      title: "block party",
-      description: "its gonna be wild!",
+      author_id: "letsgo@yahoo.com",
+      title: "Block Party",
+      description: "It's gonna be wild!",
       category: "Social",
       date: "09/25/2018",
       location: "Seasame Street Cul-de-sac"
     }, {
-      author_id: 555,
-      title: "volleyball tournament",
-      description: "serve it up!",
+      author_id: "play123@gmail.com",
+      title: "Volleyball Tournament",
+      description: "Serve it up!",
       category: "Sports",
       date: "09/25/2018",
-      location: "Pool-side beach volleyball court"
+      location: "Pool-side beach volleyball court",
+      allDay: true
+    }, {
+      author_id: "admin@hoa.com",
+      title: "Member-appreciation week!",
+      description: "Come by the clubhouse for your treat this week!",
+      category: "Community",
+      date: "06/25/2018",
+      endDate: "06/29/2018",
+      location: "Clubhouse"
     }
   ]);
 
