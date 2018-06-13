@@ -32,7 +32,7 @@ var PostClassified = function(){
       // status: $form.find('.status-selector .item').val().trim()
     }
 
-    console.log(formValues);
+    // console.log(formValues);
 
     if (formValues.name === '' || formValues.email === '' || formValues.price === '' || formValues.phone === '' || formValues.title === '') {
       alert('fill out ALL required forms.');
