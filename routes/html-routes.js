@@ -58,14 +58,6 @@ module.exports = function (app) {
 
   });
 
-/*   app.get('/classes', function (req, res) {
-    res.render('community');
-  });
-
-  app.get('/meetups', function (req, res) {
-    res.render('meetups');
-  }); */
-
   app.get('/faq', function (req, res) {
     let hbsObject = {
       faqs: faqs,

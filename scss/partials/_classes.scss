@@ -2312,3 +2312,14 @@ Headers:		'Varela Round', sans-serif;
   float: right;
   text-align: right;
 }
+
+.weather-icon {
+  font-size: 14px;
+  top: 2px;
+  position: relative;
+}
+@media(max-width: 768px) {
+  .weather {
+    display: none;
+  }
+}
