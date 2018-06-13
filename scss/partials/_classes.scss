@@ -101,7 +101,6 @@ Headers:		'Varela Round', sans-serif;
   font-size: 10px;
   margin-left: 5px;
 }
-.alert {}
 .alert.alert-warning {
   background-color: #fffde3;
   border: none;
@@ -318,7 +317,6 @@ Headers:		'Varela Round', sans-serif;
 .categories-list li .sub-categories a:after {
   content: ",";
 }
-.categories-list li .sub-categories a:last-child {}
 .categories-list li .sub-categories a:last-child:after {
   content: "...";
 }
@@ -478,7 +476,7 @@ Headers:		'Varela Round', sans-serif;
 }
 /*background-image: url("../../assets/img/hero-overlay.png"); background-size: contain; background-position: bottom center; background-repeat: no-repeat; padding-bottom: 4rem; position: relative; background-color:#fff; z-index: 3;*/
 .hero .hero-wrapper {
-  padding-bottom: 7rem;
+  padding-bottom: 2rem;
 }
 .hero .main-navigation {
   z-index: 999;
@@ -511,7 +509,6 @@ Headers:		'Varela Round', sans-serif;
   background-color:white;
 }
 
-.hero .main-navigation .navbar ul.navbar-nav li.nav-item.has-child > a.nav-link {}
 .hero .main-navigation .navbar ul.navbar-nav li.nav-item.has-child > a.nav-link:after {
   font-family: 'fontawesome';
   position: absolute;
@@ -522,7 +519,6 @@ Headers:		'Varela Round', sans-serif;
   margin: auto;
   height: 1.6rem;
 }
-.hero .main-navigation .navbar ul.navbar-nav li.nav-item.has-child:hover > a.nav-link {}
 .hero .main-navigation .navbar ul.navbar-nav li.nav-item.has-child:hover > a.nav-link:after {
   color: $color-accent;
 }
@@ -531,21 +527,18 @@ Headers:		'Varela Round', sans-serif;
 .hero .main-navigation .navbar ul.navbar-nav > li.nav-item > ul.child {
   margin-top: 1.5rem;
 }
-.hero .main-navigation .navbar ul.navbar-nav > li.nav-item > ul.child > li {}
 /*------ 2nd level ------*/
 .hero .main-navigation .navbar ul.navbar-nav > li.nav-item > ul.child > li:hover > ul.child {
   opacity: 1;
   pointer-events: auto;
   transform: translateX(0rem);
 }
-.hero .main-navigation .navbar ul.navbar-nav > li.nav-item > ul.child > li:hover > ul.child > li {}
 /*------ 3rd level ------*/
 .hero .main-navigation .navbar ul.navbar-nav > li.nav-item > ul.child > li:hover > ul.child > li:hover > ul.child {
   opacity: 1;
   pointer-events: auto;
   transform: translateX(0rem);
 }
-.hero .main-navigation .navbar ul.navbar-nav > li.nav-item > ul.child > li:hover > ul.child > li:hover > ul.child > li {}
 /*------ 4th level ------*/
 .hero .main-navigation .navbar ul.navbar-nav > li.nav-item > ul.child > li:hover > ul.child > li:hover > ul.child > li:hover > ul.child {
   opacity: 1;
@@ -590,9 +583,6 @@ Headers:		'Varela Round', sans-serif;
   transform: translateX(.3rem);
   margin-right: .5rem;
 }
-.hero .main-navigation .navbar ul.navbar-nav > li.nav-item ul.child li ul li {/*----- Small right arrow on first list item ------*/
-}
-.hero .main-navigation .navbar ul.navbar-nav > li.nav-item ul.child li ul li:first-child {}
 .hero .main-navigation .navbar ul.navbar-nav > li.nav-item ul.child li ul li:first-child:after {
   background-color: transparent;
   width: .5rem;
@@ -612,7 +602,6 @@ Headers:		'Varela Round', sans-serif;
   right: -.6rem;
   z-index: 1;
 }
-.hero .main-navigation .navbar ul.navbar-nav > li.nav-item ul.child li ul li:first-child:hover {}
 .hero .main-navigation .navbar ul.navbar-nav > li.nav-item ul.child li ul li:first-child:hover:before {
   border-color: transparent transparent transparent #fafafa;
 }
@@ -627,7 +616,6 @@ Headers:		'Varela Round', sans-serif;
   background-color: rgba(0,0,0,.02);
 }
 
-.hero .main-navigation .navbar ul.navbar-nav > li.nav-item ul.child li.has-child > a.nav-link {}
 .hero .main-navigation .navbar ul.navbar-nav > li.nav-item ul.child li.has-child > a.nav-link:after {
   content: "\f0d9";
   left: 1rem;
@@ -635,7 +623,6 @@ Headers:		'Varela Round', sans-serif;
 .hero .main-navigation .navbar ul.navbar-nav > li.nav-item ul.child:hover {
   pointer-events: auto;
 }
-.hero .main-navigation .navbar ul.navbar-nav > li.nav-item.has-child > a.nav-link {}
 .hero .main-navigation .navbar ul.navbar-nav > li.nav-item.has-child > a.nav-link:after {
   content: "\f0d7";
   right: .4rem;
@@ -706,7 +693,6 @@ Headers:		'Varela Round', sans-serif;
   display: inline-block;
   text-decoration: none;
 }
-.hero .secondary-navigation a {}
 .hero .secondary-navigation a:hover {
   background-color: rgba(255,255,255,.1);
 }
@@ -717,7 +703,6 @@ Headers:		'Varela Round', sans-serif;
 .hero .secondary-navigation .left {
   float: left;
 }
-.hero .secondary-navigation .left li {}
 .hero .secondary-navigation .left li:first-child {
   padding-left: 0;
 }
@@ -770,11 +755,9 @@ Headers:		'Varela Round', sans-serif;
 .hero .page-title h4 {
   opacity: .5;
 }
-.hero .page-title h4 a {}
 .hero .page-title h4 a:after {
   display: none;
 }
-.hero .page-title h4.location {}
 .hero .page-title h4.location:before {
   font-family: 'fontawesome';
   color: #000;
@@ -945,7 +928,6 @@ Headers:		'Varela Round', sans-serif;
 .items:not(.selectize-input) .item h4 a:hover {
   text-decoration: underline;
 }
-.items:not(.selectize-input) .item h4.location {}
 .items:not(.selectize-input) .item h4.location:before {
   color: #fff;
 }
@@ -1220,7 +1202,6 @@ Headers:		'Varela Round', sans-serif;
 .items:not(.selectize-input).list .item h4 a {
   color: #000;
 }
-.items:not(.selectize-input).list .item h4.location {}
 .items:not(.selectize-input).list .item h4.location:before {
   font-family: 'fontawesome';
   color: #000;
@@ -1321,7 +1302,6 @@ Headers:		'Varela Round', sans-serif;
 .items:not(.selectize-input).list.compact .item .image .background-image {
   width: 20rem;
 }
-.items:not(.selectize-input).list.compact .item .image .image-wrapper {}
 .items:not(.selectize-input).list.compact .item .image .image-wrapper:before {
   opacity: .6;
   height: 8rem;
@@ -1424,7 +1404,6 @@ Headers:		'Varela Round', sans-serif;
   box-shadow: 0 0.2rem .7rem 0 rgba(0,0,0, .08);
   top: 2.5rem;
 }
-.map .infobox-wrapper a {}
 .map .infobox-wrapper a:hover {
   color: inherit;
 }
@@ -1540,7 +1519,6 @@ Headers:		'Varela Round', sans-serif;
 .nav-tabs .nav-link, .nav-pills .nav-link {
   padding: 1rem 2rem;
 }
-.nav-pills .nav-link {}
 .nav-pills .nav-link.active {
   background-color: $color-accent;
 }
@@ -1655,7 +1633,6 @@ Headers:		'Varela Round', sans-serif;
 /********
 --- P ---
 ********/
-.pac-logo {}
 .pac-logo:after {
   display: none;
 }
@@ -1681,10 +1658,9 @@ Headers:		'Varela Round', sans-serif;
   position: absolute;
 }
 .page.sub-page .page-title {
-  padding-top: 3rem;
+  padding-top: 1rem;
   padding-bottom: 1rem;
 }
-.page.sub-page .form {}
 .page.sub-page .form.hero-form {
   padding-top: 2rem;
 }
@@ -2072,7 +2048,6 @@ Headers:		'Varela Round', sans-serif;
 .tag:hover {
   background-color: $color-accent;
 }
-.tags {}
 .tags.framed .tag {
   background-color: transparent;
   border: .1rem solid rgba(0,0,0,.1);
