@@ -32,6 +32,16 @@ module.exports = function(sequelize, Sequelize) {
     last_login: {
       type: Sequelize.DATE
     },
+    account_type: {
+      type: Sequelize.STRING,
+      allowNull: false,
+      defaultValue: "user"
+    },
+    dues: {
+      type: Sequelize.DECIMAL(10,2),
+      allowNull: false,
+      defaultValue: 0.00
+    },
     status: {
       type: Sequelize.ENUM('active', 'inactive'),
       defaultValue: 'active'

@@ -1,205 +1,205 @@
 [{
-  "title": "classifieds 1",
-  "url": "classifieds1url",
-  "icon": "fa-bed",
-  "subcats": [
-  {
-    "title": "first",
-    "url": "/first"
-  },
-  {
-    "title": "second",
-    "url": "/second"
-  },
-  {
-    "title": "third",
-    "url": "/third"
-  }]
-},{
-  "title": "classifieds 2",
-  "url": "classifieds2url",
-  "icon": "fa-paw",
-  "subcats": [
-  {
-    "title": "first",
-    "url": "/first"
-  },
-  {
-    "title": "second",
-    "url": "/second"
-  },
-  {
-    "title": "third",
-    "url": "/third"
-  }]
-},{
-  "title": "classifieds 3",
-  "url": "classifieds3url",
-  "icon": "fa-ravelry",
-  "subcats": [
-  {
-    "title": "first",
-    "url": "/first"
-  },
-  {
-    "title": "second",
-    "url": "/second"
-  },
-  {
-    "title": "third",
-    "url": "/third"
-  }]
-},{
-  "title": "classifieds 4",
-  "url": "classifieds4url",
-  "icon": "fa-user-circle-o",
-  "subcats": [
-  {
-    "title": "first",
-    "url": "/first"
-  },
-  {
-    "title": "second",
-    "url": "/second"
-  },
-  {
-    "title": "third",
-    "url": "/third"
-  }]
-},{
-  "title": "classifieds 5",
-  "url": "classifieds5url",
-  "icon": "fa-arrows",
-  "subcats": [
-  {
-    "title": "first",
-    "url": "/first"
-  },
-  {
-    "title": "second",
-    "url": "/second"
-  },
-  {
-    "title": "third",
-    "url": "/third"
-  }]
-},{
-  "title": "classifieds 6",
-  "url": "classifieds6url",
-  "icon": "fa-bolt",
-  "subcats": [
-  {
-    "title": "first",
-    "url": "/first"
-  },
-  {
-    "title": "second",
-    "url": "/second"
-  },
-  {
-    "title": "third",
-    "url": "/third"
-  }]
-},{
-  "title": "classifieds 7",
-  "url": "classifieds7url",
+  "title": "Autos",
+  "url": "classifieds/autos",
   "icon": "fa-car",
   "subcats": [
   {
     "title": "first",
-    "url": "/first"
+    "url": "classifieds/autos"
   },
   {
     "title": "second",
-    "url": "/second"
+    "url": "classifieds/autos"
   },
   {
     "title": "third",
-    "url": "/third"
+    "url": "classifieds/autos"
   }]
 },{
-  "title": "classifieds 8",
-  "url": "classifieds8url",
-  "icon": "fa-cutlery",
+  "title": "Bikes",
+  "url": "classifieds/bikes",
+  "icon": "fa-bicycle",
+  "subcats": [
+  {
+    "title": "Kids & Youth",
+    "url": "classifieds/bikes?Kids&Youth"
+  },
+  {
+    "title": "Adult",
+    "url": "classifieds/bikes?Adult"
+  },
+  {
+    "title": "Perf",
+    "url": "classifieds/bikes?Performance"
+  }]
+},{
+  "title": "Electronics",
+  "url": "classifieds/electronics",
+  "icon": "fa-gamepad",
+  "subcats": [
+  {
+    "title": "Computers",
+    "url": "classifieds/electronics?Computers"
+  },
+  {
+    "title": "Tvs",
+    "url": "classifieds/electronics?Tvs"
+  },
+  {
+    "title": "Camera",
+    "url": "classifieds/electronics?Camera"
+  }]
+},{
+  "title": "Appliances",
+  "url": "classifieds/appliances",
+  "icon": "fa-gears",
+  "subcats": [
+  {
+    "title": "Kitchen",
+    "url": "classifieds/appliances?Kitchen"
+  },
+  {
+    "title": "Household",
+    "url": "classifieds/appliances?Household"
+  },
+  {
+    "title": "Other",
+    "url": "classifieds/appliances?Other"
+  }]
+},{
+  "title": "BabyKid",
+  "url": "classifieds/babyKid",
+  "icon": "fa-child",
+  "subcats": [
+  {
+    "title": "Toys",
+    "url": "classifieds/babyKid?Toys"
+  },
+  {
+    "title": "Strollers",
+    "url": "classifieds/babyKid?Strollers"
+  },
+  {
+    "title": "Bedroom",
+    "url": "classifieds/babyKid?Bedroom"
+  }]
+},{
+  "title": "Clothes",
+  "url": "classifieds/clothes",
+  "icon": "fa-get-pocket",
+  "subcats": [
+  {
+    "title": "Mens",
+    "url": "classifieds/clothes?Mens"
+  },
+  {
+    "title": "Womens",
+    "url": "classifieds/clothes?Womens"
+  },
+  {
+    "title": "Baby",
+    "url": "classifieds/clothes?Baby"
+  }]
+},{
+  "title": "Furniture",
+  "url": "classifieds/furniture",
+  "icon": "fa-bed",
   "subcats": [
   {
     "title": "first",
-    "url": "/first"
+    "url": "classifieds/furniture?"
   },
   {
     "title": "second",
-    "url": "/second"
+    "url": "classifieds/furniture?"
   },
   {
     "title": "third",
-    "url": "/third"
+    "url": "classifieds/furniture?"
   }]
 },{
-  "title": "classifieds 9",
-  "url": "classifieds9url",
-  "icon": "fa-flag",
+  "title": "Lawn",
+  "url": "classifieds/lawn",
+  "icon": "fa-tree",
   "subcats": [
   {
-    "title": "first",
-    "url": "/first"
+    "title": "Equipment",
+    "url": "classifieds/lawn?Equipment"
   },
   {
-    "title": "second",
-    "url": "/second"
+    "title": "Decorative",
+    "url": "classifieds/lawn?Decorative"
   },
   {
-    "title": "third",
-    "url": "/third"
+    "title": "Plants",
+    "url": "classifieds/lawn?Plants"
   }]
 },{
-  "title": "classifieds 10",
-  "url": "classifieds10url",
-  "icon": "fa-hand-lizard-o",
+  "title": "Music",
+  "url": "classifieds/music",
+  "icon": "fa-music",
   "subcats": [
   {
-    "title": "first",
-    "url": "/first"
+    "title": "Guitars",
+    "url": "classifieds/music?Guitars"
   },
   {
-    "title": "second",
-    "url": "/second"
+    "title": "Amps",
+    "url": "classifieds/music?Amps"
   },
   {
-    "title": "third",
-    "url": "/third"
+    "title": "Drums",
+    "url": "classifieds/music?Drums"
   }]
 },{
-  "title": "classifieds 11",
-  "url": "classifieds11url",
-  "icon": "fa-hourglass-start",
+  "title": "Sports",
+  "url": "classifieds/sports",
+  "icon": "fa-soccer-ball-o",
   "subcats": [
   {
-    "title": "first",
-    "url": "/first"
+    "title": "Fitness",
+    "url": "classifieds/sports?Fitness"
   },
   {
-    "title": "second",
-    "url": "/second"
+    "title": "YardGames",
+    "url": "classifieds/sports?YardGames"
   },
   {
-    "title": "third",
-    "url": "/third"
+    "title": "Hiking",
+    "url": "classifieds/sports?Hiking"
   }]
 },{
-  "title": "classifieds 12",
-  "url": "classifieds12url",
-  "icon": "fa-location-arrow",
+  "title": "Phones",
+  "url": "classifieds/phones",
+  "icon": "fa-phone",
   "subcats": [
   {
-    "title": "first",
-    "url": "/first"
+    "title": "Apple",
+    "url": "classifieds/phones?Apple"
   },
   {
-    "title": "second",
-    "url": "/second"
+    "title": "Android",
+    "url": "classifieds/phones?Android"
   },
   {
-    "title": "third",
-    "url": "/third"
+    "title": "Other",
+    "url": "classifieds/phones?Other"
+  }]
+},{
+  "title": "Tickets",
+  "url": "classifieds/tickets",
+  "icon": "fa-ticket",
+  "subcats": [
+  {
+    "title": "Sports",
+    "url": "classifieds/tickets?Sports"
+  },
+  {
+    "title": "Concerts",
+    "url": "classifieds/tickets?Concerts"
+  },
+  {
+    "title": "Other",
+    "url": "classifieds/tickets?Other"
   }]
 }]
