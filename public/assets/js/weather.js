@@ -75,7 +75,7 @@ var Weather = function(){
   }
 
   function appendHTML(data, icon) {
-    $('.weather').append('<span>'+data.name+'</span>|<span>'+data.main.temp.toFixed()+'</span>|<span>'+icon+'</span></span>');
+    $('.weather').append('<span>'+data.name+'</span>|<span>'+data.main.temp.toFixed()+'<sup>°F</sup></span>|<span>'+icon+'</span></span>');
 
   }
 
