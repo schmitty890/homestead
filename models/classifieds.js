@@ -34,6 +34,9 @@ module.exports = function(sequelize, Sequelize) {
         len: [1,50]
       }
     },
+    image: {
+      type: Sequelize.STRING
+    },
     price: {
       type: Sequelize.INTEGER,
       notEmpty: true

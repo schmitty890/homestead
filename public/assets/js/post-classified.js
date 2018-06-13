@@ -26,12 +26,13 @@ var PostClassified = function(){
       price: $form.find('#price').val().trim(),
       title: $form.find('#title').val().trim(),
       details: $form.find('#details').val().trim(),
-      category: $form.find('#category').val().trim()
+      category: $form.find('#category').val().trim(),
+      image: $form.find('#image').val().trim()
       // condition: $form.find('.status-selector .item').val().trim(),
       // status: $form.find('.status-selector .item').val().trim()
     }
 
-    // console.log(formValues);
+    console.log(formValues);
 
     if (formValues.name === '' || formValues.email === '' || formValues.price === '' || formValues.phone === '' || formValues.title === '') {
       alert('fill out ALL required forms.');
