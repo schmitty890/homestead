@@ -141,6 +141,7 @@ function seeds() {
       details: "Android phone",
       date_added: "10/10/2018",
       category: "phone",
+      type: "applePhone",
       condition: "Used"
     },{
       author_id: 100,
@@ -148,12 +149,13 @@ function seeds() {
       name: "Bill",
       email: "SkaterDude89@gmail.com",
       phone: "9191232367",
-      title: "title to an awesome post",
+      title: "stones shirt",
       image: "https://target.scene7.com/is/image/Target/52252380?wid=488&hei=488&fmt=pjpeg",
       price: "10",
-      details: "details about this product",
+      details: "rolling stones shirt",
       date_added: "06/18/2018",
       category: "clothes",
+      type: "mensClothes",
       condition: "Like new"
     },{
       author_id: 101,
@@ -167,6 +169,7 @@ function seeds() {
       details: "details about this product",
       date_added: "11/10/2018",
       category: "autos",
+      type: "trucks",
       condition: "Like new"
     },{
       author_id: 102,
@@ -180,6 +183,7 @@ function seeds() {
       details: "42 inch tv",
       date_added: "12/10/2018",
       category: "electronics",
+      type: "camera",
       condition: "Used"
     },{
       author_id: 103,
@@ -193,6 +197,7 @@ function seeds() {
       details: "details about this product",
       date_added: "08/03/2018",
       category: "lawn",
+      type: "plants",
       condition: "Used"
     },{
       author_id: 104,
@@ -206,6 +211,7 @@ function seeds() {
       details: "Section 201 tickets!",
       date_added: "08/13/2018",
       category: "tickets",
+      type: "sportsTickets",
       condition: "Used"
     },{
       author_id: 105,
@@ -219,6 +225,7 @@ function seeds() {
       details: "nirvana",
       date_added: "10/18/2018",
       category: "babyKid",
+      type: "toys",
       condition: "Like new"
     },{
       author_id: 106,
@@ -232,6 +239,7 @@ function seeds() {
       details: "Tickets to the Durham Bulls",
       date_added: "11/22/2018",
       category: "tickets",
+      type: "sportsTickets",
       condition: "Like new"
     },{
       author_id: 107,
@@ -245,6 +253,7 @@ function seeds() {
       details: "details about this product",
       date_added: "10/10/2018",
       category: "phones",
+      type: "androidPhone",
       condition: "Like new"
     },{
       author_id: 108,
@@ -258,6 +267,7 @@ function seeds() {
       details: "Jeep Wrangler with 23,000 miles on it.",
       date_added: "09/03/2018",
       category: "autos",
+      type: "cars",
       condition: "Like new"
     }
   ]);
