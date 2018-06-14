@@ -1,0 +1,241 @@
+<div class="page home-page">
+  <section class="content">
+    <div class="page sub-page">
+      <section class="hero">
+        <div class="hero-wrapper">
+          <div class="page-title">
+            <div class="container">
+              <h1>Manager Portal</h1>
+              <h2>Messages</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="content">
+        <section class="block">
+          <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-12 col-xl-12">
+                    <!--============ Section Title===========================================================-->
+                  <div class="section-title clearfix">
+                  </div>
+                  <div id="messaging__chat-list" class="messaging__box">
+                    <div class="messaging__header">
+                      <ul class="nav nav-pills">
+                        <li class="nav-item">
+                          <a class="nav-link active" href="#">All</a>
+                        </li>
+          {{!--               <li class="nav-item">
+                          <a class="nav-link" href="#">Urgent</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Issues</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Ideas</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Other</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Saved</a>
+                        </li> --}}
+                      </ul>
+                    </div>
+                  </div>
+                  <br>
+                  <br>
+                  <br>
+                </div>
+            </div>
+            <div class="items list grid-xl-4-items grid-lg-3-items grid-md-2-items" id="allMessages">
+              <h2>All Messages</h2>
+              {{#each hbsObject.messages.messages}}
+              <div class="item">
+                <div class="wrapper">
+                  <div class="image">
+                      <h3>
+                        <a href="#" class="tag category">{{upperCase this.category}}</a>
+                        <a class="title">{{upperCase this.subject}}</a>
+                      </h3>
+                      <a class="image-wrapper background-image">
+                          <img src="/assets/images/emailIcon.png" alt="">
+                      </a>
+                  </div>
+                  <!--end image-->
+                  <h4 class="location">
+                    <a href="#">From: {{this.name}}</a>
+                  </h4>
+                  <div class="meta">
+                    <figure>
+                      <i class="fa fa-calendar-o"></i>Sent On: {{formatDateForEvents this.date}}
+                    </figure>
+                  </div>
+                  <!--end meta-->
+                  <div class="description">
+                    <p>{{this.message}}</p>
+                  </div>
+                  <!--end description-->
+                </div>
+              </div>
+              {{/each}}
+            </div>
+            {{!-- <div class="items list grid-xl-4-items grid-lg-3-items grid-md-2-items" id="urgentMessages">
+              <h2>Urgent Messages</h2>
+              {{#each hbsObject.messages.messages}}
+              <div class="item">
+                <div class="wrapper">
+                  <div class="image">
+                      <h3>
+                          <a href="single-listing-1.html" class="title">{{upperCase this.subject}}</a>
+                      </h3>
+                      <a href="single-listing-1.html" class="image-wrapper background-image">
+                          <img src="assets/img/image-01.jpg" alt="">
+                      </a>
+                  </div>
+                  <!--end image-->
+                  <h4 class="location">
+                    <a href="#">From: {{this.name}}</a>
+                  </h4>
+                  <div class="meta">
+                    <figure>
+                      <i class="fa fa-calendar-o"></i>Sent On: {{formatDateForEvents this.date}}
+                    </figure>
+                  </div>
+                  <!--end meta-->
+                  <div class="description">
+                    <p>{{this.message}}</p>
+                  </div>
+                  <!--end description-->
+                </div>
+              </div>
+              {{/each}}
+            </div>
+            <div class="items list grid-xl-4-items grid-lg-3-items grid-md-2-items" id="allMessages">
+              <h2>Issues Messages</h2>
+              {{#each hbsObject.messages.messages}}
+              <div class="item">
+                <div class="wrapper">
+                  <div class="image">
+                      <h3>
+                          <a href="single-listing-1.html" class="title">{{upperCase this.subject}}</a>
+                      </h3>
+                      <a href="single-listing-1.html" class="image-wrapper background-image">
+                          <img src="assets/img/image-01.jpg" alt="">
+                      </a>
+                  </div>
+                  <!--end image-->
+                  <h4 class="location">
+                    <a href="#">From: {{this.name}}</a>
+                  </h4>
+                  <div class="meta">
+                    <figure>
+                      <i class="fa fa-calendar-o"></i>Sent On: {{formatDateForEvents this.date}}
+                    </figure>
+                  </div>
+                  <!--end meta-->
+                  <div class="description">
+                    <p>{{this.message}}</p>
+                  </div>
+                  <!--end description-->
+                </div>
+              </div>
+              {{/each}}
+            </div>
+            <div class="items list grid-xl-4-items grid-lg-3-items grid-md-2-items" id="allMessages">
+              <h2>Ideas Messages</h2>
+              {{#each hbsObject.messages.messages}}
+              <div class="item">
+                <div class="wrapper">
+                  <div class="image">
+                      <h3>
+                          <a href="single-listing-1.html" class="title">{{upperCase this.subject}}</a>
+                      </h3>
+                      <a href="single-listing-1.html" class="image-wrapper background-image">
+                          <img src="assets/img/image-01.jpg" alt="">
+                      </a>
+                  </div>
+                  <!--end image-->
+                  <h4 class="location">
+                    <a href="#">From: {{this.name}}</a>
+                  </h4>
+                  <div class="meta">
+                    <figure>
+                      <i class="fa fa-calendar-o"></i>Sent On: {{formatDateForEvents this.date}}
+                    </figure>
+                  </div>
+                  <!--end meta-->
+                  <div class="description">
+                    <p>{{this.message}}</p>
+                  </div>
+                  <!--end description-->
+                </div>
+              </div>
+              {{/each}}
+            </div>
+            <div class="items list grid-xl-4-items grid-lg-3-items grid-md-2-items" id="allMessages">
+              <h2>Other Messages</h2>
+              {{#each hbsObject.messages.messages}}
+              <div class="item">
+                <div class="wrapper">
+                  <div class="image">
+                      <h3>
+                          <a href="single-listing-1.html" class="title">{{upperCase this.subject}}</a>
+                      </h3>
+                      <a href="single-listing-1.html" class="image-wrapper background-image">
+                          <img src="assets/img/image-01.jpg" alt="">
+                      </a>
+                  </div>
+                  <!--end image-->
+                  <h4 class="location">
+                    <a href="#">From: {{this.name}}</a>
+                  </h4>
+                  <div class="meta">
+                    <figure>
+                      <i class="fa fa-calendar-o"></i>Sent On: {{formatDateForEvents this.date}}
+                    </figure>
+                  </div>
+                  <!--end meta-->
+                  <div class="description">
+                    <p>{{this.message}}</p>
+                  </div>
+                  <!--end description-->
+                </div>
+              </div>
+              {{/each}}
+            </div>
+            <div class="items list grid-xl-4-items grid-lg-3-items grid-md-2-items" id="allMessages">
+              <h2>Saved Messages</h2>
+              {{#each hbsObject.messages.messages}}
+              <div class="item">
+                <div class="wrapper">
+                  <div class="image">
+                      <h3>
+                          <a href="single-listing-1.html" class="title">{{upperCase this.subject}}</a>
+                      </h3>
+                      <a href="single-listing-1.html" class="image-wrapper background-image">
+                          <img src="assets/img/image-01.jpg" alt="">
+                      </a>
+                  </div>
+                  <!--end image-->
+                  <h4 class="location">
+                    <a href="#">From: {{this.name}}</a>
+                  </h4>
+                  <div class="meta">
+                    <figure>
+                      <i class="fa fa-calendar-o"></i>Sent On: {{formatDateForEvents this.date}}
+                    </figure>
+                  </div>
+                  <!--end meta-->
+                  <div class="description">
+                    <p>{{this.message}}</p>
+                  </div>
+                  <!--end description-->
+                </div>
+              </div>
+              {{/each}}
+            </div> --}}
+          </div>
+        </section>
+      </section>
+  </div>
