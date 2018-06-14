@@ -8,7 +8,7 @@ var Form = function(){
    * NOTE: There should not be more than one of the same ID on a form. if we need mulitple dates, create another id and add that handler here]
    */
   function initDate() {
-    $("#date").flatpickr({
+    $(".date").flatpickr({
       enableTime: true,
       dateFormat: "Y-m-d H:i"
     });

@@ -13,7 +13,7 @@ module.exports = function(app) {
     var userId = '';
     db.classifieds.create(req.body)
       .then(function(classified) {
-        console.log(classified, "made it here")
+        // console.log(classified, "made it here")
         res.json(classified);
       })
       .catch(function(err) {
@@ -23,12 +23,12 @@ module.exports = function(app) {
 
   app.post("/api/messages", function(req, res) {
     var userId = '';
-    console.log(req.body)
+    // console.log(req.body)
     db.message.create(req.body)
       .then(function(message) {
-        console.log(message, "made it here")
+        // console.log(message, "made it here")
         res.json(message);
-        console.log("made it here")
+        // console.log("made it here")
       })
       .catch(function(err) {
         res.json({ status: "ERROR", message: err })
@@ -48,6 +48,8 @@ module.exports = function(app) {
 
   app.post("/api/resources", function(req, res) {
     var userId = '';
+    // console.log(req.body);
+
     db.resource.create(req.body)
       .then(function(resources) {
         res.json(resources);
@@ -70,7 +72,7 @@ module.exports = function(app) {
         res.send(resp.data);
       })
       .catch(function (error) {
-        console.log(error);
+        // console.log(error);
       });
 
   });

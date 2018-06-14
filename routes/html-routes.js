@@ -61,7 +61,7 @@ module.exports = function (app) {
   /*   app.get('/classes', function (req, res) {
       res.render('community');
     });
-  
+
     app.get('/meetups', function (req, res) {
       res.render('meetups');
     }); */
@@ -121,21 +121,31 @@ module.exports = function (app) {
 
   app.get('/classifieds/:category', function (req, res) {
     var category = req.params.category;
+    var whereAt = {};
+    // build out where clause if there is a query parameter or not
+    if(req.query.type === undefined) {
+      whereAt = {
+        category: category
+      }
+    } else {
+      whereAt = {
+        category: category,
+        type: req.query.type
+      }
+    }
 
     let hbsObject = {
       user: req.user
     }
 
     db.classifieds.findAll({
-      where: {
-        category: category
-      },
+      where: whereAt,
       order: [
         ['createdAt', 'DESC']
       ]
     }).then(function (classifieds) {
-      console.log('--------------------------------');
-      // console.log(classifiedAutos);
+      // console.log('--------------------------------');
+      // console.log(classifieds);
       hbsObject.category = {
         classifieds: classifieds
       }

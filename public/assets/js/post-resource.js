@@ -6,17 +6,14 @@
  */
 var PostResource = function () {
 
-  // $('#submit-category').selectize({
-  //   sortField: 'text'
-  // });
-
   var formValues = {};
 
   function gatherFormElements() {
 
     formValues = {
+      author_id: $('#post-resource').attr('data-id'),
+      email: $('#post-resource').attr('data-email'),
       title: $('#title').val().trim(),
-      date: $('#date').val().trim(),
       description: $('#details').val().trim(),
       category: $('#resource-category-select').val()
     }
@@ -27,7 +24,7 @@ var PostResource = function () {
   }
 
   function passToBackend(formValues) {
-    console.log("formValues", formValues);
+    // console.log("formValues", formValues);
     $.ajax('/api/resources', {
       type: 'POST',
       data: formValues

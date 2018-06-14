@@ -19,6 +19,7 @@ module.exports = function(sequelize, Sequelize) {
     description: {
       type: Sequelize.TEXT,
       notEmpty: true,
+      defaultValue: "None",
       validate: {
         len: [1,1000]
       }
@@ -26,6 +27,7 @@ module.exports = function(sequelize, Sequelize) {
     category: {
       type: Sequelize.STRING,
       notEmpty: true,
+      defaultValue: "Other",
       validate: {
         len: [1,50]
       }
@@ -38,7 +40,24 @@ module.exports = function(sequelize, Sequelize) {
       }
     },
     date: {
-      type: Sequelize.DATE
+      type: Sequelize.DATE,
+      notEmpty: true
+    },
+    endDate: {
+      type: Sequelize.DATE,
+      validate: {
+        isAfter(end) {
+          if (moment(end).subtract(moment(this.date)) < 0) {
+            throw new Error('Enter a date or time after the start time');
+            // we also are in the model's context here, so this.otherField
+            // would get the value of otherField if it existed
+          }
+        }
+      }  
+    },
+    allDay: {
+      type: Sequelize.BOOLEAN,
+      defaultValue: false
     }
   });
   return Event;

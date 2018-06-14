@@ -3,10 +3,10 @@
   <div class="wrapper">
     <div class="image">
       <h3>
-        <a href="#" class="title">Bikes</a>
+        <a href="/classifieds/bikes" class="title">Bikes</a>
       </h3>
       <a href="#" class="image-wrapper background-image">
-          <img src="assets/img/image-02.jpg" alt="">
+          <img src="{{hbsObject.bikes.latest.image}}" alt="">
       </a>
     </div>
     <div class="price">${{hbsObject.bikes.latest.price}}</div>

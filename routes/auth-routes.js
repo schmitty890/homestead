@@ -25,6 +25,11 @@ module.exports = function(app) {
   }))
 
   app.get('/new-resource', isLoggedIn, authController.postresource);
+  app.post('/api/resource', passport.authenticate('local-signin', {
+    successRedirect: '/resources',
+    failureRedirect: '/signup'
+  }))
+
   app.get('/contact', isLoggedIn, authController.contact);
   app.get('/logout',authController.logout);
 

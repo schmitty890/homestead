@@ -34,6 +34,9 @@ module.exports = function(sequelize, Sequelize) {
         len: [1,50]
       }
     },
+    image: {
+      type: Sequelize.STRING
+    },
     price: {
       type: Sequelize.INTEGER,
       notEmpty: true
@@ -51,6 +54,9 @@ module.exports = function(sequelize, Sequelize) {
     category: {
       type: Sequelize.STRING,
       notEmpty: true
+    },
+    type: {
+      type: Sequelize.STRING
     },
     condition: {
       type: Sequelize.STRING,
