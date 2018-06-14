@@ -1,19 +1,19 @@
 [{
   "questions": [
   {
-    "question": "first question",
-    "answer": "first answer"
+    "question": "What do I do if my trash or recycling wasn't picked up?",
+    "answer": "If your trash was not picked up, please be sure it is not a holiday week where the pickup schedule will be altered.  If it is not, please send us a message with the category Issues to let us know about the issue."
   }, {
-    "question": "second question",
-    "answer": "second answer"
+    "question": "What day must dues be paid by?",
+    "answer": "Due payments should be postmarked or dropped of at the HOA by the fifth of the month.  If your payment has not been received by opening on the sixth, a late fee will be assessed."
   }, {
-    "question": "third question",
-    "answer": "third answer"
+    "question": "What do I do if the power goes out?",
+    "answer": "If the power goes out, we will contact the utility companies and send all registered residents an email to let them know the situation and how long to expect until services are restored."
   }, {
-    "question": "fourth question",
-    "answer": "fourth answer"
+    "question": "Is it okay to drink a beer while I walk my dog around the neighborhood?",
+    "answer": "Yes, Joe, you've finally found a neighborhood that is okay with you doing that.  Thank goodness."
   }, {
-    "question": "fifth question",
-    "answer": "fifth answer"
+    "question": "Can I post things in classifieds that are free?",
+    "answer": "Please use resources posting for items which you are giving away for free."
   }]
 }]
