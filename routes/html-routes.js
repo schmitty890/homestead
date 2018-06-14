@@ -249,6 +249,7 @@ module.exports = function (app) {
   app.get('/messages', function (req, res) {
     let hbsObject = {
       user: req.user
+      
     }
 
     // find and count all categories
