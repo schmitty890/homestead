@@ -33,12 +33,12 @@ $(document).ready(function($) {
             header: {
             left: 'prev,next today',
             center: 'title',
-            right: 'month,agendaWeek,agendaDay,listWeek'
+            right: 'month,listWeek'
             },
             defaultView: 'month',
             defaultDate: moment(),
             navLinks: true, // can click day/week names to navigate views
-            editable: true,
+            editable: false,
             eventLimit: true, // allow "more" link when too many events
             events: eventList,
             

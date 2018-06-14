@@ -1,11 +1,21 @@
+<div class="section-title clearfix">
+    <div class="float-left float-xs-none">
+        <label class="mr-3 align-text-bottom">Sort: </label>
+        <select name="sorting" id="sorting" class="small width-200px" data-placeholder="By Date" >
+            <option value="">By Date</option>
+            <option value="1">By Date</option>
+            <option value="2">By Category</option>
+        </select>
+    </div>
+</div>
 <div class="items list grid-xl-4-items grid-lg-3-items grid-md-2-items">
-    {{#each events}}
+    {{#each hbsObject.eventInfo}}
     <div class="item">
         <div class="wrapper">
             <div class="image">
                 <h3>
-                    <a href="#" class="tag category">{{this.category}}</a>
-                    <a href="single-listing-1.html" class="title">{{upperCase this.title}}</a>
+                    <a href="./{{this.cateogory}}" class="tag category">{{this.category}}</a>
+                    <a class="title">{{upperCase this.title}}</a>
                 </h3>
                 <a href="single-listing-1.html" class="image-wrapper background-image">
                     <img src="assets/img/image-01.jpg" alt="">

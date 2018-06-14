@@ -45,15 +45,42 @@ module.exports = function (app) {
   }); */
 
   app.get('/events', function (req, res) {
-    //didn't mess with, seems like we need to make eventInfo a sub of the handlebars object
-    //don't want to break all of Eric's work on accident
+    
+    let hbsObject = {
+      user: req.user,
+      signedIn: (req.user !== undefined)
+    }
+
     db.event.findAll({
       order: [
         ['date', 'ASC']
       ]
     }).then(function (eventInfo) {
-      // console.log(eventInfo);
-      res.render('events', { events: eventInfo });
+      hbsObject.eventInfo = eventInfo;
+      res.render('events', { hbsObject: hbsObject });
+    })
+
+  });
+
+  app.get('/events:cat', function (req, res) {
+    
+    
+    let cat = req.params.cat;
+    let hbsObject = {
+      user: req.user,
+      signedIn: (req.user !== undefined)
+    }
+
+    db.event.findAll({
+      order: [
+        ['date', 'ASC']
+      ],
+      where: {
+        category: cat
+      }
+    }).then(function (eventInfo) {
+      hbsObject.eventInfo = eventInfo;
+      res.render('events', { hbsObject: hbsObject });
     })
 
   });
