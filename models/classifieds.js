@@ -55,6 +55,9 @@ module.exports = function(sequelize, Sequelize) {
       type: Sequelize.STRING,
       notEmpty: true
     },
+    type: {
+      type: Sequelize.STRING
+    },
     condition: {
       type: Sequelize.STRING,
       notEmpty: true

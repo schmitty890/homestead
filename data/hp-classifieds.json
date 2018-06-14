@@ -4,16 +4,16 @@
   "icon": "fa-car",
   "subcats": [
   {
-    "title": "first",
-    "url": "classifieds/autos"
+    "title": "Cars",
+    "url": "classifieds/autos?type=cars"
   },
   {
-    "title": "second",
-    "url": "classifieds/autos"
+    "title": "Trucks",
+    "url": "classifieds/autos?type=trucks"
   },
   {
-    "title": "third",
-    "url": "classifieds/autos"
+    "title": "Rvs",
+    "url": "classifieds/autos?type=rvs"
   }]
 },{
   "title": "Bikes",
@@ -22,15 +22,15 @@
   "subcats": [
   {
     "title": "Kids & Youth",
-    "url": "classifieds/bikes?Kids&Youth"
+    "url": "classifieds/bikes?type=kidsYouthBike"
   },
   {
     "title": "Adult",
-    "url": "classifieds/bikes?Adult"
+    "url": "classifieds/bikes?type=adultBike"
   },
   {
     "title": "Perf",
-    "url": "classifieds/bikes?Performance"
+    "url": "classifieds/bikes?type=performanceBike"
   }]
 },{
   "title": "Electronics",
@@ -39,15 +39,15 @@
   "subcats": [
   {
     "title": "Computers",
-    "url": "classifieds/electronics?Computers"
+    "url": "classifieds/electronics?type=computers"
   },
   {
     "title": "Tvs",
-    "url": "classifieds/electronics?Tvs"
+    "url": "classifieds/electronics?type=tvs"
   },
   {
     "title": "Camera",
-    "url": "classifieds/electronics?Camera"
+    "url": "classifieds/electronics?type=camera"
   }]
 },{
   "title": "Appliances",
@@ -56,15 +56,15 @@
   "subcats": [
   {
     "title": "Kitchen",
-    "url": "classifieds/appliances?Kitchen"
+    "url": "classifieds/appliances?type=kitchen"
   },
   {
     "title": "Household",
-    "url": "classifieds/appliances?Household"
+    "url": "classifieds/appliances?type=household"
   },
   {
     "title": "Other",
-    "url": "classifieds/appliances?Other"
+    "url": "classifieds/appliances?type=other"
   }]
 },{
   "title": "BabyKid",
@@ -73,15 +73,15 @@
   "subcats": [
   {
     "title": "Toys",
-    "url": "classifieds/babyKid?Toys"
+    "url": "classifieds/babyKid?type=toys"
   },
   {
     "title": "Strollers",
-    "url": "classifieds/babyKid?Strollers"
+    "url": "classifieds/babyKid?type=strollers"
   },
   {
     "title": "Bedroom",
-    "url": "classifieds/babyKid?Bedroom"
+    "url": "classifieds/babyKid?type=kidsBedroom"
   }]
 },{
   "title": "Clothes",
@@ -90,15 +90,15 @@
   "subcats": [
   {
     "title": "Mens",
-    "url": "classifieds/clothes?Mens"
+    "url": "classifieds/clothes?type=mensClothes"
   },
   {
     "title": "Womens",
-    "url": "classifieds/clothes?Womens"
+    "url": "classifieds/clothes?type=womensClothes"
   },
   {
     "title": "Baby",
-    "url": "classifieds/clothes?Baby"
+    "url": "classifieds/clothes?type=babyClothes"
   }]
 },{
   "title": "Furniture",
@@ -106,16 +106,16 @@
   "icon": "fa-bed",
   "subcats": [
   {
-    "title": "first",
-    "url": "classifieds/furniture?"
+    "title": "Outdoor",
+    "url": "classifieds/furniture?type=outdoor"
   },
   {
-    "title": "second",
-    "url": "classifieds/furniture?"
+    "title": "Couches",
+    "url": "classifieds/furniture?type=couches"
   },
   {
-    "title": "third",
-    "url": "classifieds/furniture?"
+    "title": "Chairs",
+    "url": "classifieds/furniture?type=chairs"
   }]
 },{
   "title": "Lawn",
@@ -124,15 +124,15 @@
   "subcats": [
   {
     "title": "Equipment",
-    "url": "classifieds/lawn?Equipment"
+    "url": "classifieds/lawn?type=lawnEq"
   },
   {
     "title": "Decorative",
-    "url": "classifieds/lawn?Decorative"
+    "url": "classifieds/lawn?type=decorativeLawn"
   },
   {
     "title": "Plants",
-    "url": "classifieds/lawn?Plants"
+    "url": "classifieds/lawn?type=plants"
   }]
 },{
   "title": "Music",
@@ -141,15 +141,15 @@
   "subcats": [
   {
     "title": "Guitars",
-    "url": "classifieds/music?Guitars"
+    "url": "classifieds/music?type=guitars"
   },
   {
     "title": "Amps",
-    "url": "classifieds/music?Amps"
+    "url": "classifieds/music?type=amps"
   },
   {
     "title": "Drums",
-    "url": "classifieds/music?Drums"
+    "url": "classifieds/music?type=drums"
   }]
 },{
   "title": "Sports",
@@ -158,15 +158,15 @@
   "subcats": [
   {
     "title": "Fitness",
-    "url": "classifieds/sports?Fitness"
+    "url": "classifieds/sports?type=fitness"
   },
   {
     "title": "YardGames",
-    "url": "classifieds/sports?YardGames"
+    "url": "classifieds/sports?type=yardGames"
   },
   {
     "title": "Hiking",
-    "url": "classifieds/sports?Hiking"
+    "url": "classifieds/sports?type=hiking"
   }]
 },{
   "title": "Phones",
@@ -175,15 +175,15 @@
   "subcats": [
   {
     "title": "Apple",
-    "url": "classifieds/phones?Apple"
+    "url": "classifieds/phones?type=applePhone"
   },
   {
     "title": "Android",
-    "url": "classifieds/phones?Android"
+    "url": "classifieds/phones?type=androidPhone"
   },
   {
     "title": "Other",
-    "url": "classifieds/phones?Other"
+    "url": "classifieds/phones?type=phonesOther"
   }]
 },{
   "title": "Tickets",
@@ -192,14 +192,14 @@
   "subcats": [
   {
     "title": "Sports",
-    "url": "classifieds/tickets?Sports"
+    "url": "classifieds/tickets?type=sportsTickets"
   },
   {
     "title": "Concerts",
-    "url": "classifieds/tickets?Concerts"
+    "url": "classifieds/tickets?type=concertTickets"
   },
   {
     "title": "Other",
-    "url": "classifieds/tickets?Other"
+    "url": "classifieds/tickets?type=otherTickets"
   }]
 }]
