@@ -724,7 +724,7 @@ Headers:		'Varela Round', sans-serif;
   padding: 0;
 }
 .hero .page-title {
-  padding-top: 5rem;
+  padding-top: 1rem;
   padding-bottom: 3rem;
 }
 .hero .page-title a {
@@ -1657,10 +1657,10 @@ Headers:		'Varela Round', sans-serif;
   content: "";
   position: absolute;
 }
-.page.sub-page .page-title {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
+// .page.sub-page .page-title {
+//   padding-top: 1rem;
+//   padding-bottom: 1rem;
+// }
 .page.sub-page .form.hero-form {
   padding-top: 2rem;
 }

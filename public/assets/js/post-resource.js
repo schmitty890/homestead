@@ -24,7 +24,7 @@ var PostResource = function () {
   }
 
   function passToBackend(formValues) {
-    console.log("formValues", formValues);
+    // console.log("formValues", formValues);
     $.ajax('/api/resources', {
       type: 'POST',
       data: formValues

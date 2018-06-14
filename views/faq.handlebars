@@ -1,27 +1,35 @@
 <div class="page faq-page">
+
   <section class="content">
+
+    <div class="hero hero-wrapper">
+      <div class="page-title">
+        <div class="container">
+          <h1>Frequently Asked Questions</h1>
+        </div>
+        <!--end container-->
+      </div>
+    </div>
+
+
     <section class="block">
       <div class="container">
         <div class="row">
           <div class="col-md-9">
+
+
             <section>
-              <form class="form inputs-underline">
-                <h3>Frequently Asked Questions</h3>
-              </form>
+              {{#each hbsObject.faqs}} {{#each this.questions}}
+              <div class="answer">
+                <div class="box">
+                  <h3>{{this.question}}</h3>
+                  <p>{{this.answer}}
+                  </p>
+                </div>
+              </div>
+              {{/each}} {{/each}}
             </section>
-            <section>
-              {{#each hbsObject.faqs}}
-                {{#each this.questions}}
-                  <div class="answer">
-                    <div class="box">
-                      <h3>{{this.question}}</h3>
-                      <p>{{this.answer}}
-                      </p>
-                    </div>
-                  </div>
-                {{/each}}
-              {{/each}}
-            </section>
+
           </div>
         </div>
       </div>
