@@ -100,7 +100,7 @@ module.exports = function (app) {
   /*   app.get('/classes', function (req, res) {
       res.render('community');
     });
-
+  
     app.get('/meetups', function (req, res) {
       res.render('meetups');
     }); */
@@ -160,31 +160,21 @@ module.exports = function (app) {
 
   app.get('/classifieds/:category', function (req, res) {
     var category = req.params.category;
-    var whereAt = {};
-    // build out where clause if there is a query parameter or not
-    if(req.query.type === undefined) {
-      whereAt = {
-        category: category
-      }
-    } else {
-      whereAt = {
-        category: category,
-        type: req.query.type
-      }
-    }
 
     let hbsObject = {
       user: req.user
     }
 
     db.classifieds.findAll({
-      where: whereAt,
+      where: {
+        category: category
+      },
       order: [
         ['createdAt', 'DESC']
       ]
     }).then(function (classifieds) {
-      // console.log('--------------------------------');
-      // console.log(classifieds);
+      console.log('--------------------------------');
+      // console.log(classifiedAutos);
       hbsObject.category = {
         classifieds: classifieds
       }
@@ -254,6 +244,25 @@ module.exports = function (app) {
 
       res.render('resources', { hbsObject: hbsObject });
     })
+  })
+
+  app.get('/messages', function (req, res) {
+    let hbsObject = {
+      user: req.user
+    }
+
+    // find and count all categories
+    db.message.findAll({
+      order: [
+        ['createdAt', 'DESC']
+      ]
+    }).then(function (data) {
+      hbsObject.messages = {
+        messages: data,
+      }
+      console.log("hey " + JSON.stringify(hbsObject))
+      res.render('messages', { hbsObject: hbsObject });
+    });
   })
 
 };
