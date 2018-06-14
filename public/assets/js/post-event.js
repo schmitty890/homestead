@@ -15,8 +15,9 @@ var PostEvent = function(){
     }
     if (formValues.title === '' || formValues.date === '') {
       alert('fill out ALL required forms.');
+    } else {
+      passToBackend(formValues);
     }
-    passToBackend(formValues);
   }
 
   function passToBackend(formValues) {

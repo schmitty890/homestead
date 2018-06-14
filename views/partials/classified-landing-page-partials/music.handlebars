@@ -1,0 +1,40 @@
+{{#if hbsObject.music.latest.createdAt}}
+<div class="item">
+  <div class="wrapper">
+    <div class="image">
+      <h3>
+        <a href="/classifieds/music" class="title">Music</a>
+      </h3>
+      <a href="#" class="image-wrapper background-image">
+          <img src="{{hbsObject.music.latest.image}}" alt="">
+      </a>
+    </div>
+    <div class="price">${{hbsObject.music.latest.price}}</div>
+    <div class="meta">
+      <figure>
+        <i class="fa fa-calendar-o"></i>{{momentFromNowTime hbsObject.music.latest.createdAt}}
+      </figure>
+      <figure>
+        <a href="#">
+          <i class="fa fa-user"></i>{{hbsObject.music.latest.email}}
+        </a>
+      </figure>
+    </div>
+    <div class="description">
+      <p>{{hbsObject.music.latest.details}}</p>
+    </div>
+    <div class="additional-info">
+      <ul>
+        <li>
+          <figure>Latest Post</figure>
+          <aside>{{momentFromNowTime hbsObject.music.latest.createdAt}}</aside>
+        </li>
+        <li>
+          <figure>Total number of music listed</figure>
+          <aside>{{hbsObject.music.classifiedCount}}</aside>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+{{/if}}

@@ -1,0 +1,40 @@
+{{#if hbsObject.lawn.latest.createdAt}}
+<div class="item">
+  <div class="wrapper">
+    <div class="image">
+      <h3>
+        <a href="/classifieds/lawn" class="title">Lawn</a>
+      </h3>
+      <a href="#" class="image-wrapper background-image">
+          <img src="{{hbsObject.lawn.latest.image}}" alt="">
+      </a>
+    </div>
+    <div class="price">${{hbsObject.lawn.latest.price}}</div>
+    <div class="meta">
+      <figure>
+        <i class="fa fa-calendar-o"></i>{{momentFromNowTime hbsObject.lawn.latest.createdAt}}
+      </figure>
+      <figure>
+        <a href="#">
+          <i class="fa fa-user"></i>{{hbsObject.lawn.latest.email}}
+        </a>
+      </figure>
+    </div>
+    <div class="description">
+      <p>{{hbsObject.lawn.latest.details}}</p>
+    </div>
+    <div class="additional-info">
+      <ul>
+        <li>
+          <figure>Latest Post</figure>
+          <aside>{{momentFromNowTime hbsObject.lawn.latest.createdAt}}</aside>
+        </li>
+        <li>
+          <figure>Total number of lawn listed</figure>
+          <aside>{{hbsObject.lawn.classifiedCount}}</aside>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+{{/if}}

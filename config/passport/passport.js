@@ -44,11 +44,15 @@ module.exports = function(passport,user){
         } else
         {
           const userPassword = generateHash(password);
+          console.log("this one")
+          console.log(req.body)
           const data =
           { email:email,
             password:userPassword,
             firstname: req.body.firstname,
-            lastname: req.body.lastname
+            lastname: req.body.lastname,
+            about: req.body.aboutSignup,
+            username: req.body.username
           };
           //if not already existing, create new user and return values to session
           User.create(data).then(function(newUser,created){

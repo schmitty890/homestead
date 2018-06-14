@@ -3,7 +3,7 @@
     <div class="hero-wrapper">
       <div class="page-title">
         <div class="container">
-          <h1>Submit Ad</h1>
+          <h1>Post Classified</h1>
         </div>
       </div>
     </div>
@@ -12,7 +12,7 @@
   <section class="content">
     <section class="block">
       <div class="container">
-        <form class="form form-submit" id="postClassy">
+        <form class="form form-submit" id="post-classified-form">
           <section>
             <h2>Basic Information</h2>
             <div class="row">
@@ -57,7 +57,7 @@
                 <h2>Category</h2>
                 <div class="form-group">
                   <label for="category" class="col-form-label">Category</label>
-                  <select onchange="prefixMaker()" class="change-tab" data-change-tab-target="category-tabs" name="category" id="category" data-placeholder="Select Category" data-prefix="auto">
+                  <select class="change-tab" data-change-tab-target="category-tabs" name="category" id="category" data-placeholder="Select Category" data-prefix="auto">
                     <option value="">Select Category</option>
                     <option value="appliances">Appliances</option>
                     <option value="babyKid">Baby &AMP; Kid</option>
@@ -101,7 +101,7 @@
                       <div class="col-md-4">
                         <div class="form-group">
                           <label for="status" class="col-form-label">Status</label>
-                          <select name="status" id="applianceStatus" data-placeholder="Status">
+                          <select name="status" id="applianceStatus" class="status-selector" data-placeholder="Status">
                             <option value="">Status</option>
                             <option value="new">New</option>
                             <option value="likenew">Like New</option>
@@ -110,6 +110,10 @@
                         </div>
                       </div>
                       <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="image" class="col-form-label">Image</label>
+                          <input name="image" type="text" class="form-control" id="image" placeholder="image.jpg">
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -137,7 +141,7 @@
                       <div class="col-md-4">
                         <div class="form-group">
                           <label for="status" class="col-form-label">Status</label>
-                          <select name="status" id="babyKidStatus" data-placeholder="Status">
+                          <select name="status" id="babyKidStatus" class="status-selector" data-placeholder="Status">
                             <option value="">Status</option>
                             <option value="new">New</option>
                             <option value="likenew">Like New</option>
@@ -146,6 +150,10 @@
                         </div>
                       </div>
                       <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="image" class="col-form-label">Image</label>
+                          <input name="image" type="text" class="form-control" id="image" placeholder="image.jpg">
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -173,7 +181,7 @@
                       <div class="col-md-4">
                         <div class="form-group">
                           <label for="status" class="col-form-label">Status</label>
-                          <select name="status" id="bikesStatus" data-placeholder="Status">
+                          <select name="status" id="bikesStatus" class="status-selector" data-placeholder="Status">
                             <option value="">Status</option>
                             <option value="new">New</option>
                             <option value="likenew">Like New</option>
@@ -182,6 +190,10 @@
                         </div>
                       </div>
                       <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="image" class="col-form-label">Image</label>
+                          <input name="image" type="text" class="form-control" id="image" placeholder="image.jpg">
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -208,7 +220,7 @@
                       <div class="col-md-4">
                         <div class="form-group">
                           <label for="status" class="col-form-label">Status</label>
-                          <select name="status" id="phonesStatus" data-placeholder="Status">
+                          <select name="status" id="phonesStatus" class="status-selector" data-placeholder="Status">
                             <option value="">Status</option>
                             <option value="new">New</option>
                             <option value="likenew">Like New</option>
@@ -217,6 +229,10 @@
                         </div>
                       </div>
                       <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="image" class="col-form-label">Image</label>
+                          <input name="image" type="text" class="form-control" id="image" placeholder="image.jpg">
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -244,7 +260,7 @@
                       <div class="col-md-4">
                         <div class="form-group">
                           <label for="status" class="col-form-label">Status</label>
-                          <select name="status" id="clothesStatus" data-placeholder="Status">
+                          <select name="status" id="clothesStatus" class="status-selector" data-placeholder="Status">
                             <option value="">Status</option>
                             <option value="new">New</option>
                             <option value="likenew">Like New</option>
@@ -253,6 +269,10 @@
                         </div>
                       </div>
                       <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="image" class="col-form-label">Image</label>
+                          <input name="image" type="text" class="form-control" id="image" placeholder="image.jpg">
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -269,18 +289,21 @@
                           <label for="condition" class="col-form-label">Type</label>
                           <select name="condition" id="electronicsCondition" data-placeholder="Type">
                             <option value="">Type</option>
-                            <option value="toys">Toys</option>
-                            <option value="strollers">Strollers</option>
-                            <option value="highChairs">High Chairs</option>
-                            <option value="kidsBedroom">Bedroom</option>
-                            <option value="baKiOther">Other</option>
+                            <option value="computers">Computers</option>
+                            <option value="computerParts">Computer Parts</option>
+                            <option value="homeAudio">Home Audio</option>
+                            <option value="carAudio">Car Audio</option>
+                            <option value="tvs">Tvs</option>
+                            <option value="camera">Camera</option>
+                            <option value="video">Video</option>
+                            <option value="other">Other</option>
                           </select>
                         </div>
                       </div>
                       <div class="col-md-4">
                         <div class="form-group">
                           <label for="status" class="col-form-label">Status</label>
-                          <select name="status" id="electronicsStatus" data-placeholder="Status">
+                          <select name="status" id="electronicsStatus" class="status-selector" data-placeholder="Status">
                             <option value="">Status</option>
                             <option value="new">New</option>
                             <option value="likenew">Like New</option>
@@ -289,6 +312,10 @@
                         </div>
                       </div>
                       <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="image" class="col-form-label">Image</label>
+                          <input name="image" type="text" class="form-control" id="image" placeholder="image.jpg">
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -316,7 +343,7 @@
                       <div class="col-md-4">
                         <div class="form-group">
                           <label for="status" class="col-form-label">Status</label>
-                          <select name="status" id="furnitureStatus" data-placeholder="Status">
+                          <select name="status" id="furnitureStatus" class="status-selector" data-placeholder="Status">
                             <option value="">Status</option>
                             <option value="new">New</option>
                             <option value="likenew">Like New</option>
@@ -325,6 +352,10 @@
                         </div>
                       </div>
                       <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="image" class="col-form-label">Image</label>
+                          <input name="image" type="text" class="form-control" id="image" placeholder="image.jpg">
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -352,7 +383,7 @@
                       <div class="col-md-4">
                         <div class="form-group">
                           <label for="status" class="col-form-label">Status</label>
-                          <select name="status" id="lawnStatus" data-placeholder="Status">
+                          <select name="status" id="lawnStatus" class="status-selector" data-placeholder="Status">
                             <option value="">Status</option>
                             <option value="new">New</option>
                             <option value="likenew">Like New</option>
@@ -361,6 +392,10 @@
                         </div>
                       </div>
                       <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="image" class="col-form-label">Image</label>
+                          <input name="image" type="text" class="form-control" id="image" placeholder="image.jpg">
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -389,7 +424,7 @@
                       <div class="col-md-4">
                         <div class="form-group">
                           <label for="status" class="col-form-label">Status</label>
-                          <select name="status" id="musicStatus" data-placeholder="Status">
+                          <select name="status" id="musicStatus" class="status-selector" data-placeholder="Status">
                             <option value="">Status</option>
                             <option value="new">New</option>
                             <option value="likenew">Like New</option>
@@ -398,6 +433,10 @@
                         </div>
                       </div>
                       <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="image" class="col-form-label">Image</label>
+                          <input name="image" type="text" class="form-control" id="image" placeholder="image.jpg">
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -425,7 +464,7 @@
                       <div class="col-md-4">
                         <div class="form-group">
                           <label for="status" class="col-form-label">Status</label>
-                          <select name="status" id="sportsStatus" data-placeholder="Status">
+                          <select name="status" id="sportsStatus" class="status-selector" data-placeholder="Status">
                             <option value="">Status</option>
                             <option value="new">New</option>
                             <option value="likenew">Like New</option>
@@ -434,6 +473,10 @@
                         </div>
                       </div>
                       <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="image" class="col-form-label">Image</label>
+                          <input name="image" type="text" class="form-control" id="image" placeholder="image.jpg">
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -460,7 +503,7 @@
                       <div class="col-md-4">
                         <div class="form-group">
                           <label for="status" class="col-form-label">Status</label>
-                          <select name="status" id="ticketsStatus" data-placeholder="Status">
+                          <select name="status" id="ticketsStatus" class="status-selector" data-placeholder="Status">
                             <option value="">Status</option>
                             <option value="new">New</option>
                             <option value="likenew">Like New</option>
@@ -469,6 +512,10 @@
                         </div>
                       </div>
                       <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="image" class="col-form-label">Image</label>
+                          <input name="image" type="text" class="form-control" id="image" placeholder="image.jpg">
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -496,7 +543,7 @@
                       <div class="col-md-4">
                         <div class="form-group">
                           <label for="status" class="col-form-label">Status</label>
-                          <select name="status" id="autosStatus" class="statusSelector" data-placeholder="Status">
+                          <select name="status" id="autosStatus" class="status-selector" data-placeholder="Status">
                             <option value="">Status</option>
                             <option value="new">New</option>
                             <option value="likenew">Like New</option>
@@ -505,6 +552,10 @@
                         </div>
                       </div>
                       <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="image" class="col-form-label">Image</label>
+                          <input name="image" type="text" class="form-control" id="image" placeholder="image.jpg">
+                        </div>
                       </div>
                     </div>
                   </div>

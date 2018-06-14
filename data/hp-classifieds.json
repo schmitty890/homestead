@@ -1,205 +1,205 @@
 [{
-  "title": "classifieds 1",
-  "url": "classifieds1url",
-  "icon": "fa-bed",
-  "subcats": [
-  {
-    "title": "first",
-    "url": "/first"
-  },
-  {
-    "title": "second",
-    "url": "/second"
-  },
-  {
-    "title": "third",
-    "url": "/third"
-  }]
-},{
-  "title": "classifieds 2",
-  "url": "classifieds2url",
-  "icon": "fa-paw",
-  "subcats": [
-  {
-    "title": "first",
-    "url": "/first"
-  },
-  {
-    "title": "second",
-    "url": "/second"
-  },
-  {
-    "title": "third",
-    "url": "/third"
-  }]
-},{
-  "title": "classifieds 3",
-  "url": "classifieds3url",
-  "icon": "fa-ravelry",
-  "subcats": [
-  {
-    "title": "first",
-    "url": "/first"
-  },
-  {
-    "title": "second",
-    "url": "/second"
-  },
-  {
-    "title": "third",
-    "url": "/third"
-  }]
-},{
-  "title": "classifieds 4",
-  "url": "classifieds4url",
-  "icon": "fa-user-circle-o",
-  "subcats": [
-  {
-    "title": "first",
-    "url": "/first"
-  },
-  {
-    "title": "second",
-    "url": "/second"
-  },
-  {
-    "title": "third",
-    "url": "/third"
-  }]
-},{
-  "title": "classifieds 5",
-  "url": "classifieds5url",
-  "icon": "fa-arrows",
-  "subcats": [
-  {
-    "title": "first",
-    "url": "/first"
-  },
-  {
-    "title": "second",
-    "url": "/second"
-  },
-  {
-    "title": "third",
-    "url": "/third"
-  }]
-},{
-  "title": "classifieds 6",
-  "url": "classifieds6url",
-  "icon": "fa-bolt",
-  "subcats": [
-  {
-    "title": "first",
-    "url": "/first"
-  },
-  {
-    "title": "second",
-    "url": "/second"
-  },
-  {
-    "title": "third",
-    "url": "/third"
-  }]
-},{
-  "title": "classifieds 7",
-  "url": "classifieds7url",
+  "title": "Autos",
+  "url": "classifieds/autos",
   "icon": "fa-car",
   "subcats": [
   {
-    "title": "first",
-    "url": "/first"
+    "title": "Cars",
+    "url": "classifieds/autos?type=cars"
   },
   {
-    "title": "second",
-    "url": "/second"
+    "title": "Trucks",
+    "url": "classifieds/autos?type=trucks"
   },
   {
-    "title": "third",
-    "url": "/third"
+    "title": "Rvs",
+    "url": "classifieds/autos?type=rvs"
   }]
 },{
-  "title": "classifieds 8",
-  "url": "classifieds8url",
-  "icon": "fa-cutlery",
+  "title": "Bikes",
+  "url": "classifieds/bikes",
+  "icon": "fa-bicycle",
   "subcats": [
   {
-    "title": "first",
-    "url": "/first"
+    "title": "Kids & Youth",
+    "url": "classifieds/bikes?type=kidsYouthBike"
   },
   {
-    "title": "second",
-    "url": "/second"
+    "title": "Adult",
+    "url": "classifieds/bikes?type=adultBike"
   },
   {
-    "title": "third",
-    "url": "/third"
+    "title": "Perf",
+    "url": "classifieds/bikes?type=performanceBike"
   }]
 },{
-  "title": "classifieds 9",
-  "url": "classifieds9url",
-  "icon": "fa-flag",
+  "title": "Electronics",
+  "url": "classifieds/electronics",
+  "icon": "fa-gamepad",
   "subcats": [
   {
-    "title": "first",
-    "url": "/first"
+    "title": "Computers",
+    "url": "classifieds/electronics?type=computers"
   },
   {
-    "title": "second",
-    "url": "/second"
+    "title": "Tvs",
+    "url": "classifieds/electronics?type=tvs"
   },
   {
-    "title": "third",
-    "url": "/third"
+    "title": "Camera",
+    "url": "classifieds/electronics?type=camera"
   }]
 },{
-  "title": "classifieds 10",
-  "url": "classifieds10url",
-  "icon": "fa-hand-lizard-o",
+  "title": "Appliances",
+  "url": "classifieds/appliances",
+  "icon": "fa-gears",
   "subcats": [
   {
-    "title": "first",
-    "url": "/first"
+    "title": "Kitchen",
+    "url": "classifieds/appliances?type=kitchen"
   },
   {
-    "title": "second",
-    "url": "/second"
+    "title": "Household",
+    "url": "classifieds/appliances?type=household"
   },
   {
-    "title": "third",
-    "url": "/third"
+    "title": "Other",
+    "url": "classifieds/appliances?type=other"
   }]
 },{
-  "title": "classifieds 11",
-  "url": "classifieds11url",
-  "icon": "fa-hourglass-start",
+  "title": "BabyKid",
+  "url": "classifieds/babyKid",
+  "icon": "fa-child",
   "subcats": [
   {
-    "title": "first",
-    "url": "/first"
+    "title": "Toys",
+    "url": "classifieds/babyKid?type=toys"
   },
   {
-    "title": "second",
-    "url": "/second"
+    "title": "Strollers",
+    "url": "classifieds/babyKid?type=strollers"
   },
   {
-    "title": "third",
-    "url": "/third"
+    "title": "Bedroom",
+    "url": "classifieds/babyKid?type=kidsBedroom"
   }]
 },{
-  "title": "classifieds 12",
-  "url": "classifieds12url",
-  "icon": "fa-location-arrow",
+  "title": "Clothes",
+  "url": "classifieds/clothes",
+  "icon": "fa-get-pocket",
   "subcats": [
   {
-    "title": "first",
-    "url": "/first"
+    "title": "Mens",
+    "url": "classifieds/clothes?type=mensClothes"
   },
   {
-    "title": "second",
-    "url": "/second"
+    "title": "Womens",
+    "url": "classifieds/clothes?type=womensClothes"
   },
   {
-    "title": "third",
-    "url": "/third"
+    "title": "Baby",
+    "url": "classifieds/clothes?type=babyClothes"
+  }]
+},{
+  "title": "Furniture",
+  "url": "classifieds/furniture",
+  "icon": "fa-bed",
+  "subcats": [
+  {
+    "title": "Outdoor",
+    "url": "classifieds/furniture?type=outdoor"
+  },
+  {
+    "title": "Couches",
+    "url": "classifieds/furniture?type=couches"
+  },
+  {
+    "title": "Chairs",
+    "url": "classifieds/furniture?type=chairs"
+  }]
+},{
+  "title": "Lawn",
+  "url": "classifieds/lawn",
+  "icon": "fa-tree",
+  "subcats": [
+  {
+    "title": "Equipment",
+    "url": "classifieds/lawn?type=lawnEq"
+  },
+  {
+    "title": "Decorative",
+    "url": "classifieds/lawn?type=decorativeLawn"
+  },
+  {
+    "title": "Plants",
+    "url": "classifieds/lawn?type=plants"
+  }]
+},{
+  "title": "Music",
+  "url": "classifieds/music",
+  "icon": "fa-music",
+  "subcats": [
+  {
+    "title": "Guitars",
+    "url": "classifieds/music?type=guitars"
+  },
+  {
+    "title": "Amps",
+    "url": "classifieds/music?type=amps"
+  },
+  {
+    "title": "Drums",
+    "url": "classifieds/music?type=drums"
+  }]
+},{
+  "title": "Sports",
+  "url": "classifieds/sports",
+  "icon": "fa-soccer-ball-o",
+  "subcats": [
+  {
+    "title": "Fitness",
+    "url": "classifieds/sports?type=fitness"
+  },
+  {
+    "title": "YardGames",
+    "url": "classifieds/sports?type=yardGames"
+  },
+  {
+    "title": "Hiking",
+    "url": "classifieds/sports?type=hiking"
+  }]
+},{
+  "title": "Phones",
+  "url": "classifieds/phones",
+  "icon": "fa-phone",
+  "subcats": [
+  {
+    "title": "Apple",
+    "url": "classifieds/phones?type=applePhone"
+  },
+  {
+    "title": "Android",
+    "url": "classifieds/phones?type=androidPhone"
+  },
+  {
+    "title": "Other",
+    "url": "classifieds/phones?type=phonesOther"
+  }]
+},{
+  "title": "Tickets",
+  "url": "classifieds/tickets",
+  "icon": "fa-ticket",
+  "subcats": [
+  {
+    "title": "Sports",
+    "url": "classifieds/tickets?type=sportsTickets"
+  },
+  {
+    "title": "Concerts",
+    "url": "classifieds/tickets?type=concertTickets"
+  },
+  {
+    "title": "Other",
+    "url": "classifieds/tickets?type=otherTickets"
   }]
 }]

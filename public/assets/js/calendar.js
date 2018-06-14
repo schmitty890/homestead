@@ -8,23 +8,37 @@ $(document).ready(function($) {
             displayCalendar(eventData);
         }
       );
+
+    function determineColor(cat) {
+        switch(cat) {
+            case("Social"):
+                return "red";
+            case("Sell"):
+                return "green";
+            case ("Fitness"):
+                return "yellow";
+            case ("Class"):
+                return "orange";
+            case ("Community"):
+                return "purple";
+            default:
+                return "blue"; 
+        }
+
+    }
   
     function displayCalendar(eventData) {
         var eventList = [];
         eventData.forEach(function(event) {
             var newEvent = ({
                 title: event.title,
-                start: moment(event.date).format("YYYY-MM-DD"),
-                allDay: true,
-                textColor: 'white'
+                start: moment(event.date).format("YYYY-MM-DD hh:mm:ss"),
+                end: moment(event.endDate).format("YYYY-MM-DD hh:mm:ss"),
+                allDay: event.allDay,
+                textColor: 'white',
+                color: determineColor(event.category)
             })
-            if(event.category === "Social") {
-                newEvent.color = "red"
-            } else if(event.category === "Sell") {
-                newEvent.color = "green"
-            } else {
-                newEvent.color = "blue"
-            }
+            
             eventList.push(newEvent); 
         }) 
 

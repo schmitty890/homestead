@@ -7,18 +7,15 @@
           <li>
             <span>
               {{#if hbsObject.user}}
-                Posting As: {{hbsObject.user.email}}
+                Posting As: {{hbsObject.user.email}} |
               {{/if}}
             </span>
+          </li>
+          <li class="weather">
           </li>
         </ul>
         <!--end left-->
         <ul class="right">
-          <li>
-            <a href="my-ads.html">
-              <i class="fa fa-heart"></i>My Ads
-            </a>
-          </li>
           {{#if hbsObject.user}}
           <li>
             <a href="/logout">
@@ -48,8 +45,8 @@
     <div class="main-navigation">
       <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
-          <a class="navbar-brand" href="index.html">
-            <img src="assets/img/logo.png" alt="">
+          <a class="navbar-brand" href="/">
+            <img src="/assets/images/homesteadLogo.png" class="logo" alt="logo">
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -72,16 +69,40 @@
                 <!-- 1st level -->
                 <ul class="child">
                   <li class="nav-item">
-                    <a href="/autosetc" class="nav-link">Autos, Boats, and More</a>
+                    <a href="/classifieds/autos" class="nav-link">Autos</a>
                   </li>
                   <li class="nav-item">
-                    <a href="/homegoods" class="nav-link">Homegoods</a>
+                    <a href="/classifieds/bikes" class="nav-link">Bikes</a>
                   </li>
                   <li class="nav-item">
-                    <a href="/outdoor" class="nav-link">Outdoor</a>
+                    <a href="/classifieds/electronics" class="nav-link">Electronics</a>
                   </li>
                   <li class="nav-item">
-                    <a href="/other" class="nav-link">Other</a>
+                    <a href="/classifieds/appliances" class="nav-link">Appliances</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/classifieds/BabyKid" class="nav-link">BabyKid</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/classifieds/clothes" class="nav-link">Clothes</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/classifieds/furniture" class="nav-link">Furniture</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/classifieds/lawn" class="nav-link">Lawn</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/classifieds/music" class="nav-link">Music</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/classifieds/sports" class="nav-link">Sports</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/classifieds/phones" class="nav-link">Phones</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/classifieds/tickets" class="nav-link">Tickets</a>
                   </li>
                 </ul>
                 <!-- end 1st level -->

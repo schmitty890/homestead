@@ -1,0 +1,38 @@
+<div class="item">
+  <div class="wrapper">
+    <div class="image">
+      <h3>
+        <a href="#" class="title">Classifieds - All</a>
+      </h3>
+      <a href="#" class="image-wrapper background-image">
+          <img src="{{hbsObject.total.latest.image}}" alt="">
+      </a>
+    </div>
+    <div class="price">${{hbsObject.total.latest.price}}</div>
+    <div class="meta">
+      <figure>
+        <i class="fa fa-calendar-o"></i>{{momentFromNowTime hbsObject.total.latest.createdAt}}
+      </figure>
+      <figure>
+        <a href="#">
+          <i class="fa fa-user"></i>{{hbsObject.total.latest.email}}
+        </a>
+      </figure>
+    </div>
+    <div class="description">
+      <p>{{hbsObject.total.latest.details}}</p>
+    </div>
+    <div class="additional-info">
+      <ul>
+        <li>
+          <figure>Latest Post</figure>
+          <aside>{{momentFromNowTime hbsObject.total.latest.createdAt}}</aside>
+        </li>
+        <li>
+          <figure>Total Number of Classifieds Listed</figure>
+          <aside>{{hbsObject.total.classifiedCount}}</aside>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
