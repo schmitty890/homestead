@@ -116,7 +116,7 @@
       bottom: inherit;
       top: 1.5rem;
   }
-  .hero .main-navigation .navbar ul.navbar-nav li.nav-item.has-child.hover > ul.child {
+  .hero .main-navigation .navbar ul.navbar-nav li.nav-item.has-child.hoverr > ul.child {
       height: auto;
   }
   .owl-carousel {}
@@ -356,7 +356,7 @@
       bottom: inherit;
       top: 1.5rem;
   }
-  .hero .main-navigation .navbar ul.navbar-nav li.nav-item.has-child.hover > ul.child {
+  .hero .main-navigation .navbar ul.navbar-nav li.nav-item.has-child.hoverr > ul.child {
       height: auto;
   }
   .hero .page-title .price {
@@ -447,6 +447,7 @@
   background-color: #fff;
   border-radius: .3rem;
   box-shadow: 0 0.2rem .7rem 0 rgba(0,0,0, .08);
+  width: auto !important;
 }
 
 #messaging__chat-list .messaging__content {
