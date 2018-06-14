@@ -33,6 +33,9 @@ app.engine('handlebars', exphbs({
     },
     formatDateForEvents: function (time) {
       return moment(time).format("ddd, MMM Do")
+    },
+    imagePath: function(category) {
+      return "/assets/images/event-categories/" + category + ".jpg";
     }
   }
 }));
