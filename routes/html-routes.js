@@ -54,7 +54,19 @@ module.exports = function (app) {
     db.event.findAll({
       order: [
         ['date', 'ASC']
-      ]
+      ],
+      where: {
+        date : {
+          $gte: db.Sequelize.fn('CURDATE')
+        },
+        $or: [
+          {
+            endDate : {
+              $gte: db.Sequelize.fn('CURDATE')
+            }
+          }
+        ]
+      }
     }).then(function (eventInfo) {
       hbsObject.eventInfo = eventInfo;
       res.render('events', { hbsObject: hbsObject });
