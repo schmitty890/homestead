@@ -73,7 +73,7 @@
   "subcats": [
   {
     "title": "Toys",
-    "url": "classifieds/babyKid?toys"
+    "url": "classifieds/babyKid?type=toys"
   },
   {
     "title": "Strollers",
@@ -106,16 +106,16 @@
   "icon": "fa-bed",
   "subcats": [
   {
-    "title": "first",
-    "url": "classifieds/furniture?"
+    "title": "Outdoor",
+    "url": "classifieds/furniture?type=outdoor"
   },
   {
-    "title": "second",
-    "url": "classifieds/furniture?"
+    "title": "Couches",
+    "url": "classifieds/furniture?type=couches"
   },
   {
-    "title": "third",
-    "url": "classifieds/furniture?"
+    "title": "Chairs",
+    "url": "classifieds/furniture?type=chairs"
   }]
 },{
   "title": "Lawn",
