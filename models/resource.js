@@ -40,6 +40,9 @@ module.exports = function (sequelize, Sequelize) {
       type: Sequelize.ENUM('services needed', 'services offered', 'items needed', 'items offered'),
       notEmpty: true
     },
+    image: {
+      type: Sequelize.STRING
+    },
   });
   return Resource;
 }
