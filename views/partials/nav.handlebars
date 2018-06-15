@@ -66,9 +66,11 @@
                 <a class="nav-link" href="#">Classifieds</a>
                 <!-- 1st level -->
                 <ul class="child">
+                  {{#if hbsObject.user}}
                   <li class="nav-item-post">
                     <a href="/new-classified-PLACEHOLDER" class="nav-link">New Post</a>
                   </li>
+                  {{/if}}
                   <li class="nav-item">
                     <a href="/classifieds" class="nav-link">All Classifieds</a>
                   </li>
@@ -117,9 +119,11 @@
                 <a class="nav-link" href="#">Resource Share</a>
                 <!-- 1st level -->
                 <ul class="child">
+                  {{#if hbsObject.user}}
                   <li class="nav-item-post">
                     <a href="/new-resource" class="nav-link">New Post</a>
                   </li>
+                  {{/if}}
                   <li class="nav-item">
                     <a href="/resources" class="nav-link">All Resources</a>
                   </li>
