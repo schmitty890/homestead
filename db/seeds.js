@@ -183,8 +183,41 @@ function seeds() {
     { author_id: 55, username: "sara", name: "sara", email: "sara@gmail.com", phone: "9191875567", title: "40lb weight", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUwUNl13Kqcy0J1xGN9CEt3pgugZuJGj0OqdUUb7H2A--z4tyW", price: "20", details: "get buff with this dumbbell", date_added: "09/03/2018", category: "sports", type: "fitness", condition: "Like new" },
     { author_id: 098, username: "ray", name: "ray", email: "ray@gmail.com", phone: "9191875567", title: "KitchenAid Mixer", image: "https://target.scene7.com/is/image/Target/51021848?wid=328&hei=328&qlt=80&fmt=pjpeg", price: "20", details: "Mix all kinds of things!", date_added: "09/03/2018", category: "appliances", type: "kitchen", condition: "Like new" }
   ]);
-
-
+  db.message.bulkCreate([
+    {
+      author_id: 3,
+      name: 'tommy',
+      email: 'tommy@tom.com',
+      subject: 'trash',
+      category: "issue",
+      message: 'my trash was not picked up.',
+    },
+    {
+      author_id: 3,
+      name: 'tommy',
+      email: 'tommy@tom.com',
+      subject: 'urgent',
+      category: "urgent",
+      message: 'my neighbor has a dog that will not shut up',
+    },
+    {
+      author_id: 3,
+      name: 'tommy',
+      email: 'tommy@tom.com',
+      subject: 'idea',
+      category: "idea",
+      message: 'noise dampening fences.',
+    },
+    {
+      author_id: 3,
+      name: 'tommy',
+      email: 'tommy@tom.com',
+      subject: 'other',
+      category: "other",
+      message: 'i keep seeing snakes but I like that just wanted you to know',
+      saved: true
+    },
+  ]);
 }
 // commenting this out as we are invoking it on server.js
 // seeds();

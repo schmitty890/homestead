@@ -286,7 +286,6 @@ module.exports = function (app) {
       hbsObject.emails = {
         emails: data,
       }
-      console.log(JSON.stringify(hbsObject.emails))
       res.render('postdues', { hbsObject: hbsObject });
     });
 

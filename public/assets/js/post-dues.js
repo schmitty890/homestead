@@ -1,5 +1,4 @@
 $("#post-dues-form").on("submit", function (event) {
-  console.log("postduesreceived")
   var newDues = {};
   event.preventDefault();
   if ($.trim($("#dues").val()) === "") {
