@@ -136,30 +136,69 @@ module.exports = function (app) {
     });
   }, function (req, res, next) {
     hbsObject = res.locals.user;
+    console.log(hbsObject);
     var categories = ['bikes', 'electronics', 'appliances', 'babyKid', 'clothes', 'furniture', 'lawn', 'music', 'sports', 'autos', 'phones', 'tickets'];
-    // var categories = ['clothes', 'appliances'];
     // loop over array of categories
-    categories.forEach(function (category) {
-      // console.log(category);
+    Promise.all(categories.map(category =>
       db.classifieds.findAll({
         where: {
           category: category
         },
+        limit: 1,
         order: [
           ['createdAt', 'DESC']
         ]
-      }).then(function (classifiedAd) {
-        // console.log('--------------------------------');
-        // console.log(classifiedAd);
+      })
+      )).then(function (classifiedAd) {
+        console.log('-----------start---------------------');
+        console.log(classifiedAd);
+        classifiedAd.forEach(function(classified) {
+          console.log('-----------classy start---------------------');
+          // console.log(classy.length);
+          // hbsObject[] = {
 
-        hbsObject[category] = {
-          classifiedCount: classifiedAd.length,
-          latest: classifiedAd[0]
-        }
+          // }
+          // console.log(classy);
+          classified.forEach(function(element) {
+            console.log(element.dataValues);
+            hbsObject[element.category] = {
+              latest: element.dataValues
+            }
+          });
+          // console.log(classy[0].classifieds.dataValues.username)
+          // console.log(classy)
+          console.log('-----------classy finished---------------------');
+        });
+        console.log('------------finish--------------------');
+        // hbsObject[category] = {
+        //   classifiedCount: classifiedAd.length,
+        //   latest: classifiedAd[0]
+        // }
+        res.render('classifieds', { hbsObject: hbsObject });
       });
-    });
 
-    res.render('classifieds', { hbsObject: hbsObject });
+
+    // categories.forEach(function (category) {
+    //   // console.log(category);
+    //   db.classifieds.findAll({
+    //     where: {
+    //       category: category
+    //     },
+    //     order: [
+    //       ['createdAt', 'DESC']
+    //     ]
+    //   }).then(function (classifiedAd) {
+    //     // console.log('--------------------------------');
+    //     // console.log(classifiedAd);
+
+    //     hbsObject[category] = {
+    //       classifiedCount: classifiedAd.length,
+    //       latest: classifiedAd[0]
+    //     }
+    //   });
+    // });
+
+
   });
 
   app.get('/classifieds/:category', function (req, res) {
