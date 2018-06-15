@@ -14,10 +14,14 @@
         <input name="date" type="text" class="form-control date" placeholder="Start" id="startDate" required readonly="readonly">
         <input name="date" type="text" class="form-control date d-none" style="margin-top:10px" placeholder="End" id="endDate" required readonly="readonly">
     </div>
-
-    <div class="form-check">
-        <input class="form-check-input active float-left" type="checkbox" value="" id="allDayEvent" checked="checked">
-        <label class="form-check-label float-left" for="allDayEvent">All-Day Event?</label>
+    <div class="">
+      <div class="form-group">
+          <label class="">
+              <div class="float-left"><input type="checkbox" name="type" value="1" required="" style="position: absolute; opacity: 0;"></div>
+              <div style="margin-right: 10px;">All day event?</div>
+          </label>
+      </div>
+      <!--end form-group-->
     </div>
     <!--end form-group-->
     <div class="form-group clearfix">
@@ -34,5 +38,5 @@
         </select>
     </div>
     <!--end form-group-->
-    <button type="submit" class="btn btn-primary large icon float-right" id="post-event" data-id={{userId}} data-userName={{userName}}>Post<i class="fa fa-chevron-right"></i></button>    
+    <button type="submit" class="btn btn-primary large icon float-right" id="post-event" data-id={{userId}} data-userName={{userName}}>Post<i class="fa fa-chevron-right"></i></button>
 </form>
