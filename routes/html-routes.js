@@ -113,12 +113,10 @@ module.exports = function (app) {
     res.render('faq', { hbsObject: hbsObject });
   });
 
-  app.get('/classifieds', function (req, res) {
+  app.get('/classifieds', function (req, res, next) {
     let hbsObject = {
       user: req.user
     }
-
-    var categories = ['bikes', 'electronics', 'appliances', 'babyKid', 'clothes', 'furniture', 'lawn', 'music', 'sports', 'autos', 'phones', 'tickets']
 
     // find and count all categories
     db.classifieds.findAll({
@@ -133,29 +131,35 @@ module.exports = function (app) {
         latest: classifiedsInfo[0]
       }
 
-      // loop over array of categories
-      categories.forEach(function (category) {
-        // console.log(category);
-        db.classifieds.findAll({
-          where: {
-            category: category
-          },
-          order: [
-            ['createdAt', 'DESC']
-          ]
-        }).then(function (classifiedAd) {
-          // console.log('--------------------------------');
-          // console.log(classifiedAd);
-
-          hbsObject[category] = {
-            classifiedCount: classifiedAd.length,
-            latest: classifiedAd[0]
-          }
-        });
-      });
-
-      res.render('classifieds', { hbsObject: hbsObject });
+      res.locals.user = hbsObject;
+      next();
     });
+  }, function (req, res, next) {
+    hbsObject = res.locals.user;
+    var categories = ['bikes', 'electronics', 'appliances', 'babyKid', 'clothes', 'furniture', 'lawn', 'music', 'sports', 'autos', 'phones', 'tickets'];
+    // var categories = ['clothes', 'appliances'];
+    // loop over array of categories
+    categories.forEach(function (category) {
+      // console.log(category);
+      db.classifieds.findAll({
+        where: {
+          category: category
+        },
+        order: [
+          ['createdAt', 'DESC']
+        ]
+      }).then(function (classifiedAd) {
+        // console.log('--------------------------------');
+        // console.log(classifiedAd);
+
+        hbsObject[category] = {
+          classifiedCount: classifiedAd.length,
+          latest: classifiedAd[0]
+        }
+      });
+    });
+
+    res.render('classifieds', { hbsObject: hbsObject });
   });
 
   app.get('/classifieds/:category', function (req, res) {
