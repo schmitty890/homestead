@@ -31,6 +31,23 @@ function seeds() {
       email: 'tommyn.gre@gmail.com',
       password: "$2a$08$w0/oyZgS4ded.Dvm7pvfPuZNhJN.e8XNaWV.STPRhPWpFYxKt6hGW",
       status: 'active'
+    },{
+      firstname: 'joe',
+      lastname: 'joeferson',
+      username: 'managerJoe',
+      about: "I run this place!",
+      email: 'joe@manager.com',
+      password: "$2a$08$4l1Huo8LhhmJGK.2YN8ICOePfImACiO1lTRWivKUIGthKDRPAFNQ2",
+      manager: true,
+      status: 'active'
+    },{
+      firstname: 'joe',
+      lastname: 'userson',
+      username: 'userJoe',
+      about: "I am always looking for  doggie meetup!",
+      email: 'joe@user.com',
+      password: "$2a$08$4l1Huo8LhhmJGK.2YN8ICOePfImACiO1lTRWivKUIGthKDRPAFNQ2",
+      status: 'active'
     }
   ]);
 
