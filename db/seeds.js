@@ -23,6 +23,14 @@ function seeds() {
       password: 'password123',
       // last_login:
       status: 'active'
+    },{
+      firstname: 'tommy',
+      lastname: 'tomison',
+      username: 'tommyt',
+      about: "Nothing notable really",
+      email: 'tommyn.gre@gmail.com',
+      password: "$2a$08$w0/oyZgS4ded.Dvm7pvfPuZNhJN.e8XNaWV.STPRhPWpFYxKt6hGW",
+      status: 'active'
     }
   ]);
 
@@ -72,7 +80,7 @@ function seeds() {
       email: "DanaVelasquez@hotmails.com",
       description: "persuasive person needed to convince my a certain individual to complete expected yardwork",
       image: "https://www.thewrap.com/wp-content/uploads/2018/04/Screen-Shot-2018-04-07-at-12.52.30-PM.png",
-      category: "skills needed",
+      category: "services needed",
     }
 
 
