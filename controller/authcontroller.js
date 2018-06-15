@@ -36,9 +36,16 @@ exports.postcommunity = function(req, res) {
 }
 
 exports.postclassified = function(req, res) {
+  
+  
   let hbsObject = {
-    user: req.user
+    user: req.user,
   }
+
+  if (req.path === "/postclassified") {
+    hbsObject.path = true;
+  }
+
   res.render('postclassified', {
     userId: req.user.id,
     userName: req.user.username,
