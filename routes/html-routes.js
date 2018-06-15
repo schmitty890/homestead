@@ -139,8 +139,7 @@ module.exports = function (app) {
     var categories = ['bikes', 'electronics', 'appliances', 'babyKid', 'clothes', 'furniture', 'lawn', 'music', 'sports', 'autos', 'phones', 'tickets'];
     // var categories = ['clothes', 'appliances'];
     // loop over array of categories
-    categories.forEach(function (category) {
-      // console.log(category);
+    Promise.all(categories.map(category =>
       db.classifieds.findAll({
         where: {
           category: category
@@ -148,16 +147,37 @@ module.exports = function (app) {
         order: [
           ['createdAt', 'DESC']
         ]
-      }).then(function (classifiedAd) {
+      })
+      )).then(function (classifiedAd) {
         // console.log('--------------------------------');
-        // console.log(classifiedAd);
+        console.log(classifiedAd);
 
-        hbsObject[category] = {
-          classifiedCount: classifiedAd.length,
-          latest: classifiedAd[0]
-        }
+        // hbsObject[category] = {
+        //   classifiedCount: classifiedAd.length,
+        //   latest: classifiedAd[0]
+        // }
       });
-    });
+
+
+    // categories.forEach(function (category) {
+    //   // console.log(category);
+    //   db.classifieds.findAll({
+    //     where: {
+    //       category: category
+    //     },
+    //     order: [
+    //       ['createdAt', 'DESC']
+    //     ]
+    //   }).then(function (classifiedAd) {
+    //     // console.log('--------------------------------');
+    //     // console.log(classifiedAd);
+
+    //     hbsObject[category] = {
+    //       classifiedCount: classifiedAd.length,
+    //       latest: classifiedAd[0]
+    //     }
+    //   });
+    // });
 
     res.render('classifieds', { hbsObject: hbsObject });
   });
