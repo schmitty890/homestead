@@ -114,10 +114,10 @@ $(document).ready(function($) {
 
   $(".has-child a[href='#'].nav-link").on("click", function(e) {
     e.preventDefault();
-    if (!$(this).parent().hasClass("hover")) {
-      $(this).parent().addClass("hover");
+    if (!$(this).parent().hasClass("hoverr")) {
+      $(this).parent().addClass("hoverr");
     } else {
-      $(this).parent().removeClass("hover");
+      $(this).parent().removeClass("hoverr");
     }
   });
 

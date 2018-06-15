@@ -30,14 +30,20 @@ $(document).ready(function($) {
     function displayCalendar(eventData) {
         var eventList = [];
         eventData.forEach(function(event) {
-            var newEvent = ({
+            var newEvent = {
                 title: event.title,
-                start: moment(event.date).format("YYYY-MM-DD hh:mm:ss"),
-                end: moment(event.endDate).format("YYYY-MM-DD hh:mm:ss"),
-                allDay: event.allDay,
                 textColor: 'white',
-                color: determineColor(event.category)
-            })
+                color: determineColor(event.category),
+                allDay: true
+
+            };
+            if(!event.allDay) {
+                    newEvent.start = moment(event.date).format("YYYY-MM-DD hh:mm:ss");
+                    newEvent.end = moment(event.endDate).format("YYYY-MM-DD hh:mm:ss");   
+            } else {
+                newEvent.start = moment(event.date).format("YYYY-MM-DD hh:mm:ss");
+                newEvent.end = moment(event.endDate).format("YYYY-MM-DD hh:mm:ss"); 
+            } 
             
             eventList.push(newEvent); 
         }) 
@@ -47,12 +53,12 @@ $(document).ready(function($) {
             header: {
             left: 'prev,next today',
             center: 'title',
-            right: 'month,agendaWeek,agendaDay,listWeek'
+            right: 'month,listWeek'
             },
             defaultView: 'month',
             defaultDate: moment(),
             navLinks: true, // can click day/week names to navigate views
-            editable: true,
+            editable: false,
             eventLimit: true, // allow "more" link when too many events
             events: eventList,
             

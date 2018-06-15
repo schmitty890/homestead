@@ -8,11 +8,11 @@
       <div class="wrapper">
         <div class="image">
           <h3>
-            <a href="#" class="tag category">category</a>
-            <a href="single-listing-1.html" class="title">{{this.title}}</a>
+            <a class="tag category">{{this.category}}</a>
+            <a class="title">{{this.title}}</a>
           </h3>
-          <a href="#" class="image-wrapper background-image">
-            <img src="assets/img/image-01.jpg" alt="">
+          <a class="image-wrapper background-image">
+            <img src="{{imagePath this.category}}" alt="">
           </a>
         </div>
         <!--end image-->
@@ -21,7 +21,7 @@
             <i class="fa fa-calendar-o"></i>{{momentFromNowTime this.date}}
           </figure>
           <figure>
-            <a href="#">
+            <a>
               <i class="fa fa-user"></i>Posted By: {{this.author_id}}
             </a>
           </figure>
@@ -31,7 +31,7 @@
           <p>{{this.description}}</p>
         </div>
         <!--end description-->
-        <a href="#" class="detail text-caps underline">Detail</a>
+        <a href="./events" class="detail text-caps underline">See More!</a>
       </div>
     </div>
     {{/each}}
