@@ -3,7 +3,6 @@
 // 1200px and up
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 @media (min-width: 1200px) {
-  .items.grid, .items.masonry {}
   .items.grid.grid-xl-4-items .item, .items.masonry.grid-xl-4-items .item {
       width: 25%;
   }
@@ -14,11 +13,9 @@
       width: 50%;
   }
 }
-/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 // 992px - 1199px
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 @media (min-width: 992px) and (max-width: 1199px) {
-  .items.grid, .items.masonry {}
   .items.grid.grid-lg-4-items .item, .items.masonry.grid-lg-4-items .item {
       width: 25%;
   }
@@ -28,15 +25,13 @@
   .items.grid.grid-lg-2-items .item, .items.masonry.grid-lg-2-items .item {
       width: 50%;
   }
-  .owl-carousel {}
   .owl-carousel.full-width-carousel .item {
       width: 90rem;
       height: 50rem;
   }
 }
-/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 // 768px - 991px
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 @media (min-width: 768px) and (max-width: 991px) {
   h1 {
       font-size: 3rem;
@@ -44,13 +39,10 @@
   h2 {
       font-size: 2rem;
   }
-  .form {}
   .form.hero-form .main-search-form .form-group label {
       top: -4rem;
       font-size: 1.8rem;
   }
-  .items.grid, .items.masonry {}
-  .items.grid.grid, .items.grid.masonry, .items.masonry.grid, .items.masonry.masonry {}
   .items.grid.grid.grid-md-4-items .item, .items.grid.masonry.grid-md-4-items .item, .items.masonry.grid.grid-md-4-items .item, .items.masonry.masonry.grid-md-4-items .item {
       width: 25%;
   }
@@ -95,7 +87,6 @@
   .hero .main-navigation .navbar ul.navbar-nav > li.nav-item ul.child li a.nav-link {
       padding: 1rem 2.5rem;
   }
-  .hero .main-navigation .navbar ul.navbar-nav > li.nav-item ul.child li.has-child > a.nav-link {}
   .hero .main-navigation .navbar ul.navbar-nav > li.nav-item ul.child li.has-child > a.nav-link:after {
       content: "\f0d7";
       left: inherit;
@@ -111,7 +102,6 @@
       height: 0;
       overflow: hidden;
   }
-  .hero .main-navigation .navbar ul.navbar-nav li.nav-item.has-child > a.nav-link {}
   .hero .main-navigation .navbar ul.navbar-nav li.nav-item.has-child > a.nav-link:after {
       bottom: inherit;
       top: 1.5rem;
@@ -119,15 +109,13 @@
   .hero .main-navigation .navbar ul.navbar-nav li.nav-item.has-child.hoverr > ul.child {
       height: auto;
   }
-  .owl-carousel {}
   .owl-carousel.full-width-carousel .item {
       width: 69rem;
       height: 40rem;
   }
 }
-/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 // max to 767px
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 @media (max-width: 767px) {
   body::before {
       display: none;
@@ -139,6 +127,9 @@
   h2 {
       font-size: 2rem;
   }
+  .nav-link-read-only{
+    padding: 1rem 2.5rem;
+}
   .d-xs-grid {
       display: grid !important;
   }
@@ -155,7 +146,6 @@
       top: 3rem !important;
       bottom: auto !important;
   }
-  .author {}
   .author.big {
       padding-top: 28rem;
       position: relative;
@@ -177,13 +167,9 @@
   .footer {
       position: relative;
   }
-  .form-slides {}
-  .form-slides#category-tabs {}
   .form-slides#category-tabs:before, .form-slides#category-tabs:after {
       display: none;
   }
-  .items:not(.selectize-input) {}
-  .items:not(.selectize-input).grid, .items:not(.selectize-input).masonry {}
   .items:not(.selectize-input).grid[class*="grid-"] .item, .items:not(.selectize-input).masonry[class*="grid-"] .item {
       width: 100%;
       display: block;
@@ -211,7 +197,6 @@
   .items:not(.selectize-input).list .item h3 a:not(.category), .items:not(.selectize-input).list.compact .item h3 a:not(.category) {
       color: #fff;
   }
-  .items:not(.selectize-input).list .item h3 .tag, .items:not(.selectize-input).list.compact .item h3 .tag {}
   .items:not(.selectize-input).list .item h3 .tag.category, .items:not(.selectize-input).list.compact .item h3 .tag.category {
       top: -3rem;
       left: 0;
@@ -235,7 +220,6 @@
   .items:not(.selectize-input).list .item h4 a:before, .items:not(.selectize-input).list.compact .item h4 a:before {
       color: #fff;
   }
-  .items:not(.selectize-input).list .item h4.location, .items:not(.selectize-input).list.compact .item h4.location {}
   .items:not(.selectize-input).list .item h4.location:before, .items:not(.selectize-input).list.compact .item h4.location:before {
       color: #fff;
   }
@@ -292,7 +276,6 @@
       margin-left: 0;
       margin-bottom: 4rem;
   }
-  .form {}
   .form.hero-form {
       padding-top: 1rem;
   }
@@ -335,7 +318,6 @@
   .hero .main-navigation .navbar ul.navbar-nav > li.nav-item ul.child li a.nav-link {
       padding: 1rem 2.5rem;
   }
-  .hero .main-navigation .navbar ul.navbar-nav > li.nav-item ul.child li.has-child > a.nav-link {}
   .hero .main-navigation .navbar ul.navbar-nav > li.nav-item ul.child li.has-child > a.nav-link:after {
       content: "\f0d7";
       left: inherit;
@@ -351,7 +333,6 @@
       height: 0;
       overflow: hidden;
   }
-  .hero .main-navigation .navbar ul.navbar-nav li.nav-item.has-child > a.nav-link {}
   .hero .main-navigation .navbar ul.navbar-nav li.nav-item.has-child > a.nav-link:after {
       bottom: inherit;
       top: 1.5rem;
@@ -417,7 +398,6 @@
   .width-300px {
       width: 100% !important;
   }
-  .owl-carousel {}
   .owl-carousel.full-width-carousel .item {
       width: 100%;
       height: 100%;
@@ -431,7 +411,6 @@
   .owl-carousel.full-width-carousel .owl-item {
       opacity: 1;
   }
-  ul, ol, dl {}
   ul.columns-2, ol.columns-2, dl.columns-2 {
       column-count: 1;
   }
@@ -484,8 +463,6 @@
   padding-left: 0;
   margin-bottom: 0;
 }
-
-.messaging__persons-list li {}
 
 .messaging__persons-list li:last-child .messaging__person {
   border-bottom: none;

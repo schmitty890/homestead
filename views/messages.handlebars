@@ -1,3 +1,4 @@
+{{#if hbsObject.user.manager}}
 <div class="page home-page">
   <section class="content">
     <div class="page sub-page">
@@ -23,23 +24,20 @@
                     <div class="messaging__header">
                       <ul class="nav nav-pills">
                         <li class="nav-item">
-                          <a class="nav-link active" href="#">All</a>
+                          <a class="nav-link" id="showAll">All</a>
                         </li>
-          {{!--               <li class="nav-item">
-                          <a class="nav-link" href="#">Urgent</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="#">Issues</a>
+                         <li class="nav-item">
+                          <a class="nav-link" id="showUrgent">Urgent</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#">Ideas</a>
+                          <a class="nav-link" id="showIssue">Issues</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#">Other</a>
+                          <a class="nav-link" id="showIdea">Ideas</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#">Saved</a>
-                        </li> --}}
+                          <a class="nav-link" id="showOther">Other</a>
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -51,7 +49,7 @@
             <div class="items list grid-xl-4-items grid-lg-3-items grid-md-2-items" id="allMessages">
               <h2>All Messages</h2>
               {{#each hbsObject.messages.messages}}
-              <div class="item">
+              <div class="item {{this.category}}">
                 <div class="wrapper">
                   <div class="image">
                       <h3>
@@ -239,3 +237,4 @@
         </section>
       </section>
   </div>
+  {{/if}}

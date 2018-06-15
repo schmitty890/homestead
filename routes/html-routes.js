@@ -45,7 +45,7 @@ module.exports = function (app) {
     }); */
 
   app.get('/events', function (req, res) {
-    
+
     let hbsObject = {
       user: req.user,
       signedIn: (req.user !== undefined)
@@ -75,8 +75,8 @@ module.exports = function (app) {
   });
 
   app.get('/events:cat', function (req, res) {
-    
-    
+
+
     let cat = req.params.cat;
     let hbsObject = {
       user: req.user,
@@ -100,7 +100,7 @@ module.exports = function (app) {
   /*   app.get('/classes', function (req, res) {
       res.render('community');
     });
-  
+
     app.get('/meetups', function (req, res) {
       res.render('meetups');
     }); */
@@ -113,12 +113,10 @@ module.exports = function (app) {
     res.render('faq', { hbsObject: hbsObject });
   });
 
-  app.get('/classifieds', function (req, res) {
+  app.get('/classifieds', function (req, res, next) {
     let hbsObject = {
       user: req.user
     }
-
-    var categories = ['bikes', 'electronics', 'appliances', 'babyKid', 'clothes', 'furniture', 'lawn', 'music', 'sports', 'autos', 'phones', 'tickets']
 
     // find and count all categories
     db.classifieds.findAll({
@@ -133,42 +131,56 @@ module.exports = function (app) {
         latest: classifiedsInfo[0]
       }
 
-      // loop over array of categories
-      categories.forEach(function (category) {
-        // console.log(category);
-        db.classifieds.findAll({
-          where: {
-            category: category
-          },
-          order: [
-            ['createdAt', 'DESC']
-          ]
-        }).then(function (classifiedAd) {
-          // console.log('--------------------------------');
-          // console.log(classifiedAd);
-
-          hbsObject[category] = {
-            classifiedCount: classifiedAd.length,
-            latest: classifiedAd[0]
+      res.locals.user = hbsObject; // we pass the hbsObject res.locals.user so we can reference it in the next function below
+      next();
+    });
+  }, function (req, res, next) {
+    hbsObject = res.locals.user;
+    var categories = ['bikes', 'electronics', 'appliances', 'babyKid', 'clothes', 'furniture', 'lawn', 'music', 'sports', 'autos', 'phones', 'tickets'];
+    // loop over array of categories. using map, we return a promise to ensure this has finished looping before passing the hbsObject to the handlebars template
+    Promise.all(categories.map(category =>
+      db.classifieds.findAll({
+        where: {
+          category: category
+        },
+        limit: 1,
+        order: [
+          ['createdAt', 'DESC']
+        ]
+      })
+    )).then(function (classifiedAd) {
+      // loop through classifiedAds, adding to the hbsObject
+      classifiedAd.forEach(function(classified) {
+        classified.forEach(function(element) {
+          hbsObject[element.category] = {
+            latest: element.dataValues
           }
         });
       });
-      console.log(hbsObject.furniture);
+
       res.render('classifieds', { hbsObject: hbsObject });
     });
   });
 
   app.get('/classifieds/:category', function (req, res) {
     var category = req.params.category;
-
+    var whereAt = {};
+    // build out where clause if there is a query parameter or not
+    if(req.query.type === undefined) {
+      whereAt = {
+      category: category
+      }
+    } else {
+      whereAt = {
+        category: category,
+        type: req.query.type
+      }
+    }
     let hbsObject = {
       user: req.user
     }
-
     db.classifieds.findAll({
-      where: {
-        category: category
-      },
+      where: whereAt,
       order: [
         ['createdAt', 'DESC']
       ]
@@ -249,7 +261,7 @@ module.exports = function (app) {
   app.get('/messages', function (req, res) {
     let hbsObject = {
       user: req.user
-      
+
     }
 
     // find and count all categories
@@ -261,10 +273,23 @@ module.exports = function (app) {
       hbsObject.messages = {
         messages: data,
       }
-      console.log("hey " + JSON.stringify(hbsObject))
       res.render('messages', { hbsObject: hbsObject });
     });
   })
+
+  app.get('/postdues', function (req, res) {
+    let hbsObject = {
+      user: req.user
+    }
+    db.user.findAll({
+    }).then(function (data) {
+      hbsObject.emails = {
+        emails: data,
+      }
+      res.render('postdues', { hbsObject: hbsObject });
+    });
+
+  });
 
 };
 

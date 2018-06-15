@@ -148,5 +148,27 @@ module.exports = function(app) {
       })
     }
   })
-};
 
+
+app.put("/api/postdues/:email", function(req, res) {
+  var updateLine;
+  var pingEmail = req.params.email;
+    updateLine = req.body.dues;
+    db.user.update({
+      dues: updateLine
+    }, {
+      where: {
+        email: pingEmail
+      }
+    }).then(function() {
+      if (result.changedRows == 0) {
+        return res.status(404).end();
+      } else {
+        res.status(200).end();
+      }
+    })
+    .catch(function(err) {
+      res.json({status: "ERROR", message: err})
+    })
+  })
+};
