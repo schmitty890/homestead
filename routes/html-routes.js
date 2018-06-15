@@ -131,14 +131,13 @@ module.exports = function (app) {
         latest: classifiedsInfo[0]
       }
 
-      res.locals.user = hbsObject;
+      res.locals.user = hbsObject; // we pass the hbsObject res.locals.user so we can reference it in the next function below
       next();
     });
   }, function (req, res, next) {
     hbsObject = res.locals.user;
-    console.log(hbsObject);
     var categories = ['bikes', 'electronics', 'appliances', 'babyKid', 'clothes', 'furniture', 'lawn', 'music', 'sports', 'autos', 'phones', 'tickets'];
-    // loop over array of categories
+    // loop over array of categories. using map, we return a promise to ensure this has finished looping before passing the hbsObject to the handlebars template
     Promise.all(categories.map(category =>
       db.classifieds.findAll({
         where: {
@@ -149,56 +148,18 @@ module.exports = function (app) {
           ['createdAt', 'DESC']
         ]
       })
-      )).then(function (classifiedAd) {
-        console.log('-----------start---------------------');
-        console.log(classifiedAd);
-        classifiedAd.forEach(function(classified) {
-          console.log('-----------classy start---------------------');
-          // console.log(classy.length);
-          // hbsObject[] = {
-
-          // }
-          // console.log(classy);
-          classified.forEach(function(element) {
-            console.log(element.dataValues);
-            hbsObject[element.category] = {
-              latest: element.dataValues
-            }
-          });
-          // console.log(classy[0].classifieds.dataValues.username)
-          // console.log(classy)
-          console.log('-----------classy finished---------------------');
+    )).then(function (classifiedAd) {
+      // loop through classifiedAds, adding to the hbsObject
+      classifiedAd.forEach(function(classified) {
+        classified.forEach(function(element) {
+          hbsObject[element.category] = {
+            latest: element.dataValues
+          }
         });
-        console.log('------------finish--------------------');
-        // hbsObject[category] = {
-        //   classifiedCount: classifiedAd.length,
-        //   latest: classifiedAd[0]
-        // }
-        res.render('classifieds', { hbsObject: hbsObject });
       });
 
-
-    // categories.forEach(function (category) {
-    //   // console.log(category);
-    //   db.classifieds.findAll({
-    //     where: {
-    //       category: category
-    //     },
-    //     order: [
-    //       ['createdAt', 'DESC']
-    //     ]
-    //   }).then(function (classifiedAd) {
-    //     // console.log('--------------------------------');
-    //     // console.log(classifiedAd);
-
-    //     hbsObject[category] = {
-    //       classifiedCount: classifiedAd.length,
-    //       latest: classifiedAd[0]
-    //     }
-    //   });
-    // });
-
-
+      res.render('classifieds', { hbsObject: hbsObject });
+    });
   });
 
   app.get('/classifieds/:category', function (req, res) {

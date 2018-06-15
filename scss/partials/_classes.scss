@@ -503,10 +503,18 @@ Headers:		'Varela Round', sans-serif;
   position: relative;
 }
 .nav-link-read-only{
-  padding: 1rem 1.5rem;
+  padding: .6rem 1.5rem;
+  font-size: 1.2rem;
+  background-color: rgba(0,0,0,0.01);
 }
-.nav-link-read-only:hover{
-  background-color:white;
+
+ul.navbar-nav li.nav-item-post a.nav-link {
+  background-color:#FF7F7F;
+  color:white;
+}
+ul.navbar-nav li.nav-item-post:hover a.nav-link {
+  background-color:#FF6666;
+  color:white;
 }
 
 .hero .main-navigation .navbar ul.navbar-nav li.nav-item.has-child > a.nav-link:after {
@@ -1524,6 +1532,9 @@ Headers:		'Varela Round', sans-serif;
 }
 .tab-content {
   padding-top: 2rem;
+}
+a.nav-link{
+  cursor: pointer;
 }
 /********
 --- O ---
