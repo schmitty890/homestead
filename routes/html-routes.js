@@ -45,15 +45,54 @@ module.exports = function (app) {
     }); */
 
   app.get('/events', function (req, res) {
-    //didn't mess with, seems like we need to make eventInfo a sub of the handlebars object
-    //don't want to break all of Eric's work on accident
+    
+    let hbsObject = {
+      user: req.user,
+      signedIn: (req.user !== undefined)
+    }
+
     db.event.findAll({
       order: [
         ['date', 'ASC']
-      ]
+      ],
+      where: {
+        date : {
+          $gte: db.Sequelize.fn('CURDATE')
+        },
+        $or: [
+          {
+            endDate : {
+              $gte: db.Sequelize.fn('CURDATE')
+            }
+          }
+        ]
+      }
     }).then(function (eventInfo) {
-      // console.log(eventInfo);
-      res.render('events', { events: eventInfo });
+      hbsObject.eventInfo = eventInfo;
+      res.render('events', { hbsObject: hbsObject });
+    })
+
+  });
+
+  app.get('/events:cat', function (req, res) {
+    
+    
+    let cat = req.params.cat;
+    let hbsObject = {
+      user: req.user,
+      signedIn: (req.user !== undefined)
+    }
+
+    db.event.findAll({
+      order: [
+        ['date', 'ASC']
+      ],
+      where: {
+        category: cat
+      }
+    }).then(function (eventInfo) {
+      hbsObject.eventInfo = eventInfo;
+      res.render('events', { hbsObject: hbsObject });
     })
 
   });
@@ -205,6 +244,26 @@ module.exports = function (app) {
 
       res.render('resources', { hbsObject: hbsObject });
     })
+  })
+
+  app.get('/messages', function (req, res) {
+    let hbsObject = {
+      user: req.user
+      
+    }
+
+    // find and count all categories
+    db.message.findAll({
+      order: [
+        ['createdAt', 'DESC']
+      ]
+    }).then(function (data) {
+      hbsObject.messages = {
+        messages: data,
+      }
+      console.log("hey " + JSON.stringify(hbsObject))
+      res.render('messages', { hbsObject: hbsObject });
+    });
   })
 
 };

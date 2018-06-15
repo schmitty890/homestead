@@ -1,7 +1,9 @@
-<div class="section-title clearfix">
-    <div class="float-left float-xs-none">
-        <label class="mr-3 align-text-bottom">Sort: </label>
-        <label class="mr-3 align-text-bottom">Filter by Category: </label>
+<div class="row flex-column-reverse flex-md-row">
+    <div class="col-md-9">
+        <!--============ Section Title===================================================================-->
+        <div class="section-title clearfix">
+            <div class="float-left float-xs-none">
+                <label class="mr-3 align-text-bottom">Filter by Category: </label>
                 <select name="sorting" id="sorting" class="small width-200px" data-placeholder="All" >
                     <option value="">All</option>
                     <option value="/">All</option>
@@ -13,15 +15,17 @@
                     <option value="/sports">Sports</option>
                     <option value="/other">Other</option>
                 </select>
-    </div>
-</div>
-<div class="items list grid-xl-4-items grid-lg-3-items grid-md-2-items">
-    {{#each hbsObject.eventInfo}}
+
+            </div>
+            
+        </div>
+        <div class="items list compact grid-xl-3-items grid-lg-3-items grid-md-2-items">
+            {{#each hbsObject.eventInfo}}
     <div class="item">
         <div class="wrapper">
             <div class="image">
                 <h3>
-                    <a href="./{{this.cateogory}}" class="tag category">{{this.category}}</a>
+                    <a class="tag category">{{this.category}}</a>
                     <a class="title">{{upperCase this.title}}</a>
                 </h3>
                 <a class="image-wrapper background-image">
@@ -45,4 +49,21 @@
         </div>
     </div>
     {{/each}}
+        </div>
+    </div>
+    <div class="col-md-3">
+        <!--============ Side Bar ===============================================================-->
+        <aside class="sidebar">
+            <section>
+                <h2>Post an Event</h2>
+                <!--============ Side Bar Search Form ===========================================-->
+                {{>eventForm}}
+                <!--============ End Side Bar Search Form =======================================-->
+            </section>
+        </aside>
+        <!--============ End Side Bar ===========================================================-->
+    </div>
+    <!--end col-md-3-->
 </div>
+<!--end row-->
+

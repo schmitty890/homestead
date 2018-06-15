@@ -17,6 +17,8 @@ var PostClassified = function(){
   function gatherFormElements() {
     var userId = $("#addClassBtn").data("id");
     var userName = $("#addClassBtn").data("username");
+    var $category = $form.find('#category').val().trim();
+
     formValues = {
       author_id: userId,
       username: userName,
@@ -27,9 +29,9 @@ var PostClassified = function(){
       title: $form.find('#title').val().trim(),
       details: $form.find('#details').val().trim(),
       category: $form.find('#category').val().trim(),
-      image: $form.find('#image').val().trim()
-      // condition: $form.find('.status-selector .item').val().trim(),
-      // status: $form.find('.status-selector .item').val().trim()
+      image: $('#'+$category).find('#image').val().trim(),
+      condition: $('#'+$category).find('#'+$category+'Status').val(),
+      type: $('#'+$category).find('#'+$category+'Condition').val()
     }
 
     // console.log(formValues);
