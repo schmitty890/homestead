@@ -22,6 +22,8 @@ Within the application, community members may plan and publish events, post clas
 - [Sequelize](https://www.npmjs.com/package/sequelize)
 - [Passport](http://www.passportjs.org/)
 - [Gulp](https://gulpjs.com/)
+- [Axios](https://www.npmjs.com/package/axios)
+- [Slick.js](http://kenwheeler.github.io/slick/)
 - [FlatPickr](https://flatpickr.js.org/)
 - [FullCalendar.io](https://fullcalendar.io/)
 
