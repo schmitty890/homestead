@@ -39,7 +39,7 @@ module.exports = function(app) {
     
     db.event.create(req.body)
       .then(function(events) {
-        console.log(events)
+        // console.log(events)
         res.json(events);
       })
       .catch(function(err) {

@@ -38,7 +38,7 @@ var EventPage = function(){
             type: 'POST',
             data: newEvent
         }).then( function(data) {
-            console.log(data)
+            // console.log(data)
             location.reload();
         });
     }
