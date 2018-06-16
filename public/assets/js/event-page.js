@@ -11,10 +11,13 @@ var EventPage = function(){
             category: $('#newEventCategory').val().trim(),
             location: $('#newEventLocation').val().trim(),
             date: $('#newEventStartDate').val(),
-            endDate: $('#newEventEndDate').val(),
             allDay: $('#newEventAllDay').prop('checked')
         }
-        console.log(newEvent.date);
+        
+        if(!newEvent.allDay) {
+            newEvent.endDate = $('#newEventEndDate').val()
+        }
+
         passEventToBackend(newEvent);
 
     }
@@ -34,8 +37,9 @@ var EventPage = function(){
         $.ajax('/api/events', {
             type: 'POST',
             data: newEvent
-        }).then( function() {
-            // location.reload();
+        }).then( function(data) {
+            console.log(data)
+            location.reload();
         });
     }
 
