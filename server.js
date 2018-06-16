@@ -35,7 +35,7 @@ app.engine('handlebars', exphbs({
       return moment(time).format("ddd, MMM Do")
     },
     imagePath: function(category) {
-      return "/assets/images/event-categories/" + category + ".jpg";
+      return "/assets/images/event-categories/" + category.toLowerCase() + ".jpg";
     }
   }
 }));
@@ -68,8 +68,8 @@ app.get('*', function(req, res) {
 db.sequelize.sync().then(function() {
 // reset your seeds
 
-// db.sequelize.sync({ force: true }).then(function () {
-  // seeds(); // populates with seed data
+ //db.sequelize.sync({ force: true }).then(function () {
+   //seeds(); // populates with seed data
 
   app.listen(PORT, function () {
     // console.log("App listening on PORT " + PORT);

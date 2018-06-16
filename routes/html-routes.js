@@ -58,14 +58,14 @@ module.exports = function (app) {
       where: {
         date : {
           $gte: db.Sequelize.fn('CURDATE')
-        },
-        $or: [
-          {
-            endDate : {
-              $gte: db.Sequelize.fn('CURDATE')
-            }
-          }
-        ]
+        }
+        // $or: [
+        //   {
+        //     endDate : {
+        //       $gte: db.Sequelize.fn('CURDATE')
+        //     }
+        //   }
+        // ]
       }
     }).then(function (eventInfo) {
       hbsObject.eventInfo = eventInfo;
@@ -273,10 +273,23 @@ module.exports = function (app) {
       hbsObject.messages = {
         messages: data,
       }
-      console.log("hey " + JSON.stringify(hbsObject))
       res.render('messages', { hbsObject: hbsObject });
     });
   })
+
+  app.get('/postdues', function (req, res) {
+    let hbsObject = {
+      user: req.user
+    }
+    db.user.findAll({
+    }).then(function (data) {
+      hbsObject.emails = {
+        emails: data,
+      }
+      res.render('postdues', { hbsObject: hbsObject });
+    });
+
+  });
 
 };
 

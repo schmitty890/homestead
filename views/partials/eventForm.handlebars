@@ -1,22 +1,33 @@
-<form class="sidebar-form form">
+
     <div class="form-group">
-        <label for="what" class="col-form-label">What?</label>
-        <input name="keyword" type="text" class="form-control" id="title" placeholder="What are we calling it?" required>
+        <label for="newEventTitle" class="col-form-label">What?</label>
+        <input name="keyword" type="text" class="form-control" id="newEventTitle" placeholder="What are we calling it?" required>
     </div>
     <!--end form-group-->
     <div class="form-group">
-        <label for="input-location" class="col-form-label">Where?</label>
-        <input name="location" type="text" class="form-control" id="input-location" placeholder="Enter Location" required>
+        <label for="newEventLocation" class="col-form-label">Where?</label>
+        <input name="location" type="text" class="form-control" id="newEventLocation" placeholder="Enter Location" required>
         <span class="geo-location input-group-addon"><i class="fa fa-map-marker"></i></span>
     </div>
-    <div class="form-group">
-        <label for="input-location" class="col-form-label">Where?</label>
-        <input name="date" type="text" class="form-control flatpickr-input active" placeholder="mm/dd/yyyy" id="date" required readonly="readonly">
-    </div>
     <!--end form-group-->
     <div class="form-group">
-        <label for="category" class="col-form-label">Category?</label>
-        <select name="category" id="category" data-placeholder="Select Category" required>
+        <label for="newEventStartDate" class="col-form-label">When?</label>
+        <input name="date" type="text" class="form-control date" placeholder="Start" id="newEventStartDate" required readonly="readonly">
+        <input name="date" type="text" class="form-control date" style="display:none;margin-top:10px" placeholder="End" id="newEventEndDate" readonly="readonly">
+    </div>
+    <!--end form-group-->
+    <div class="">
+      <div class="form-group">
+          <label class="">
+              <div class="float-left"><input type="checkbox" name="type" id="newEventAllDay" checked="checked" style="position: absolute; opacity: 0;"></div>
+              <div style="margin-right: 10px;">All day event?</div>
+          </label>
+      </div>
+      <!--end form-group-->
+    </div>
+    <div class="form-group clearfix">
+        <label for="newEventCategory" class="col-form-label">Category?</label>
+        <select name="category" id="newEventCategory" data-placeholder="Select Category" required>
             <option value="">Select Category</option>
             <option value="Class">Class</option>
             <option value="Community">Community</option>
@@ -24,8 +35,14 @@
             <option value="Sell">Sell</option>
             <option value="Social">Social</option>
             <option value="Sports">Sports</option>
+            <option value="Other">Other</option>
         </select>
     </div>
+
+    <div class="form-group">
+        <label for="newEventDescription" class="col-form-label">Description?</label>
+        <textarea class="form-control" id="newEventDescription" rows="5" placeholder="Enter description here!"></textarea>
+    </div>
     <!--end form-group-->
-    <button type="submit" class="btn btn-primary large icon float-right" id="post-event" data-id={{userId}} data-userName={{userName}}>Post<i class="fa fa-chevron-right"></i></button>    
+    <button type="submit" class="btn btn-primary medium icon float-right" id="post-new-event" data-id="{{hbsObject.user.email}}">Post<i class="fa fa-chevron-right"></i></button>
 </form>

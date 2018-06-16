@@ -36,12 +36,14 @@ module.exports = function(app) {
   });
 
   app.post("/api/events", function(req, res) {
-    var userId = '';
+    
     db.event.create(req.body)
       .then(function(events) {
+        // console.log(events)
         res.json(events);
       })
       .catch(function(err) {
+        console.log(err.message)
         res.json({ status: "ERROR", message: err })
       })
   });
@@ -148,5 +150,27 @@ module.exports = function(app) {
       })
     }
   })
-};
 
+
+app.put("/api/postdues/:email", function(req, res) {
+  var updateLine;
+  var pingEmail = req.params.email;
+    updateLine = req.body.dues;
+    db.user.update({
+      dues: updateLine
+    }, {
+      where: {
+        email: pingEmail
+      }
+    }).then(function() {
+      if (result.changedRows == 0) {
+        return res.status(404).end();
+      } else {
+        res.status(200).end();
+      }
+    })
+    .catch(function(err) {
+      res.json({status: "ERROR", message: err})
+    })
+  })
+};
