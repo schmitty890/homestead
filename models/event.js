@@ -44,16 +44,16 @@ module.exports = function(sequelize, Sequelize) {
       notEmpty: true
     },
     endDate: {
-      type: Sequelize.DATE,
-      validate: {
-        isAfter(end) {
-          if (moment(end).subtract(moment(this.date)) < 0) {
-            throw new Error('Enter a date or time after the start time');
-            // we also are in the model's context here, so this.otherField
-            // would get the value of otherField if it existed
-          }
-        }
-      }  
+      type: Sequelize.STRING
+      // validate: {
+      //   isAfter(end) {
+      //     if (moment(end).subtract(moment(this.date)) < 0) {
+      //       throw new Error('Enter a date or time after the start time');
+      //       // we also are in the model's context here, so this.otherField
+      //       // would get the value of otherField if it existed
+      //     }
+      // //   }
+      // }
     },
     allDay: {
       type: Sequelize.BOOLEAN,

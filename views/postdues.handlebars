@@ -1,0 +1,58 @@
+{{#if hbsObject.user.manager}}
+<div class="page home-page">
+  <section class="content">
+    <div class="page sub-page">
+      <section class="hero">
+        <div class="hero-wrapper">
+          <div class="page-title">
+            <div class="container">
+              <h1>Manager Portal</h1>
+              <h2>Messages</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="content">
+      <section class="block">
+        <div class="container">
+          <form class="form form-submit" id="post-dues-form">
+            <section>
+              <h2>Select User</h2>
+              <div class="row">
+                <div class="col-md-8">
+                  <div class="form-group">
+                    <label for="duesEmail" class="col-form-label">Member Email</label>
+                    <select name="duesEmail" id="duesEmail" data-placeholder="Member Email">
+                      <option value="">User</option>
+                      {{#each hbsObject.emails.emails}}
+                      <option value="{{this.email}}">{{this.email}}</option>
+                      {{/each}}
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                </div>
+              </div>
+            </section>
+            <section>
+              <h2>Dues Amount</h2>
+              <div class="form-group">
+                <div class="form-group">
+                  <label for="dues" class="col-form-label required">Dues Amount</label>
+                  <input name="dues" type="text" class="form-control" id="dues" placeholder="60.00" required>
+                </div>
+              </div>
+            </section>
+            <section class="clearfix">
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary large icon float-right" id="post-dues-btn" data-id={{userId}} data-userName={{userName}}>Post<i class="fa fa-chevron-right"></i></button>
+              </div>
+            </section>
+          </form>
+        </div>
+      </section>
+    </section>
+    </div>
+  </section>
+</div>
+{{/if}}

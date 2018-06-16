@@ -32,10 +32,10 @@ module.exports = function(sequelize, Sequelize) {
     last_login: {
       type: Sequelize.DATE
     },
-    account_type: {
-      type: Sequelize.STRING,
+    manager: {
+      type: Sequelize.BOOLEAN,
       allowNull: false,
-      defaultValue: "user"
+      defaultValue: false
     },
     dues: {
       type: Sequelize.DECIMAL(10,2),

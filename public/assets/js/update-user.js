@@ -53,8 +53,7 @@ $("#updateUserDescription").on("submit", function (event) {
       about: $("#updateDescription").val().trim()
     }
     var updateID = $("#updateDescriptionBtn").data("id")
-    console.log(newDescription)
-    console.log(updateID)
+
     $.ajax("/api/users/"+updateID, {
       type: "PUT",
       data: newDescription

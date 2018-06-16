@@ -32,7 +32,6 @@
             </a>
           </li>
           {{/if}}
-
         </ul>
         <!--end right-->
       </div>
@@ -66,9 +65,11 @@
                 <a class="nav-link" href="#">Classifieds</a>
                 <!-- 1st level -->
                 <ul class="child">
+                  {{#if hbsObject.user}}
                   <li class="nav-item-post">
-                    <a href="/new-classified-PLACEHOLDER" class="nav-link">New Post</a>
+                    <a href="/postclassified" class="nav-link">New Post</a>
                   </li>
+                  {{/if}}
                   <li class="nav-item">
                     <a href="/classifieds" class="nav-link">All Classifieds</a>
                   </li>
@@ -117,9 +118,11 @@
                 <a class="nav-link" href="#">Resource Share</a>
                 <!-- 1st level -->
                 <ul class="child">
+                  {{#if hbsObject.user}}
                   <li class="nav-item-post">
                     <a href="/new-resource" class="nav-link">New Post</a>
                   </li>
+                  {{/if}}
                   <li class="nav-item">
                     <a href="/resources" class="nav-link">All Resources</a>
                   </li>
@@ -153,6 +156,21 @@
                 </ul>
                 <!-- end 1st level -->
               </li>
+              {{#if hbsObject.user.manager}}
+              <li class="nav-item has-child">
+                <a class="nav-link" href="#">Manager</a>
+                <!-- 1st level -->
+                <ul class="child">
+                  <li class="nav-item">
+                    <a href="/messages" class="nav-link">Messages</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/postdues" class="nav-link">Post Dues</a>
+                  </li>
+                </ul>
+                <!-- end 1st level -->
+              </li>
+              {{/if}}
               <!--Main navigation list-->
           </div>
           <!--end navbar-collapse-->
