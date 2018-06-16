@@ -58,14 +58,14 @@ module.exports = function (app) {
       where: {
         date : {
           $gte: db.Sequelize.fn('CURDATE')
-        },
-        $or: [
-          {
-            endDate : {
-              $gte: db.Sequelize.fn('CURDATE')
-            }
-          }
-        ]
+        }
+        // $or: [
+        //   {
+        //     endDate : {
+        //       $gte: db.Sequelize.fn('CURDATE')
+        //     }
+        //   }
+        // ]
       }
     }).then(function (eventInfo) {
       hbsObject.eventInfo = eventInfo;

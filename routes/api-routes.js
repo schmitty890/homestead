@@ -36,12 +36,14 @@ module.exports = function(app) {
   });
 
   app.post("/api/events", function(req, res) {
-    var userId = '';
+    
     db.event.create(req.body)
       .then(function(events) {
+        // console.log(events)
         res.json(events);
       })
       .catch(function(err) {
+        console.log(err.message)
         res.json({ status: "ERROR", message: err })
       })
   });

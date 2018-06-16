@@ -35,7 +35,7 @@ app.engine('handlebars', exphbs({
       return moment(time).format("ddd, MMM Do")
     },
     imagePath: function(category) {
-      return "/assets/images/event-categories/" + category + ".jpg";
+      return "/assets/images/event-categories/" + category.toLowerCase() + ".jpg";
     }
   }
 }));

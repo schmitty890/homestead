@@ -9,10 +9,18 @@ var PostEvent = function(){
 
   function gatherFormElements() {
     formValues = {
-      title: $('#title').val().trim(),
-      date: $('#date').val().trim(),
-      description: $('#details').val().trim()
+      author_id: $('#post-new-event').data("id"),
+      title: $('#newEventTitle').val().trim(),
+      description: $('#newEventDescription').val().trim(),
+      category: $('#newEventCategory').val().trim(),
+      location: $('#newEventLocation').val().trim(),
+      date: $('#newEventStartDate').val(),
+      allDay: $('#newEventAllDay').prop('checked')
     }
+    if(!formValues.allDay) {
+      formValues.endDate = $('#newEventEndDate').val()
+    }
+
     if (formValues.title === '' || formValues.date === '') {
       alert('fill out ALL required forms.');
     } else {
